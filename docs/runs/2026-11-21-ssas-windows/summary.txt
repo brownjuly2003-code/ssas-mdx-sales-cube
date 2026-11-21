@@ -1,0 +1,25 @@
+reference: reports/expected.json equals docs/runs/expected-seed64.json (seed 64)
+SQL Server media: SQLServer2022-x64-ENU-Dev.iso, 1163053056 bytes, SHA-256 80D2CD75DD2B28098C0182F50AD86BD44F9B3A9F357C30FF617480A1497DAFFD
+SQL Server setup: exit code 0 in 4.3 min (features SQLENGINE,AS; ASSERVERMODE=MULTIDIMENSIONAL)
+SqlServer module: 22.4.5.1 at C:\Program Files\WindowsPowerShell\Modules\SqlServer\22.4.5.1
+Database Engine: 16.0.1000.6 | Developer Edition (64-bit) | Microsoft SQL Server 2022 (RTM) - 16.0.1000.6 (X64)  	Oct  8 2022 05:58:25  	Copyright (C) 2022 Microsoft Corporation 	Developer Edition (64-bit) on Windows Server 2022 Datacenter 10.0 <X64> (Build 20348: ) (Hypervisor) 
+Analysis Services version: 16.0.42.209
+Analysis Services edition: Developer64
+Analysis Services server mode (AMO ServerMode): Multidimensional
+msmdsrv.ini DeploymentMode: 0 (C:\Program Files\Microsoft SQL Server\MSAS16.MSSQLSERVER\OLAP\Config\msmdsrv.ini)
+star in SQL Server: DimDate 731, DimProduct 6, DimCustomer 4, FactSales 1838, SUM(Units) 8422, SUM(Revenue) 870055
+SSAS service account with db_datareader on P64SalesDW: NT Service\MSSQLServerOLAPService
+AMO Validate: AMO 19.96.1.0 from C:\Program Files\WindowsPowerShell\Modules\SqlServer\22.4.5.1; P64SalesCube: 3 dimensions, 1 measure group, 2 measures
+Create (cube/create.xmla): no Exception or Error in the answer
+ProcessFull (cube/process.xmla): no Exception or Error in the answer, 3.2 s
+Database P64SalesCube: State Processed, LastProcessed 11/21/2026 12:49:00, EstimatedSize 273602
+Cube Sales: State Processed, LastProcessed 11/21/2026 12:49:00, StorageMode Molap
+Partition SalesLines: State Processed, StorageMode Molap, LastProcessed 11/21/2026 12:49:00 PM, EstimatedSize 7358 bytes
+DISCOVER_PARTITION_STAT: DATABASE_NAME=P64SalesCube, CUBE_NAME=Sales, MEASURE_GROUP_NAME=SalesLines, PARTITION_NAME=SalesLines, AGGREGATION_SIZE=1774
+members of [Date].[Calendar].[Day]: 731 (expected 731) ok
+members of [Product].[Catalog].[Product]: 6 (expected 6) ok
+members of [Customer].[Geography].[Customer]: 4 (expected 4) ok
+Cube state: database, dimensions, cube and partition Processed; partition MOLAP; key level members match the star
+10/10 SSAS answers match the reference
+10 MDX cellsets match the reference
+negative controls on the SSAS answers (tests/test_mondrian_answers.py): ============================= 23 passed in 0.35s ==============================

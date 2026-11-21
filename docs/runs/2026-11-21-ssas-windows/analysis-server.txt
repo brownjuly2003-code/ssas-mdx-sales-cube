@@ -1,0 +1,6 @@
+AMO 19.96.1.0 from C:\Program Files\WindowsPowerShell\Modules\SqlServer\22.4.5.1
+Analysis Services product: Microsoft SQL Server Analysis Services
+Analysis Services version: 16.0.42.209
+Analysis Services edition: Developer64
+Analysis Services server mode (AMO ServerMode): Multidimensional
+msmdsrv.ini DeploymentMode: 0 (C:\Program Files\Microsoft SQL Server\MSAS16.MSSQLSERVER\OLAP\Config\msmdsrv.ini)

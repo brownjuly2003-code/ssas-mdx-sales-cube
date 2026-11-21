@@ -1,0 +1,890 @@
+ssas	Set up job	﻿2026-11-21T12:42:34.8028350Z Current runner version: '2.338.2'
+ssas	Set up job	2026-11-21T12:42:34.8104945Z ##[group]Runner Image Provisioner
+ssas	Set up job	2026-11-21T12:42:34.8105749Z Hosted Compute Agent
+ssas	Set up job	2026-11-21T12:42:34.8106349Z Version: 20261111.635
+ssas	Set up job	2026-11-21T12:42:34.8106954Z Commit: b8a594ea514ff44cadb5342986c68b1eac6e22ed
+ssas	Set up job	2026-11-21T12:42:34.8107632Z Build Date: 2026-11-11T01:49:01Z
+ssas	Set up job	2026-11-21T12:42:34.8108288Z Worker ID: {af5e8c86-9e9d-4ed6-9e0f-119299c77980}
+ssas	Set up job	2026-11-21T12:42:34.8108977Z Region: westus2
+ssas	Set up job	2026-11-21T12:42:34.8109477Z Cloud: Azure
+ssas	Set up job	2026-11-21T12:42:34.8109966Z ##[endgroup]
+ssas	Set up job	2026-11-21T12:42:34.8111225Z ##[group]Operating System
+ssas	Set up job	2026-11-21T12:42:34.8111849Z Microsoft Windows Server 2022
+ssas	Set up job	2026-11-21T12:42:34.8112403Z 10.0.20348
+ssas	Set up job	2026-11-21T12:42:34.8112917Z Datacenter
+ssas	Set up job	2026-11-21T12:42:34.8113381Z ##[endgroup]
+ssas	Set up job	2026-11-21T12:42:34.8113854Z ##[group]Runner Image
+ssas	Set up job	2026-11-21T12:42:34.8114366Z Image: windows-2022
+ssas	Set up job	2026-11-21T12:42:34.8114851Z Version: 20261116.370.1
+ssas	Set up job	2026-11-21T12:42:34.8115833Z Included Software: https://github.com/actions/runner-images/blob/win22/20261116.370/images/windows/Windows2022-Readme.md
+ssas	Set up job	2026-11-21T12:42:34.8117629Z Image Release: https://github.com/actions/runner-images/releases/tag/win22%2F20261116.370
+ssas	Set up job	2026-11-21T12:42:34.8118521Z ##[endgroup]
+ssas	Set up job	2026-11-21T12:42:34.8119511Z ##[group]GITHUB_TOKEN Permissions
+ssas	Set up job	2026-11-21T12:42:34.8121289Z Contents: read
+ssas	Set up job	2026-11-21T12:42:34.8121843Z Metadata: read
+ssas	Set up job	2026-11-21T12:42:34.8122312Z ##[endgroup]
+ssas	Set up job	2026-11-21T12:42:34.8124247Z Secret source: Actions
+ssas	Set up job	2026-11-21T12:42:34.8125083Z Cache mode: write
+ssas	Set up job	2026-11-21T12:42:34.8125783Z Prepare workflow directory
+ssas	Set up job	2026-11-21T12:42:34.8585552Z Prepare all required actions
+ssas	Set up job	2026-11-21T12:42:34.8637449Z Getting action download info
+ssas	Set up job	2026-11-21T12:42:35.2348323Z Download action repository 'actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1' (SHA:3d3c42e5aac5ba805825da76410c181273ba90b1)
+ssas	Set up job	2026-11-21T12:42:35.5006377Z Download action repository 'actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0' (SHA:6d4fd22b20465ccc0f7354476588e8df7c9ca0e0)
+ssas	Set up job	2026-11-21T12:42:35.8489389Z Download action repository 'actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9' (SHA:cf430e030ddbb5b0abf93d22962f4752f3646cd9)
+ssas	Set up job	2026-11-21T12:42:36.4186451Z Complete job name: ssas
+ssas	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	﻿2026-11-21T12:42:37.1036307Z ##[group]Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+ssas	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-21T12:42:37.1037804Z with:
+ssas	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-21T12:42:37.1038394Z   repository: brownjuly2003-code/ssas-mdx-sales-cube
+ssas	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-21T12:42:37.1043180Z   token: ***
+ssas	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-21T12:42:37.1043663Z   ssh-strict: true
+ssas	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-21T12:42:37.1044156Z   ssh-user: git
+ssas	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-21T12:42:37.1044628Z   persist-credentials: true
+ssas	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-21T12:42:37.1045058Z   clean: true
+ssas	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-21T12:42:37.1045464Z   sparse-checkout-cone-mode: true
+ssas	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-21T12:42:37.1045943Z   fetch-depth: 1
+ssas	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-21T12:42:37.1046335Z   fetch-tags: false
+ssas	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-21T12:42:37.1046729Z   show-progress: true
+ssas	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-21T12:42:37.1047126Z   lfs: false
+ssas	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-21T12:42:37.1047505Z   submodules: false
+ssas	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-21T12:42:37.1047933Z   set-safe-directory: true
+ssas	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-21T12:42:37.1048383Z   allow-unsafe-pr-checkout: false
+ssas	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-21T12:42:37.1049058Z env:
+ssas	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-21T12:42:37.1049423Z   PYTHONPATH: src
+ssas	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-21T12:42:37.1049829Z   EVIDENCE: reports/ssas
+ssas	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-21T12:42:37.1050310Z   SQLSERVER_MODULE_VERSION: 22.4.5.1
+ssas	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-21T12:42:37.1051293Z   SQL_ISO_URL: https://download.microsoft.com/download/3/8/d/38de7036-2433-4207-8eae-06e247e17b25/SQLServer2022-x64-ENU-Dev.iso
+ssas	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-21T12:42:37.1052519Z   SQL_ISO_SHA256: 80D2CD75DD2B28098C0182F50AD86BD44F9B3A9F357C30FF617480A1497DAFFD
+ssas	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-21T12:42:37.1053425Z   SETUP_LOG: C:\Program Files\Microsoft SQL Server\160\Setup Bootstrap\Log
+ssas	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-21T12:42:37.1054093Z ##[endgroup]
+ssas	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-21T12:42:37.2621458Z Syncing repository: brownjuly2003-code/ssas-mdx-sales-cube
+ssas	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-21T12:42:37.2623289Z ##[group]Getting Git version info
+ssas	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-21T12:42:37.2624039Z Working directory is 'D:\a\ssas-mdx-sales-cube\ssas-mdx-sales-cube'
+ssas	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-21T12:42:37.4645216Z [command]"C:\Program Files\Git\bin\git.exe" version
+ssas	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-21T12:42:38.9276932Z git version 2.56.1.windows.1
+ssas	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-21T12:42:38.9317983Z ##[endgroup]
+ssas	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-21T12:42:38.9331067Z Temporarily overriding HOME='D:\a\_temp\e3740b06-4e1a-42c3-a1bf-00e014005bdd' before making global git config changes
+ssas	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-21T12:42:38.9333004Z Adding repository directory to the temporary git global config as a safe directory
+ssas	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-21T12:42:38.9340863Z [command]"C:\Program Files\Git\bin\git.exe" config --global --add safe.directory D:\a\ssas-mdx-sales-cube\ssas-mdx-sales-cube
+ssas	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-21T12:42:39.0819323Z Deleting the contents of 'D:\a\ssas-mdx-sales-cube\ssas-mdx-sales-cube'
+ssas	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-21T12:42:39.0823391Z ##[group]Determining repository object format
+ssas	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-21T12:42:39.0825302Z ##[endgroup]
+ssas	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-21T12:42:39.0826569Z ##[group]Initializing the repository
+ssas	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-21T12:42:39.0834530Z [command]"C:\Program Files\Git\bin\git.exe" init D:\a\ssas-mdx-sales-cube\ssas-mdx-sales-cube
+ssas	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-21T12:42:39.2595795Z Initialized empty Git repository in D:/a/ssas-mdx-sales-cube/ssas-mdx-sales-cube/.git/
+ssas	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-21T12:42:39.2630936Z [command]"C:\Program Files\Git\bin\git.exe" remote add origin https://github.com/brownjuly2003-code/ssas-mdx-sales-cube
+ssas	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-21T12:42:39.4005649Z ##[endgroup]
+ssas	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-21T12:42:39.4006605Z ##[group]Disabling automatic garbage collection
+ssas	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-21T12:42:39.4014920Z [command]"C:\Program Files\Git\bin\git.exe" config --local gc.auto 0
+ssas	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-21T12:42:39.4415284Z ##[endgroup]
+ssas	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-21T12:42:39.4415709Z ##[group]Setting up auth
+ssas	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-21T12:42:39.4417215Z Removing SSH command configuration
+ssas	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-21T12:42:39.4433045Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp core\.sshCommand
+ssas	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-21T12:42:39.4724455Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\""
+ssas	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-21T12:42:43.7570276Z Removing HTTP extra header
+ssas	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-21T12:42:43.7579949Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+ssas	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-21T12:42:43.7870381Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\""
+ssas	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-21T12:42:44.2339751Z Removing includeIf entries pointing to credentials config files
+ssas	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-21T12:42:44.2353534Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp ^includeIf\.gitdir:
+ssas	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-21T12:42:44.2646070Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "git config --local --show-origin --name-only --get-regexp remote.origin.url"
+ssas	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-21T12:42:44.7195141Z [command]"C:\Program Files\Git\bin\git.exe" config --file D:\a\_temp\git-credentials-7ae2a46b-8bc7-4889-a9bc-ccc178fa7ad0.config http.https://github.com/.extraheader "AUTHORIZATION: basic ***"
+ssas	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-21T12:42:44.7489470Z [command]"C:\Program Files\Git\bin\git.exe" config --local includeIf.gitdir:D:/a/ssas-mdx-sales-cube/ssas-mdx-sales-cube/.git.path D:\a\_temp\git-credentials-7ae2a46b-8bc7-4889-a9bc-ccc178fa7ad0.config
+ssas	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-21T12:42:44.7772994Z [command]"C:\Program Files\Git\bin\git.exe" config --local includeIf.gitdir:D:/a/ssas-mdx-sales-cube/ssas-mdx-sales-cube/.git/worktrees/*.path D:\a\_temp\git-credentials-7ae2a46b-8bc7-4889-a9bc-ccc178fa7ad0.config
+ssas	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-21T12:42:44.8346961Z [command]"C:\Program Files\Git\bin\git.exe" config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-7ae2a46b-8bc7-4889-a9bc-ccc178fa7ad0.config
+ssas	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-21T12:42:44.8670103Z [command]"C:\Program Files\Git\bin\git.exe" config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-7ae2a46b-8bc7-4889-a9bc-ccc178fa7ad0.config
+ssas	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-21T12:42:44.8951139Z ##[endgroup]
+ssas	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-21T12:42:44.8952842Z ##[group]Fetching the repository
+ssas	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-21T12:42:44.8969162Z [command]"C:\Program Files\Git\bin\git.exe" -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +ed9510d2605091a161ed726af6c62f1e3f4778f8:refs/remotes/origin/main
+ssas	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-21T12:42:47.7272097Z From https://github.com/brownjuly2003-code/ssas-mdx-sales-cube
+ssas	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-21T12:42:47.7272942Z  * [new ref]         ed9510d2605091a161ed726af6c62f1e3f4778f8 -> origin/main
+ssas	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-21T12:42:47.7311392Z [command]"C:\Program Files\Git\bin\git.exe" branch --list --remote origin/main
+ssas	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-21T12:42:47.7931806Z   origin/main
+ssas	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-21T12:42:47.7968280Z [command]"C:\Program Files\Git\bin\git.exe" rev-parse refs/remotes/origin/main
+ssas	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-21T12:42:47.8395038Z ed9510d2605091a161ed726af6c62f1e3f4778f8
+ssas	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-21T12:42:47.8419280Z ##[endgroup]
+ssas	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-21T12:42:47.8419859Z ##[group]Determining the checkout info
+ssas	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-21T12:42:47.8420598Z ##[endgroup]
+ssas	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-21T12:42:47.8429744Z [command]"C:\Program Files\Git\bin\git.exe" sparse-checkout disable
+ssas	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-21T12:42:47.8763295Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset-all extensions.worktreeConfig
+ssas	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-21T12:42:47.9045274Z ##[group]Checking out the ref
+ssas	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-21T12:42:47.9057007Z [command]"C:\Program Files\Git\bin\git.exe" checkout --progress --force -B main refs/remotes/origin/main
+ssas	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-21T12:42:48.0387592Z Switched to a new branch 'main'
+ssas	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-21T12:42:48.0596577Z branch 'main' set up to track 'origin/main'.
+ssas	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-21T12:42:48.0628537Z ##[endgroup]
+ssas	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-21T12:42:48.1278567Z [command]"C:\Program Files\Git\bin\git.exe" log -1 --format=%H
+ssas	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-21T12:42:48.1599137Z ed9510d2605091a161ed726af6c62f1e3f4778f8
+ssas	Run actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0	﻿2026-11-21T12:42:48.2050580Z ##[group]Run actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0
+ssas	Run actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0	2026-11-21T12:42:48.2051045Z with:
+ssas	Run actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0	2026-11-21T12:42:48.2051227Z   python-version: 3.11
+ssas	Run actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0	2026-11-21T12:42:48.2051437Z   check-latest: false
+ssas	Run actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0	2026-11-21T12:42:48.2053946Z   token: ***
+ssas	Run actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0	2026-11-21T12:42:48.2054272Z   mirror: https://raw.githubusercontent.com/actions/python-versions/main
+ssas	Run actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0	2026-11-21T12:42:48.2054658Z   update-environment: true
+ssas	Run actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0	2026-11-21T12:42:48.2054872Z   allow-prereleases: false
+ssas	Run actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0	2026-11-21T12:42:48.2055069Z   freethreaded: false
+ssas	Run actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0	2026-11-21T12:42:48.2055252Z env:
+ssas	Run actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0	2026-11-21T12:42:48.2055401Z   PYTHONPATH: src
+ssas	Run actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0	2026-11-21T12:42:48.2055575Z   EVIDENCE: reports/ssas
+ssas	Run actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0	2026-11-21T12:42:48.2055780Z   SQLSERVER_MODULE_VERSION: 22.4.5.1
+ssas	Run actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0	2026-11-21T12:42:48.2056305Z   SQL_ISO_URL: https://download.microsoft.com/download/3/8/d/38de7036-2433-4207-8eae-06e247e17b25/SQLServer2022-x64-ENU-Dev.iso
+ssas	Run actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0	2026-11-21T12:42:48.2056975Z   SQL_ISO_SHA256: 80D2CD75DD2B28098C0182F50AD86BD44F9B3A9F357C30FF617480A1497DAFFD
+ssas	Run actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0	2026-11-21T12:42:48.2057508Z   SETUP_LOG: C:\Program Files\Microsoft SQL Server\160\Setup Bootstrap\Log
+ssas	Run actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0	2026-11-21T12:42:48.2057849Z ##[endgroup]
+ssas	Run actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0	2026-11-21T12:42:48.3416389Z ##[group]Installed versions
+ssas	Run actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0	2026-11-21T12:42:48.3672853Z Successfully set up CPython (3.11.9)
+ssas	Run actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0	2026-11-21T12:42:48.3673441Z ##[endgroup]
+ssas	1. Build the seed and check the reference against docs/runs/expected-seed64.json	﻿2026-11-21T12:42:48.3896513Z ##[group]Run $ErrorActionPreference = 'Stop'
+ssas	1. Build the seed and check the reference against docs/runs/expected-seed64.json	2026-11-21T12:42:48.3896982Z [36;1m$ErrorActionPreference = 'Stop'[0m
+ssas	1. Build the seed and check the reference against docs/runs/expected-seed64.json	2026-11-21T12:42:48.3897422Z [36;1mNew-Item -ItemType Directory -Force -Path $env:EVIDENCE | Out-Null[0m
+ssas	1. Build the seed and check the reference against docs/runs/expected-seed64.json	2026-11-21T12:42:48.3897821Z [36;1mpython --version[0m
+ssas	1. Build the seed and check the reference against docs/runs/expected-seed64.json	2026-11-21T12:42:48.3898084Z [36;1mpython -m pip install -r requirements.txt[0m
+ssas	1. Build the seed and check the reference against docs/runs/expected-seed64.json	2026-11-21T12:42:48.3898493Z [36;1mif ($LASTEXITCODE -ne 0) { throw "pip install exited with $LASTEXITCODE" }[0m
+ssas	1. Build the seed and check the reference against docs/runs/expected-seed64.json	2026-11-21T12:42:48.3898914Z [36;1mpython -m sales_cube --output reports[0m
+ssas	1. Build the seed and check the reference against docs/runs/expected-seed64.json	2026-11-21T12:42:48.3899338Z [36;1mif ($LASTEXITCODE -ne 0) { throw "python -m sales_cube exited with $LASTEXITCODE" }[0m
+ssas	1. Build the seed and check the reference against docs/runs/expected-seed64.json	2026-11-21T12:42:48.3899797Z [36;1mGet-Content -Encoding UTF8 reports/summary.txt[0m
+ssas	1. Build the seed and check the reference against docs/runs/expected-seed64.json	2026-11-21T12:42:48.3900810Z [36;1mpython -c "import json, sys; a = json.load(open('reports/expected.json', encoding='utf-8')); b = json.load(open('docs/runs/expected-seed64.json', encoding='utf-8')); sys.exit(0 if a == b else 'reports/expected.json differs from docs/runs/expected-seed64.json')"[0m
+ssas	1. Build the seed and check the reference against docs/runs/expected-seed64.json	2026-11-21T12:42:48.3902227Z [36;1mif ($LASTEXITCODE -ne 0) { throw 'The generated reference differs from the published one.' }[0m
+ssas	1. Build the seed and check the reference against docs/runs/expected-seed64.json	2026-11-21T12:42:48.3902878Z [36;1m$line = "reference: reports/expected.json equals docs/runs/expected-seed64.json (seed 64)"[0m
+ssas	1. Build the seed and check the reference against docs/runs/expected-seed64.json	2026-11-21T12:42:48.3903454Z [36;1mAdd-Content -Encoding UTF8 -Path "$env:EVIDENCE/summary.txt" -Value $line[0m
+ssas	1. Build the seed and check the reference against docs/runs/expected-seed64.json	2026-11-21T12:42:48.3903848Z [36;1mWrite-Output $line[0m
+ssas	1. Build the seed and check the reference against docs/runs/expected-seed64.json	2026-11-21T12:42:48.4233328Z shell: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.EXE -command ". '{0}'"
+ssas	1. Build the seed and check the reference against docs/runs/expected-seed64.json	2026-11-21T12:42:48.4233749Z env:
+ssas	1. Build the seed and check the reference against docs/runs/expected-seed64.json	2026-11-21T12:42:48.4233919Z   PYTHONPATH: src
+ssas	1. Build the seed and check the reference against docs/runs/expected-seed64.json	2026-11-21T12:42:48.4234119Z   EVIDENCE: reports/ssas
+ssas	1. Build the seed and check the reference against docs/runs/expected-seed64.json	2026-11-21T12:42:48.4234346Z   SQLSERVER_MODULE_VERSION: 22.4.5.1
+ssas	1. Build the seed and check the reference against docs/runs/expected-seed64.json	2026-11-21T12:42:48.4234903Z   SQL_ISO_URL: https://download.microsoft.com/download/3/8/d/38de7036-2433-4207-8eae-06e247e17b25/SQLServer2022-x64-ENU-Dev.iso
+ssas	1. Build the seed and check the reference against docs/runs/expected-seed64.json	2026-11-21T12:42:48.4235617Z   SQL_ISO_SHA256: 80D2CD75DD2B28098C0182F50AD86BD44F9B3A9F357C30FF617480A1497DAFFD
+ssas	1. Build the seed and check the reference against docs/runs/expected-seed64.json	2026-11-21T12:42:48.4236126Z   SETUP_LOG: C:\Program Files\Microsoft SQL Server\160\Setup Bootstrap\Log
+ssas	1. Build the seed and check the reference against docs/runs/expected-seed64.json	2026-11-21T12:42:48.4236558Z   pythonLocation: C:\hostedtoolcache\windows\Python\3.11.9\x64
+ssas	1. Build the seed and check the reference against docs/runs/expected-seed64.json	2026-11-21T12:42:48.4237017Z   PKG_CONFIG_PATH: C:\hostedtoolcache\windows\Python\3.11.9\x64/lib/pkgconfig
+ssas	1. Build the seed and check the reference against docs/runs/expected-seed64.json	2026-11-21T12:42:48.4237449Z   Python_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.11.9\x64
+ssas	1. Build the seed and check the reference against docs/runs/expected-seed64.json	2026-11-21T12:42:48.4237826Z   Python2_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.11.9\x64
+ssas	1. Build the seed and check the reference against docs/runs/expected-seed64.json	2026-11-21T12:42:48.4238203Z   Python3_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.11.9\x64
+ssas	1. Build the seed and check the reference against docs/runs/expected-seed64.json	2026-11-21T12:42:48.4238500Z ##[endgroup]
+ssas	1. Build the seed and check the reference against docs/runs/expected-seed64.json	2026-11-21T12:43:03.2508639Z Python 3.11.9
+ssas	1. Build the seed and check the reference against docs/runs/expected-seed64.json	2026-11-21T12:43:18.4471630Z Collecting pandas==2.3.2 (from -r requirements.txt (line 1))
+ssas	1. Build the seed and check the reference against docs/runs/expected-seed64.json	2026-11-21T12:43:18.6184318Z   Downloading pandas-2.3.2-cp311-cp311-win_amd64.whl.metadata (19 kB)
+ssas	1. Build the seed and check the reference against docs/runs/expected-seed64.json	2026-11-21T12:43:18.7222582Z Collecting pytest==8.4.2 (from -r requirements.txt (line 2))
+ssas	1. Build the seed and check the reference against docs/runs/expected-seed64.json	2026-11-21T12:43:18.7309718Z   Downloading pytest-8.4.2-py3-none-any.whl.metadata (7.7 kB)
+ssas	1. Build the seed and check the reference against docs/runs/expected-seed64.json	2026-11-21T12:43:18.8112255Z Collecting PyYAML==6.0.4 (from -r requirements.txt (line 3))
+ssas	1. Build the seed and check the reference against docs/runs/expected-seed64.json	2026-11-21T12:43:18.8208116Z   Downloading pyyaml-6.0.4-cp311-cp311-win_amd64.whl.metadata (2.4 kB)
+ssas	1. Build the seed and check the reference against docs/runs/expected-seed64.json	2026-11-21T12:43:19.2470673Z Collecting ruff==0.15.22 (from -r requirements.txt (line 4))
+ssas	1. Build the seed and check the reference against docs/runs/expected-seed64.json	2026-11-21T12:43:19.2567515Z   Downloading ruff-0.15.22-py3-none-win_amd64.whl.metadata (27 kB)
+ssas	1. Build the seed and check the reference against docs/runs/expected-seed64.json	2026-11-21T12:43:19.5342770Z Collecting numpy>=1.23.2 (from pandas==2.3.2->-r requirements.txt (line 1))
+ssas	1. Build the seed and check the reference against docs/runs/expected-seed64.json	2026-11-21T12:43:19.5428988Z   Downloading numpy-2.4.6-cp311-cp311-win_amd64.whl.metadata (6.6 kB)
+ssas	1. Build the seed and check the reference against docs/runs/expected-seed64.json	2026-11-21T12:43:19.6069805Z Collecting python-dateutil>=2.8.2 (from pandas==2.3.2->-r requirements.txt (line 1))
+ssas	1. Build the seed and check the reference against docs/runs/expected-seed64.json	2026-11-21T12:43:19.6163226Z   Downloading python_dateutil-4.0.0-py3-none-any.whl.metadata (7.3 kB)
+ssas	1. Build the seed and check the reference against docs/runs/expected-seed64.json	2026-11-21T12:43:19.6991272Z Collecting pytz>=2020.1 (from pandas==2.3.2->-r requirements.txt (line 1))
+ssas	1. Build the seed and check the reference against docs/runs/expected-seed64.json	2026-11-21T12:43:19.7085632Z   Downloading pytz-2026.6-py2.py3-none-any.whl.metadata (22 kB)
+ssas	1. Build the seed and check the reference against docs/runs/expected-seed64.json	2026-11-21T12:43:19.7575310Z Collecting tzdata>=2022.7 (from pandas==2.3.2->-r requirements.txt (line 1))
+ssas	1. Build the seed and check the reference against docs/runs/expected-seed64.json	2026-11-21T12:43:19.7657237Z   Downloading tzdata-2026.6-py2.py3-none-any.whl.metadata (1.4 kB)
+ssas	1. Build the seed and check the reference against docs/runs/expected-seed64.json	2026-11-21T12:43:19.8107271Z Collecting colorama>=0.4 (from pytest==8.4.2->-r requirements.txt (line 2))
+ssas	1. Build the seed and check the reference against docs/runs/expected-seed64.json	2026-11-21T12:43:19.8375805Z   Downloading colorama-0.4.6-py2.py3-none-any.whl.metadata (17 kB)
+ssas	1. Build the seed and check the reference against docs/runs/expected-seed64.json	2026-11-21T12:43:19.8962674Z Collecting iniconfig>=1 (from pytest==8.4.2->-r requirements.txt (line 2))
+ssas	1. Build the seed and check the reference against docs/runs/expected-seed64.json	2026-11-21T12:43:19.9440570Z   Downloading iniconfig-2.3.1-py3-none-any.whl.metadata (2.8 kB)
+ssas	1. Build the seed and check the reference against docs/runs/expected-seed64.json	2026-11-21T12:43:20.0480854Z Collecting packaging>=20 (from pytest==8.4.2->-r requirements.txt (line 2))
+ssas	1. Build the seed and check the reference against docs/runs/expected-seed64.json	2026-11-21T12:43:20.0585885Z   Downloading packaging-26.3-py3-none-any.whl.metadata (3.5 kB)
+ssas	1. Build the seed and check the reference against docs/runs/expected-seed64.json	2026-11-21T12:43:20.1577842Z Collecting pluggy<2,>=1.5 (from pytest==8.4.2->-r requirements.txt (line 2))
+ssas	1. Build the seed and check the reference against docs/runs/expected-seed64.json	2026-11-21T12:43:20.1682998Z   Downloading pluggy-1.7.0-py3-none-any.whl.metadata (5.0 kB)
+ssas	1. Build the seed and check the reference against docs/runs/expected-seed64.json	2026-11-21T12:43:20.2192896Z Collecting pygments>=2.7.2 (from pytest==8.4.2->-r requirements.txt (line 2))
+ssas	1. Build the seed and check the reference against docs/runs/expected-seed64.json	2026-11-21T12:43:20.2283289Z   Downloading pygments-2.21.0-py3-none-any.whl.metadata (2.5 kB)
+ssas	1. Build the seed and check the reference against docs/runs/expected-seed64.json	2026-11-21T12:43:20.3276679Z Downloading pandas-2.3.2-cp311-cp311-win_amd64.whl (11.3 MB)
+ssas	1. Build the seed and check the reference against docs/runs/expected-seed64.json	2026-11-21T12:43:20.8635622Z    ---------------------------------------- 11.3/11.3 MB 22.1 MB/s  0:00:00
+ssas	1. Build the seed and check the reference against docs/runs/expected-seed64.json	2026-11-21T12:43:20.8721181Z Downloading pytest-8.4.2-py3-none-any.whl (365 kB)
+ssas	1. Build the seed and check the reference against docs/runs/expected-seed64.json	2026-11-21T12:43:20.9149983Z Downloading pyyaml-6.0.4-cp311-cp311-win_amd64.whl (161 kB)
+ssas	1. Build the seed and check the reference against docs/runs/expected-seed64.json	2026-11-21T12:43:20.9430392Z Downloading ruff-0.15.22-py3-none-win_amd64.whl (11.9 MB)
+ssas	1. Build the seed and check the reference against docs/runs/expected-seed64.json	2026-11-21T12:43:21.0899453Z    ---------------------------------------- 11.9/11.9 MB 82.8 MB/s  0:00:00
+ssas	1. Build the seed and check the reference against docs/runs/expected-seed64.json	2026-11-21T12:43:21.0980291Z Downloading pluggy-1.7.0-py3-none-any.whl (27 kB)
+ssas	1. Build the seed and check the reference against docs/runs/expected-seed64.json	2026-11-21T12:43:21.1413553Z Downloading colorama-0.4.6-py2.py3-none-any.whl (25 kB)
+ssas	1. Build the seed and check the reference against docs/runs/expected-seed64.json	2026-11-21T12:43:21.1827552Z Downloading iniconfig-2.3.1-py3-none-any.whl (7.6 kB)
+ssas	1. Build the seed and check the reference against docs/runs/expected-seed64.json	2026-11-21T12:43:21.2067698Z Downloading numpy-2.4.6-cp311-cp311-win_amd64.whl (12.6 MB)
+ssas	1. Build the seed and check the reference against docs/runs/expected-seed64.json	2026-11-21T12:43:21.3225715Z    ---------------------------------------- 12.6/12.6 MB 98.8 MB/s  0:00:00
+ssas	1. Build the seed and check the reference against docs/runs/expected-seed64.json	2026-11-21T12:43:21.3306337Z Downloading packaging-26.3-py3-none-any.whl (129 kB)
+ssas	1. Build the seed and check the reference against docs/runs/expected-seed64.json	2026-11-21T12:43:21.3588794Z Downloading pygments-2.21.0-py3-none-any.whl (1.3 MB)
+ssas	1. Build the seed and check the reference against docs/runs/expected-seed64.json	2026-11-21T12:43:21.3893004Z    ---------------------------------------- 1.3/1.3 MB 30.9 MB/s  0:00:00
+ssas	1. Build the seed and check the reference against docs/runs/expected-seed64.json	2026-11-21T12:43:21.4162443Z Downloading python_dateutil-4.0.0-py3-none-any.whl (92 kB)
+ssas	1. Build the seed and check the reference against docs/runs/expected-seed64.json	2026-11-21T12:43:21.4563328Z Downloading pytz-2026.6-py2.py3-none-any.whl (506 kB)
+ssas	1. Build the seed and check the reference against docs/runs/expected-seed64.json	2026-11-21T12:43:21.4838667Z Downloading tzdata-2026.6-py2.py3-none-any.whl (348 kB)
+ssas	1. Build the seed and check the reference against docs/runs/expected-seed64.json	2026-11-21T12:43:22.3439384Z Installing collected packages: pytz, tzdata, ruff, PyYAML, pygments, pluggy, packaging, numpy, iniconfig, colorama, python-dateutil, pytest, pandas
+ssas	1. Build the seed and check the reference against docs/runs/expected-seed64.json	2026-11-21T12:43:46.5780958Z 
+ssas	1. Build the seed and check the reference against docs/runs/expected-seed64.json	2026-11-21T12:43:46.5795565Z Successfully installed PyYAML-6.0.4 colorama-0.4.6 iniconfig-2.3.1 numpy-2.4.6 packaging-26.3 pandas-2.3.2 pluggy-1.7.0 pygments-2.21.0 pytest-8.4.2 python-dateutil-4.0.0 pytz-2026.6 ruff-0.15.22 tzdata-2026.6
+ssas	1. Build the seed and check the reference against docs/runs/expected-seed64.json	2026-11-21T12:43:47.5669735Z seed=64
+ssas	1. Build the seed and check the reference against docs/runs/expected-seed64.json	2026-11-21T12:43:47.5670642Z DimDate: 731
+ssas	1. Build the seed and check the reference against docs/runs/expected-seed64.json	2026-11-21T12:43:47.5672287Z DimProduct: 6
+ssas	1. Build the seed and check the reference against docs/runs/expected-seed64.json	2026-11-21T12:43:47.5674004Z DimCustomer: 4
+ssas	1. Build the seed and check the reference against docs/runs/expected-seed64.json	2026-11-21T12:43:47.5675295Z FactSales: 1838
+ssas	1. Build the seed and check the reference against docs/runs/expected-seed64.json	2026-11-21T12:43:47.5676553Z 01_total: [[870055]]
+ssas	1. Build the seed and check the reference against docs/runs/expected-seed64.json	2026-11-21T12:43:47.5677843Z 02_units_by_year: [['2024', 4232], ['2025', 4190]]
+ssas	1. Build the seed and check the reference against docs/runs/expected-seed64.json	2026-11-21T12:43:47.5679018Z 03_category: [['Office', 192840], ['Tech', 218900]]
+ssas	1. Build the seed and check the reference against docs/runs/expected-seed64.json	2026-11-21T12:43:47.5679600Z 04_region: [['East', 201310], ['West', 210430]]
+ssas	1. Build the seed and check the reference against docs/runs/expected-seed64.json	2026-11-21T12:43:47.5682278Z 05_months: [['2025-01', 31130], ['2025-02', 31595], ['2025-03', 28625], ['2025-04', 35240], ['2025-05', 41575], ['2025-06', 35485], ['2025-07', 43185], ['2025-08', 30020], ['2025-09', 26565], ['2025-10', 32595], ['2025-11', 36900], ['2025-12', 38825]]
+ssas	1. Build the seed and check the reference against docs/runs/expected-seed64.json	2026-11-21T12:43:47.5683896Z 06_ytd_march: [[91350]]
+ssas	1. Build the seed and check the reference against docs/runs/expected-seed64.json	2026-11-21T12:43:47.5685761Z 07_prior_march: [[42395]]
+ssas	1. Build the seed and check the reference against docs/runs/expected-seed64.json	2026-11-21T12:43:47.5686189Z 08_march_change: [[-13770]]
+ssas	1. Build the seed and check the reference against docs/runs/expected-seed64.json	2026-11-21T12:43:47.5686981Z 09_top_products: [['Screen', 152640], ['Desk', 117000], ['Chair', 53370]]
+ssas	1. Build the seed and check the reference against docs/runs/expected-seed64.json	2026-11-21T12:43:47.5688160Z 10_east_office: [['Aspen', 48335], ['Birch', 47650]]
+ssas	1. Build the seed and check the reference against docs/runs/expected-seed64.json	2026-11-21T12:43:49.1368763Z reference: reports/expected.json equals docs/runs/expected-seed64.json (seed 64)
+ssas	2a. Download the SQL Server 2022 Developer ISO and check its SHA-256	﻿2026-11-21T12:43:49.3087639Z ##[group]Run $ErrorActionPreference = 'Stop'
+ssas	2a. Download the SQL Server 2022 Developer ISO and check its SHA-256	2026-11-21T12:43:49.3088065Z [36;1m$ErrorActionPreference = 'Stop'[0m
+ssas	2a. Download the SQL Server 2022 Developer ISO and check its SHA-256	2026-11-21T12:43:49.3088442Z [36;1m$iso = Join-Path $env:RUNNER_TEMP 'SQLServer2022-x64-ENU-Dev.iso'[0m
+ssas	2a. Download the SQL Server 2022 Developer ISO and check its SHA-256	2026-11-21T12:43:49.3088882Z [36;1mcurl.exe -fsSL --retry 3 -o $iso $env:SQL_ISO_URL[0m
+ssas	2a. Download the SQL Server 2022 Developer ISO and check its SHA-256	2026-11-21T12:43:49.3089315Z [36;1mif ($LASTEXITCODE -ne 0) { throw "curl exited with $LASTEXITCODE" }[0m
+ssas	2a. Download the SQL Server 2022 Developer ISO and check its SHA-256	2026-11-21T12:43:49.3089780Z [36;1m$hash = (Get-FileHash -Algorithm SHA256 -LiteralPath $iso).Hash[0m
+ssas	2a. Download the SQL Server 2022 Developer ISO and check its SHA-256	2026-11-21T12:43:49.3091109Z [36;1m$line = "SQL Server media: SQLServer2022-x64-ENU-Dev.iso, $((Get-Item -LiteralPath $iso).Length) bytes, SHA-256 $hash"[0m
+ssas	2a. Download the SQL Server 2022 Developer ISO and check its SHA-256	2026-11-21T12:43:49.3091777Z [36;1mAdd-Content -Encoding UTF8 -Path "$env:EVIDENCE/summary.txt" -Value $line[0m
+ssas	2a. Download the SQL Server 2022 Developer ISO and check its SHA-256	2026-11-21T12:43:49.3092178Z [36;1mWrite-Output $line[0m
+ssas	2a. Download the SQL Server 2022 Developer ISO and check its SHA-256	2026-11-21T12:43:49.3092587Z [36;1mif ($hash -ne $env:SQL_ISO_SHA256) { throw "SHA-256 differs from the pinned $env:SQL_ISO_SHA256" }[0m
+ssas	2a. Download the SQL Server 2022 Developer ISO and check its SHA-256	2026-11-21T12:43:49.3129927Z shell: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.EXE -command ". '{0}'"
+ssas	2a. Download the SQL Server 2022 Developer ISO and check its SHA-256	2026-11-21T12:43:49.3130354Z env:
+ssas	2a. Download the SQL Server 2022 Developer ISO and check its SHA-256	2026-11-21T12:43:49.3130523Z   PYTHONPATH: src
+ssas	2a. Download the SQL Server 2022 Developer ISO and check its SHA-256	2026-11-21T12:43:49.3130713Z   EVIDENCE: reports/ssas
+ssas	2a. Download the SQL Server 2022 Developer ISO and check its SHA-256	2026-11-21T12:43:49.3130930Z   SQLSERVER_MODULE_VERSION: 22.4.5.1
+ssas	2a. Download the SQL Server 2022 Developer ISO and check its SHA-256	2026-11-21T12:43:49.3131483Z   SQL_ISO_URL: https://download.microsoft.com/download/3/8/d/38de7036-2433-4207-8eae-06e247e17b25/SQLServer2022-x64-ENU-Dev.iso
+ssas	2a. Download the SQL Server 2022 Developer ISO and check its SHA-256	2026-11-21T12:43:49.3132176Z   SQL_ISO_SHA256: 80D2CD75DD2B28098C0182F50AD86BD44F9B3A9F357C30FF617480A1497DAFFD
+ssas	2a. Download the SQL Server 2022 Developer ISO and check its SHA-256	2026-11-21T12:43:49.3132678Z   SETUP_LOG: C:\Program Files\Microsoft SQL Server\160\Setup Bootstrap\Log
+ssas	2a. Download the SQL Server 2022 Developer ISO and check its SHA-256	2026-11-21T12:43:49.3133103Z   pythonLocation: C:\hostedtoolcache\windows\Python\3.11.9\x64
+ssas	2a. Download the SQL Server 2022 Developer ISO and check its SHA-256	2026-11-21T12:43:49.3133549Z   PKG_CONFIG_PATH: C:\hostedtoolcache\windows\Python\3.11.9\x64/lib/pkgconfig
+ssas	2a. Download the SQL Server 2022 Developer ISO and check its SHA-256	2026-11-21T12:43:49.3133982Z   Python_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.11.9\x64
+ssas	2a. Download the SQL Server 2022 Developer ISO and check its SHA-256	2026-11-21T12:43:49.3134368Z   Python2_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.11.9\x64
+ssas	2a. Download the SQL Server 2022 Developer ISO and check its SHA-256	2026-11-21T12:43:49.3134765Z   Python3_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.11.9\x64
+ssas	2a. Download the SQL Server 2022 Developer ISO and check its SHA-256	2026-11-21T12:43:49.3135090Z ##[endgroup]
+ssas	2a. Download the SQL Server 2022 Developer ISO and check its SHA-256	2026-11-21T12:44:04.5840947Z SQL Server media: SQLServer2022-x64-ENU-Dev.iso, 1163053056 bytes, SHA-256 80D2CD75DD2B28098C0182F50AD86BD44F9B3A9F357C30FF617480A1497DAFFD
+ssas	2b. Install SQL Server 2022 Developer - Database Engine and Analysis Services (Multidimensional)	﻿2026-11-21T12:44:04.6599489Z ##[group]Run $ErrorActionPreference = 'Stop'
+ssas	2b. Install SQL Server 2022 Developer - Database Engine and Analysis Services (Multidimensional)	2026-11-21T12:44:04.6599950Z [36;1m$ErrorActionPreference = 'Stop'[0m
+ssas	2b. Install SQL Server 2022 Developer - Database Engine and Analysis Services (Multidimensional)	2026-11-21T12:44:04.6600342Z [36;1m$iso = Join-Path $env:RUNNER_TEMP 'SQLServer2022-x64-ENU-Dev.iso'[0m
+ssas	2b. Install SQL Server 2022 Developer - Database Engine and Analysis Services (Multidimensional)	2026-11-21T12:44:04.6600960Z [36;1m# Pending reboot markers, printed for diagnosis; the setup rule RebootRequiredCheck is skipped[0m
+ssas	2b. Install SQL Server 2022 Developer - Database Engine and Analysis Services (Multidimensional)	2026-11-21T12:44:04.6601529Z [36;1m# below, as the Chocolatey package does with /IgnorePendingReboot.[0m
+ssas	2b. Install SQL Server 2022 Developer - Database Engine and Analysis Services (Multidimensional)	2026-11-21T12:44:04.6602135Z [36;1mforeach ($key in 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Component Based Servicing\RebootPending',[0m
+ssas	2b. Install SQL Server 2022 Developer - Database Engine and Analysis Services (Multidimensional)	2026-11-21T12:44:04.6602937Z [36;1m                 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate\Auto Update\RebootRequired') {[0m
+ssas	2b. Install SQL Server 2022 Developer - Database Engine and Analysis Services (Multidimensional)	2026-11-21T12:44:04.6603548Z [36;1m  Write-Output "pending reboot marker $key present: $(Test-Path $key)"[0m
+ssas	2b. Install SQL Server 2022 Developer - Database Engine and Analysis Services (Multidimensional)	2026-11-21T12:44:04.6603913Z [36;1m}[0m
+ssas	2b. Install SQL Server 2022 Developer - Database Engine and Analysis Services (Multidimensional)	2026-11-21T12:44:04.6604156Z [36;1m$image = Mount-DiskImage -ImagePath $iso -PassThru[0m
+ssas	2b. Install SQL Server 2022 Developer - Database Engine and Analysis Services (Multidimensional)	2026-11-21T12:44:04.6604516Z [36;1m$letter = $null[0m
+ssas	2b. Install SQL Server 2022 Developer - Database Engine and Analysis Services (Multidimensional)	2026-11-21T12:44:04.6604771Z [36;1mfor ($i = 1; $i -le 10 -and -not $letter; $i++) {[0m
+ssas	2b. Install SQL Server 2022 Developer - Database Engine and Analysis Services (Multidimensional)	2026-11-21T12:44:04.6605105Z [36;1m  $letter = ($image | Get-Volume).DriveLetter[0m
+ssas	2b. Install SQL Server 2022 Developer - Database Engine and Analysis Services (Multidimensional)	2026-11-21T12:44:04.6605427Z [36;1m  if (-not $letter) { Start-Sleep -Seconds 3 }[0m
+ssas	2b. Install SQL Server 2022 Developer - Database Engine and Analysis Services (Multidimensional)	2026-11-21T12:44:04.6605695Z [36;1m}[0m
+ssas	2b. Install SQL Server 2022 Developer - Database Engine and Analysis Services (Multidimensional)	2026-11-21T12:44:04.6605966Z [36;1mif (-not $letter) { throw 'The mounted ISO got no drive letter.' }[0m
+ssas	2b. Install SQL Server 2022 Developer - Database Engine and Analysis Services (Multidimensional)	2026-11-21T12:44:04.6606339Z [36;1m$setup = "${letter}:\setup.exe"[0m
+ssas	2b. Install SQL Server 2022 Developer - Database Engine and Analysis Services (Multidimensional)	2026-11-21T12:44:04.6606728Z [36;1mWrite-Output "setup: $setup $((Get-Item $setup).VersionInfo.ProductVersion)"[0m
+ssas	2b. Install SQL Server 2022 Developer - Database Engine and Analysis Services (Multidimensional)	2026-11-21T12:44:04.6607154Z [36;1m$who = "$env:USERDOMAIN\$env:USERNAME"[0m
+ssas	2b. Install SQL Server 2022 Developer - Database Engine and Analysis Services (Multidimensional)	2026-11-21T12:44:04.6607772Z [36;1m# Parameters: https://learn.microsoft.com/sql/database-engine/install-windows/install-sql-server-from-the-command-prompt[0m
+ssas	2b. Install SQL Server 2022 Developer - Database Engine and Analysis Services (Multidimensional)	2026-11-21T12:44:04.6608586Z [36;1m# Developer edition: the product key is predefined, /PID is not needed. ASSERVERMODE must be upper case.[0m
+ssas	2b. Install SQL Server 2022 Developer - Database Engine and Analysis Services (Multidimensional)	2026-11-21T12:44:04.6609066Z [36;1m$arguments = @([0m
+ssas	2b. Install SQL Server 2022 Developer - Database Engine and Analysis Services (Multidimensional)	2026-11-21T12:44:04.6609421Z [36;1m  '/Q', '/ACTION=Install', '/IACCEPTSQLSERVERLICENSETERMS', '/UPDATEENABLED=False',[0m
+ssas	2b. Install SQL Server 2022 Developer - Database Engine and Analysis Services (Multidimensional)	2026-11-21T12:44:04.6610077Z [36;1m  '/FEATURES=SQLENGINE,AS', '/INSTANCENAME=MSSQLSERVER',[0m
+ssas	2b. Install SQL Server 2022 Developer - Database Engine and Analysis Services (Multidimensional)	2026-11-21T12:44:04.6610624Z [36;1m  '/SQLSVCACCOUNT="NT Service\MSSQLSERVER"', "/SQLSYSADMINACCOUNTS=`"$who`" `"BUILTIN\Administrators`"",[0m
+ssas	2b. Install SQL Server 2022 Developer - Database Engine and Analysis Services (Multidimensional)	2026-11-21T12:44:04.6611275Z [36;1m  '/ASSVCACCOUNT="NT Service\MSSQLServerOLAPService"', "/ASSYSADMINACCOUNTS=`"$who`"",[0m
+ssas	2b. Install SQL Server 2022 Developer - Database Engine and Analysis Services (Multidimensional)	2026-11-21T12:44:04.6611867Z [36;1m  '/ASSERVERMODE=MULTIDIMENSIONAL', '/TCPENABLED=1', '/SkipRules=RebootRequiredCheck'[0m
+ssas	2b. Install SQL Server 2022 Developer - Database Engine and Analysis Services (Multidimensional)	2026-11-21T12:44:04.6612282Z [36;1m) -join ' '[0m
+ssas	2b. Install SQL Server 2022 Developer - Database Engine and Analysis Services (Multidimensional)	2026-11-21T12:44:04.6612516Z [36;1mWrite-Output "setup arguments: $arguments"[0m
+ssas	2b. Install SQL Server 2022 Developer - Database Engine and Analysis Services (Multidimensional)	2026-11-21T12:44:04.6612841Z [36;1m$watch = [Diagnostics.Stopwatch]::StartNew()[0m
+ssas	2b. Install SQL Server 2022 Developer - Database Engine and Analysis Services (Multidimensional)	2026-11-21T12:44:04.6613348Z [36;1m$process = Start-Process -FilePath $setup -ArgumentList $arguments -Wait -PassThru -NoNewWindow[0m
+ssas	2b. Install SQL Server 2022 Developer - Database Engine and Analysis Services (Multidimensional)	2026-11-21T12:44:04.6613830Z [36;1m$code = $process.ExitCode[0m
+ssas	2b. Install SQL Server 2022 Developer - Database Engine and Analysis Services (Multidimensional)	2026-11-21T12:44:04.6614232Z [36;1m$minutes = [math]::Round($watch.Elapsed.TotalMinutes, 1)[0m
+ssas	2b. Install SQL Server 2022 Developer - Database Engine and Analysis Services (Multidimensional)	2026-11-21T12:44:04.6614640Z [36;1m$summaryFile = Join-Path $env:SETUP_LOG 'Summary.txt'[0m
+ssas	2b. Install SQL Server 2022 Developer - Database Engine and Analysis Services (Multidimensional)	2026-11-21T12:44:04.6614988Z [36;1mif (Test-Path -LiteralPath $summaryFile) {[0m
+ssas	2b. Install SQL Server 2022 Developer - Database Engine and Analysis Services (Multidimensional)	2026-11-21T12:44:04.6615306Z [36;1m  Write-Output '--- Summary.txt (head) ---'[0m
+ssas	2b. Install SQL Server 2022 Developer - Database Engine and Analysis Services (Multidimensional)	2026-11-21T12:44:04.6615654Z [36;1m  Get-Content -LiteralPath $summaryFile -TotalCount 40[0m
+ssas	2b. Install SQL Server 2022 Developer - Database Engine and Analysis Services (Multidimensional)	2026-11-21T12:44:04.6615962Z [36;1m}[0m
+ssas	2b. Install SQL Server 2022 Developer - Database Engine and Analysis Services (Multidimensional)	2026-11-21T12:44:04.6616383Z [36;1m$line = "SQL Server setup: exit code $code in $minutes min (features SQLENGINE,AS; ASSERVERMODE=MULTIDIMENSIONAL)"[0m
+ssas	2b. Install SQL Server 2022 Developer - Database Engine and Analysis Services (Multidimensional)	2026-11-21T12:44:04.6617020Z [36;1mAdd-Content -Encoding UTF8 -Path "$env:EVIDENCE/summary.txt" -Value $line[0m
+ssas	2b. Install SQL Server 2022 Developer - Database Engine and Analysis Services (Multidimensional)	2026-11-21T12:44:04.6617417Z [36;1mWrite-Output $line[0m
+ssas	2b. Install SQL Server 2022 Developer - Database Engine and Analysis Services (Multidimensional)	2026-11-21T12:44:04.6617655Z [36;1mif ($code -ne 0 -and $code -ne 3010) {[0m
+ssas	2b. Install SQL Server 2022 Developer - Database Engine and Analysis Services (Multidimensional)	2026-11-21T12:44:04.6619475Z [36;1m  if (Test-Path -LiteralPath $summaryFile) {[0m
+ssas	2b. Install SQL Server 2022 Developer - Database Engine and Analysis Services (Multidimensional)	2026-11-21T12:44:04.6619826Z [36;1m    Write-Output '--- Summary.txt (tail) ---'[0m
+ssas	2b. Install SQL Server 2022 Developer - Database Engine and Analysis Services (Multidimensional)	2026-11-21T12:44:04.6620202Z [36;1m    Get-Content -LiteralPath $summaryFile -Tail 80[0m
+ssas	2b. Install SQL Server 2022 Developer - Database Engine and Analysis Services (Multidimensional)	2026-11-21T12:44:04.6620494Z [36;1m  }[0m
+ssas	2b. Install SQL Server 2022 Developer - Database Engine and Analysis Services (Multidimensional)	2026-11-21T12:44:04.6620706Z [36;1m  throw "SQL Server setup exited with $code"[0m
+ssas	2b. Install SQL Server 2022 Developer - Database Engine and Analysis Services (Multidimensional)	2026-11-21T12:44:04.6620980Z [36;1m}[0m
+ssas	2b. Install SQL Server 2022 Developer - Database Engine and Analysis Services (Multidimensional)	2026-11-21T12:44:04.6621202Z [36;1mDismount-DiskImage -ImagePath $iso | Out-Null[0m
+ssas	2b. Install SQL Server 2022 Developer - Database Engine and Analysis Services (Multidimensional)	2026-11-21T12:44:04.6658156Z shell: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.EXE -command ". '{0}'"
+ssas	2b. Install SQL Server 2022 Developer - Database Engine and Analysis Services (Multidimensional)	2026-11-21T12:44:04.6658576Z env:
+ssas	2b. Install SQL Server 2022 Developer - Database Engine and Analysis Services (Multidimensional)	2026-11-21T12:44:04.6658747Z   PYTHONPATH: src
+ssas	2b. Install SQL Server 2022 Developer - Database Engine and Analysis Services (Multidimensional)	2026-11-21T12:44:04.6658986Z   EVIDENCE: reports/ssas
+ssas	2b. Install SQL Server 2022 Developer - Database Engine and Analysis Services (Multidimensional)	2026-11-21T12:44:04.6659204Z   SQLSERVER_MODULE_VERSION: 22.4.5.1
+ssas	2b. Install SQL Server 2022 Developer - Database Engine and Analysis Services (Multidimensional)	2026-11-21T12:44:04.6659753Z   SQL_ISO_URL: https://download.microsoft.com/download/3/8/d/38de7036-2433-4207-8eae-06e247e17b25/SQLServer2022-x64-ENU-Dev.iso
+ssas	2b. Install SQL Server 2022 Developer - Database Engine and Analysis Services (Multidimensional)	2026-11-21T12:44:04.6660453Z   SQL_ISO_SHA256: 80D2CD75DD2B28098C0182F50AD86BD44F9B3A9F357C30FF617480A1497DAFFD
+ssas	2b. Install SQL Server 2022 Developer - Database Engine and Analysis Services (Multidimensional)	2026-11-21T12:44:04.6678969Z   SETUP_LOG: C:\Program Files\Microsoft SQL Server\160\Setup Bootstrap\Log
+ssas	2b. Install SQL Server 2022 Developer - Database Engine and Analysis Services (Multidimensional)	2026-11-21T12:44:04.6679474Z   pythonLocation: C:\hostedtoolcache\windows\Python\3.11.9\x64
+ssas	2b. Install SQL Server 2022 Developer - Database Engine and Analysis Services (Multidimensional)	2026-11-21T12:44:04.6679924Z   PKG_CONFIG_PATH: C:\hostedtoolcache\windows\Python\3.11.9\x64/lib/pkgconfig
+ssas	2b. Install SQL Server 2022 Developer - Database Engine and Analysis Services (Multidimensional)	2026-11-21T12:44:04.6680376Z   Python_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.11.9\x64
+ssas	2b. Install SQL Server 2022 Developer - Database Engine and Analysis Services (Multidimensional)	2026-11-21T12:44:04.6680773Z   Python2_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.11.9\x64
+ssas	2b. Install SQL Server 2022 Developer - Database Engine and Analysis Services (Multidimensional)	2026-11-21T12:44:04.6681165Z   Python3_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.11.9\x64
+ssas	2b. Install SQL Server 2022 Developer - Database Engine and Analysis Services (Multidimensional)	2026-11-21T12:44:04.6681470Z ##[endgroup]
+ssas	2b. Install SQL Server 2022 Developer - Database Engine and Analysis Services (Multidimensional)	2026-11-21T12:44:04.9775732Z pending reboot marker HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Component Based Servicing\RebootPending present: False
+ssas	2b. Install SQL Server 2022 Developer - Database Engine and Analysis Services (Multidimensional)	2026-11-21T12:44:04.9942035Z pending reboot marker HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate\Auto Update\RebootRequired present: False
+ssas	2b. Install SQL Server 2022 Developer - Database Engine and Analysis Services (Multidimensional)	2026-11-21T12:44:15.1877479Z setup: E:\setup.exe 16.0.1000.6
+ssas	2b. Install SQL Server 2022 Developer - Database Engine and Analysis Services (Multidimensional)	2026-11-21T12:44:15.1881848Z setup arguments: /Q /ACTION=Install /IACCEPTSQLSERVERLICENSETERMS /UPDATEENABLED=False /FEATURES=SQLENGINE,AS /INSTANCENAME=MSSQLSERVER /SQLSVCACCOUNT="NT Service\MSSQLSERVER" /SQLSYSADMINACCOUNTS="runnervmhh3zg\runneradmin" "BUILTIN\Administrators" /ASSVCACCOUNT="NT Service\MSSQLServerOLAPService" /ASSYSADMINACCOUNTS="runnervmhh3zg\runneradmin" /ASSERVERMODE=MULTIDIMENSIONAL /TCPENABLED=1 /SkipRules=RebootRequiredCheck
+ssas	2b. Install SQL Server 2022 Developer - Database Engine and Analysis Services (Multidimensional)	2026-11-21T12:44:20.6877857Z SQL Server 2022 transmits information about your installation experience, as well as other usage and performance data, to Microsoft to help improve the product. To learn more about SQL Server 2022 data processing and privacy controls, please see the Privacy Statement.
+ssas	2b. Install SQL Server 2022 Developer - Database Engine and Analysis Services (Multidimensional)	2026-11-21T12:48:29.8363447Z Microsoft (R) SQL Server 2022 16.00.1000.06
+ssas	2b. Install SQL Server 2022 Developer - Database Engine and Analysis Services (Multidimensional)	2026-11-21T12:48:29.8364041Z 
+ssas	2b. Install SQL Server 2022 Developer - Database Engine and Analysis Services (Multidimensional)	2026-11-21T12:48:29.8364276Z Copyright (c) 2022 Microsoft.  All rights reserved.
+ssas	2b. Install SQL Server 2022 Developer - Database Engine and Analysis Services (Multidimensional)	2026-11-21T12:48:29.8364828Z 
+ssas	2b. Install SQL Server 2022 Developer - Database Engine and Analysis Services (Multidimensional)	2026-11-21T12:48:29.8364835Z 
+ssas	2b. Install SQL Server 2022 Developer - Database Engine and Analysis Services (Multidimensional)	2026-11-21T12:48:30.2207794Z --- Summary.txt (head) ---
+ssas	2b. Install SQL Server 2022 Developer - Database Engine and Analysis Services (Multidimensional)	2026-11-21T12:48:30.2237074Z Overall summary:
+ssas	2b. Install SQL Server 2022 Developer - Database Engine and Analysis Services (Multidimensional)	2026-11-21T12:48:30.2238166Z   Final result:                  Passed
+ssas	2b. Install SQL Server 2022 Developer - Database Engine and Analysis Services (Multidimensional)	2026-11-21T12:48:30.2240605Z   Exit code (Decimal):           0
+ssas	2b. Install SQL Server 2022 Developer - Database Engine and Analysis Services (Multidimensional)	2026-11-21T12:48:30.2241417Z   Start time:                    2026-11-21 12:44:20
+ssas	2b. Install SQL Server 2022 Developer - Database Engine and Analysis Services (Multidimensional)	2026-11-21T12:48:30.2243506Z   End time:                      2026-11-21 12:48:22
+ssas	2b. Install SQL Server 2022 Developer - Database Engine and Analysis Services (Multidimensional)	2026-11-21T12:48:30.2244794Z   Requested action:              Install
+ssas	2b. Install SQL Server 2022 Developer - Database Engine and Analysis Services (Multidimensional)	2026-11-21T12:48:30.2246098Z 
+ssas	2b. Install SQL Server 2022 Developer - Database Engine and Analysis Services (Multidimensional)	2026-11-21T12:48:30.2247417Z Machine Properties:
+ssas	2b. Install SQL Server 2022 Developer - Database Engine and Analysis Services (Multidimensional)	2026-11-21T12:48:30.2248788Z   Machine name:                  runnervmhh3zg
+ssas	2b. Install SQL Server 2022 Developer - Database Engine and Analysis Services (Multidimensional)	2026-11-21T12:48:30.2249489Z   Machine processor count:       4
+ssas	2b. Install SQL Server 2022 Developer - Database Engine and Analysis Services (Multidimensional)	2026-11-21T12:48:30.2251331Z   OS version:                    Microsoft Windows Server 2022 Datacenter (10.0.20348)
+ssas	2b. Install SQL Server 2022 Developer - Database Engine and Analysis Services (Multidimensional)	2026-11-21T12:48:30.2252666Z   OS service pack:               
+ssas	2b. Install SQL Server 2022 Developer - Database Engine and Analysis Services (Multidimensional)	2026-11-21T12:48:30.2253259Z   OS region:                     United States
+ssas	2b. Install SQL Server 2022 Developer - Database Engine and Analysis Services (Multidimensional)	2026-11-21T12:48:30.2255363Z   OS language:                   English (United States)
+ssas	2b. Install SQL Server 2022 Developer - Database Engine and Analysis Services (Multidimensional)	2026-11-21T12:48:30.2256441Z   OS architecture:               x64
+ssas	2b. Install SQL Server 2022 Developer - Database Engine and Analysis Services (Multidimensional)	2026-11-21T12:48:30.2257180Z   Process architecture:          64 Bit
+ssas	2b. Install SQL Server 2022 Developer - Database Engine and Analysis Services (Multidimensional)	2026-11-21T12:48:30.2258791Z   OS clustered:                  No
+ssas	2b. Install SQL Server 2022 Developer - Database Engine and Analysis Services (Multidimensional)	2026-11-21T12:48:30.2259343Z 
+ssas	2b. Install SQL Server 2022 Developer - Database Engine and Analysis Services (Multidimensional)	2026-11-21T12:48:30.2260964Z Product features discovered:
+ssas	2b. Install SQL Server 2022 Developer - Database Engine and Analysis Services (Multidimensional)	2026-11-21T12:48:30.2262450Z   Product              Instance             Instance ID                    Feature                                  Language             Edition              Version         Clustered  Configured
+ssas	2b. Install SQL Server 2022 Developer - Database Engine and Analysis Services (Multidimensional)	2026-11-21T12:48:30.2263194Z 
+ssas	2b. Install SQL Server 2022 Developer - Database Engine and Analysis Services (Multidimensional)	2026-11-21T12:48:30.2264511Z Package properties:
+ssas	2b. Install SQL Server 2022 Developer - Database Engine and Analysis Services (Multidimensional)	2026-11-21T12:48:30.2266141Z   Description:                   Microsoft SQL Server 2022 
+ssas	2b. Install SQL Server 2022 Developer - Database Engine and Analysis Services (Multidimensional)	2026-11-21T12:48:30.2267447Z   ProductName:                   SQL Server 2022
+ssas	2b. Install SQL Server 2022 Developer - Database Engine and Analysis Services (Multidimensional)	2026-11-21T12:48:30.2268674Z   Type:                          RTM
+ssas	2b. Install SQL Server 2022 Developer - Database Engine and Analysis Services (Multidimensional)	2026-11-21T12:48:30.2269852Z   Version:                       16
+ssas	2b. Install SQL Server 2022 Developer - Database Engine and Analysis Services (Multidimensional)	2026-11-21T12:48:30.2271013Z   SPLevel:                       0
+ssas	2b. Install SQL Server 2022 Developer - Database Engine and Analysis Services (Multidimensional)	2026-11-21T12:48:30.2272192Z   Installation location:         E:\x64\setup\
+ssas	2b. Install SQL Server 2022 Developer - Database Engine and Analysis Services (Multidimensional)	2026-11-21T12:48:30.2273415Z   Installation edition:          Developer
+ssas	2b. Install SQL Server 2022 Developer - Database Engine and Analysis Services (Multidimensional)	2026-11-21T12:48:30.2274322Z 
+ssas	2b. Install SQL Server 2022 Developer - Database Engine and Analysis Services (Multidimensional)	2026-11-21T12:48:30.2275753Z Product Update Status:
+ssas	2b. Install SQL Server 2022 Developer - Database Engine and Analysis Services (Multidimensional)	2026-11-21T12:48:30.2277034Z   User selected not to include product updates.
+ssas	2b. Install SQL Server 2022 Developer - Database Engine and Analysis Services (Multidimensional)	2026-11-21T12:48:30.2278057Z 
+ssas	2b. Install SQL Server 2022 Developer - Database Engine and Analysis Services (Multidimensional)	2026-11-21T12:48:30.2279575Z Notice: Please read Microsoft SQL Server Software License Terms at aka.ms/useterms.
+ssas	2b. Install SQL Server 2022 Developer - Database Engine and Analysis Services (Multidimensional)	2026-11-21T12:48:30.2280492Z 
+ssas	2b. Install SQL Server 2022 Developer - Database Engine and Analysis Services (Multidimensional)	2026-11-21T12:48:30.2281790Z User Input Settings:
+ssas	2b. Install SQL Server 2022 Developer - Database Engine and Analysis Services (Multidimensional)	2026-11-21T12:48:30.2282914Z   ACTION:                        Install
+ssas	2b. Install SQL Server 2022 Developer - Database Engine and Analysis Services (Multidimensional)	2026-11-21T12:48:30.2284122Z   ADDCURRENTUSERASSQLADMIN:      false
+ssas	2b. Install SQL Server 2022 Developer - Database Engine and Analysis Services (Multidimensional)	2026-11-21T12:48:30.2285407Z   AGTSVCACCOUNT:                 NT Service\SQLSERVERAGENT
+ssas	2b. Install SQL Server 2022 Developer - Database Engine and Analysis Services (Multidimensional)	2026-11-21T12:48:30.2286537Z   AGTSVCPASSWORD:                *****
+ssas	2b. Install SQL Server 2022 Developer - Database Engine and Analysis Services (Multidimensional)	2026-11-21T12:48:30.2338261Z SQL Server setup: exit code 0 in 4.3 min (features SQLENGINE,AS; ASSERVERMODE=MULTIDIMENSIONAL)
+ssas	3a. SqlServer PowerShell module, pinned version	﻿2026-11-21T12:48:30.6648157Z ##[group]Run $ErrorActionPreference = 'Stop'
+ssas	3a. SqlServer PowerShell module, pinned version	2026-11-21T12:48:30.6648778Z [36;1m$ErrorActionPreference = 'Stop'[0m
+ssas	3a. SqlServer PowerShell module, pinned version	2026-11-21T12:48:30.6649257Z [36;1m$wanted = [version]$env:SQLSERVER_MODULE_VERSION[0m
+ssas	3a. SqlServer PowerShell module, pinned version	2026-11-21T12:48:30.6650100Z [36;1mGet-Module -ListAvailable SqlServer | Format-Table Name, Version, ModuleBase -AutoSize | Out-String -Width 300[0m
+ssas	3a. SqlServer PowerShell module, pinned version	2026-11-21T12:48:30.6650872Z [36;1mif (-not (Get-Module -ListAvailable SqlServer | Where-Object Version -eq $wanted)) {[0m
+ssas	3a. SqlServer PowerShell module, pinned version	2026-11-21T12:48:30.6651635Z [36;1m  Install-Module SqlServer -RequiredVersion $wanted -Repository PSGallery -Scope AllUsers -Force -AllowClobber[0m
+ssas	3a. SqlServer PowerShell module, pinned version	2026-11-21T12:48:30.6652215Z [36;1m}[0m
+ssas	3a. SqlServer PowerShell module, pinned version	2026-11-21T12:48:30.6652617Z [36;1m# The scripts call Import-Module SqlServer, which takes the newest installed version.[0m
+ssas	3a. SqlServer PowerShell module, pinned version	2026-11-21T12:48:30.6653364Z [36;1m$module = Get-Module -ListAvailable SqlServer | Sort-Object Version -Descending | Select-Object -First 1[0m
+ssas	3a. SqlServer PowerShell module, pinned version	2026-11-21T12:48:30.6654138Z [36;1mif ($module.Version -ne $wanted) { throw "The newest SqlServer module is $($module.Version), not $wanted" }[0m
+ssas	3a. SqlServer PowerShell module, pinned version	2026-11-21T12:48:30.6654872Z [36;1m[IO.File]::AppendAllText($env:GITHUB_ENV, "AMO_DIR=$($module.ModuleBase)`n")[0m
+ssas	3a. SqlServer PowerShell module, pinned version	2026-11-21T12:48:30.6655429Z [36;1m$line = "SqlServer module: $($module.Version) at $($module.ModuleBase)"[0m
+ssas	3a. SqlServer PowerShell module, pinned version	2026-11-21T12:48:30.6655982Z [36;1mAdd-Content -Encoding UTF8 -Path "$env:EVIDENCE/summary.txt" -Value $line[0m
+ssas	3a. SqlServer PowerShell module, pinned version	2026-11-21T12:48:30.6656424Z [36;1mWrite-Output $line[0m
+ssas	3a. SqlServer PowerShell module, pinned version	2026-11-21T12:48:30.6695184Z shell: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.EXE -command ". '{0}'"
+ssas	3a. SqlServer PowerShell module, pinned version	2026-11-21T12:48:30.6695661Z env:
+ssas	3a. SqlServer PowerShell module, pinned version	2026-11-21T12:48:30.6695888Z   PYTHONPATH: src
+ssas	3a. SqlServer PowerShell module, pinned version	2026-11-21T12:48:30.6696134Z   EVIDENCE: reports/ssas
+ssas	3a. SqlServer PowerShell module, pinned version	2026-11-21T12:48:30.6696401Z   SQLSERVER_MODULE_VERSION: 22.4.5.1
+ssas	3a. SqlServer PowerShell module, pinned version	2026-11-21T12:48:30.6697024Z   SQL_ISO_URL: https://download.microsoft.com/download/3/8/d/38de7036-2433-4207-8eae-06e247e17b25/SQLServer2022-x64-ENU-Dev.iso
+ssas	3a. SqlServer PowerShell module, pinned version	2026-11-21T12:48:30.6697768Z   SQL_ISO_SHA256: 80D2CD75DD2B28098C0182F50AD86BD44F9B3A9F357C30FF617480A1497DAFFD
+ssas	3a. SqlServer PowerShell module, pinned version	2026-11-21T12:48:30.6698349Z   SETUP_LOG: C:\Program Files\Microsoft SQL Server\160\Setup Bootstrap\Log
+ssas	3a. SqlServer PowerShell module, pinned version	2026-11-21T12:48:30.6698831Z   pythonLocation: C:\hostedtoolcache\windows\Python\3.11.9\x64
+ssas	3a. SqlServer PowerShell module, pinned version	2026-11-21T12:48:30.6699308Z   PKG_CONFIG_PATH: C:\hostedtoolcache\windows\Python\3.11.9\x64/lib/pkgconfig
+ssas	3a. SqlServer PowerShell module, pinned version	2026-11-21T12:48:30.6699785Z   Python_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.11.9\x64
+ssas	3a. SqlServer PowerShell module, pinned version	2026-11-21T12:48:30.6700219Z   Python2_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.11.9\x64
+ssas	3a. SqlServer PowerShell module, pinned version	2026-11-21T12:48:30.6700660Z   Python3_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.11.9\x64
+ssas	3a. SqlServer PowerShell module, pinned version	2026-11-21T12:48:30.6701015Z ##[endgroup]
+ssas	3a. SqlServer PowerShell module, pinned version	2026-11-21T12:48:31.4254494Z 
+ssas	3a. SqlServer PowerShell module, pinned version	2026-11-21T12:48:31.4255100Z Name      Version  ModuleBase                                                   
+ssas	3a. SqlServer PowerShell module, pinned version	2026-11-21T12:48:31.4255891Z ----      -------  ----------                                                   
+ssas	3a. SqlServer PowerShell module, pinned version	2026-11-21T12:48:31.4256472Z SqlServer 22.4.5.1 C:\Program Files\WindowsPowerShell\Modules\SqlServer\22.4.5.1
+ssas	3a. SqlServer PowerShell module, pinned version	2026-11-21T12:48:31.4256858Z 
+ssas	3a. SqlServer PowerShell module, pinned version	2026-11-21T12:48:31.4256890Z 
+ssas	3a. SqlServer PowerShell module, pinned version	2026-11-21T12:48:31.4256898Z 
+ssas	3a. SqlServer PowerShell module, pinned version	2026-11-21T12:48:32.1737852Z SqlServer module: 22.4.5.1 at C:\Program Files\WindowsPowerShell\Modules\SqlServer\22.4.5.1
+ssas	3b. Wait for both services; versions, edition and server mode	﻿2026-11-21T12:48:32.2026057Z ##[group]Run $ErrorActionPreference = 'Stop'
+ssas	3b. Wait for both services; versions, edition and server mode	2026-11-21T12:48:32.2026601Z [36;1m$ErrorActionPreference = 'Stop'[0m
+ssas	3b. Wait for both services; versions, edition and server mode	2026-11-21T12:48:32.2027062Z [36;1mforeach ($name in 'MSSQLSERVER', 'MSSQLServerOLAPService') {[0m
+ssas	3b. Wait for both services; versions, edition and server mode	2026-11-21T12:48:32.2027493Z [36;1m  $service = Get-Service -Name $name[0m
+ssas	3b. Wait for both services; versions, edition and server mode	2026-11-21T12:48:32.2027912Z [36;1m  if ($service.Status -ne 'Running') { Start-Service -Name $name }[0m
+ssas	3b. Wait for both services; versions, edition and server mode	2026-11-21T12:48:32.2028421Z [36;1m  $service.WaitForStatus('Running', [TimeSpan]::FromMinutes(3))[0m
+ssas	3b. Wait for both services; versions, edition and server mode	2026-11-21T12:48:32.2029104Z [36;1m  Get-CimInstance Win32_Service -Filter "Name='$name'" | Format-List Name, State, StartMode, StartName, PathName[0m
+ssas	3b. Wait for both services; versions, edition and server mode	2026-11-21T12:48:32.2029656Z [36;1m}[0m
+ssas	3b. Wait for both services; versions, edition and server mode	2026-11-21T12:48:32.2030074Z [36;1m$sqlcmd = Get-Command sqlcmd.exe -ErrorAction SilentlyContinue | Select-Object -First 1[0m
+ssas	3b. Wait for both services; versions, edition and server mode	2026-11-21T12:48:32.2030566Z [36;1mif (-not $sqlcmd) {[0m
+ssas	3b. Wait for both services; versions, edition and server mode	2026-11-21T12:48:32.2031195Z [36;1m  $found = Get-ChildItem 'C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\*\Tools\Binn\SQLCMD.EXE' -ErrorAction SilentlyContinue |[0m
+ssas	3b. Wait for both services; versions, edition and server mode	2026-11-21T12:48:32.2032828Z [36;1m    Sort-Object FullName -Descending | Select-Object -First 1[0m
+ssas	3b. Wait for both services; versions, edition and server mode	2026-11-21T12:48:32.2033387Z [36;1m  if (-not $found) { throw 'sqlcmd.exe is not on PATH and not under Client SDK\ODBC.' }[0m
+ssas	3b. Wait for both services; versions, edition and server mode	2026-11-21T12:48:32.2033905Z [36;1m  $env:PATH = "$($found.DirectoryName);$env:PATH"[0m
+ssas	3b. Wait for both services; versions, edition and server mode	2026-11-21T12:48:32.2034379Z [36;1m  [IO.File]::AppendAllText($env:GITHUB_PATH, "$($found.DirectoryName)`n")[0m
+ssas	3b. Wait for both services; versions, edition and server mode	2026-11-21T12:48:32.2034825Z [36;1m  $sqlcmd = Get-Command sqlcmd.exe[0m
+ssas	3b. Wait for both services; versions, edition and server mode	2026-11-21T12:48:32.2035128Z [36;1m}[0m
+ssas	3b. Wait for both services; versions, edition and server mode	2026-11-21T12:48:32.2035436Z [36;1mWrite-Output "sqlcmd: $($sqlcmd.Source) $($sqlcmd.Version)"[0m
+ssas	3b. Wait for both services; versions, edition and server mode	2026-11-21T12:48:32.2035839Z [36;1mfor ($i = 1; $i -le 30; $i++) {[0m
+ssas	3b. Wait for both services; versions, edition and server mode	2026-11-21T12:48:32.2036238Z [36;1m  sqlcmd -S localhost -E -C -b -Q 'SELECT 1' | Out-Null[0m
+ssas	3b. Wait for both services; versions, edition and server mode	2026-11-21T12:48:32.2036645Z [36;1m  if ($LASTEXITCODE -eq 0) { break }[0m
+ssas	3b. Wait for both services; versions, edition and server mode	2026-11-21T12:48:32.2036982Z [36;1m  Start-Sleep -Seconds 5[0m
+ssas	3b. Wait for both services; versions, edition and server mode	2026-11-21T12:48:32.2037268Z [36;1m}[0m
+ssas	3b. Wait for both services; versions, edition and server mode	2026-11-21T12:48:32.2038176Z [36;1m$engine = sqlcmd -S localhost -E -C -b -h -1 -W -Q "SET NOCOUNT ON; SELECT CONCAT(CAST(SERVERPROPERTY('ProductVersion') AS nvarchar(128)), ' | ', CAST(SERVERPROPERTY('Edition') AS nvarchar(128)), ' | ', REPLACE(REPLACE(@@VERSION, CHAR(13), ' '), CHAR(10), ' '))"[0m
+ssas	3b. Wait for both services; versions, edition and server mode	2026-11-21T12:48:32.2039283Z [36;1mif ($LASTEXITCODE -ne 0) { throw "sqlcmd exited with $LASTEXITCODE" }[0m
+ssas	3b. Wait for both services; versions, edition and server mode	2026-11-21T12:48:32.2039828Z [36;1m$line = "Database Engine: $(($engine | Where-Object { $_ }) -join ' ')"[0m
+ssas	3b. Wait for both services; versions, edition and server mode	2026-11-21T12:48:32.2040386Z [36;1mAdd-Content -Encoding UTF8 -Path "$env:EVIDENCE/summary.txt" -Value $line[0m
+ssas	3b. Wait for both services; versions, edition and server mode	2026-11-21T12:48:32.2040862Z [36;1mWrite-Output $line[0m
+ssas	3b. Wait for both services; versions, edition and server mode	2026-11-21T12:48:32.2041128Z [36;1mtry {[0m
+ssas	3b. Wait for both services; versions, edition and server mode	2026-11-21T12:48:32.2041530Z [36;1m  & .\scripts\Get-AnalysisServer.ps1 -Server localhost -AmoDirectory $env:AMO_DIR |[0m
+ssas	3b. Wait for both services; versions, edition and server mode	2026-11-21T12:48:32.2042102Z [36;1m    Tee-Object -FilePath "$env:EVIDENCE/analysis-server.txt"[0m
+ssas	3b. Wait for both services; versions, edition and server mode	2026-11-21T12:48:32.2042486Z [36;1m} finally {[0m
+ssas	3b. Wait for both services; versions, edition and server mode	2026-11-21T12:48:32.2042890Z [36;1m  Get-Content "$env:EVIDENCE/analysis-server.txt" -ErrorAction SilentlyContinue |[0m
+ssas	3b. Wait for both services; versions, edition and server mode	2026-11-21T12:48:32.2043573Z [36;1m    Where-Object { $_ -match '^(Analysis Services (version|edition|server mode)|msmdsrv.ini)' } |[0m
+ssas	3b. Wait for both services; versions, edition and server mode	2026-11-21T12:48:32.2044265Z [36;1m    ForEach-Object { Add-Content -Encoding UTF8 -Path "$env:EVIDENCE/summary.txt" -Value $_ }[0m
+ssas	3b. Wait for both services; versions, edition and server mode	2026-11-21T12:48:32.2044755Z [36;1m}[0m
+ssas	3b. Wait for both services; versions, edition and server mode	2026-11-21T12:48:32.2081640Z shell: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.EXE -command ". '{0}'"
+ssas	3b. Wait for both services; versions, edition and server mode	2026-11-21T12:48:32.2082096Z env:
+ssas	3b. Wait for both services; versions, edition and server mode	2026-11-21T12:48:32.2082317Z   PYTHONPATH: src
+ssas	3b. Wait for both services; versions, edition and server mode	2026-11-21T12:48:32.2082561Z   EVIDENCE: reports/ssas
+ssas	3b. Wait for both services; versions, edition and server mode	2026-11-21T12:48:32.2082820Z   SQLSERVER_MODULE_VERSION: 22.4.5.1
+ssas	3b. Wait for both services; versions, edition and server mode	2026-11-21T12:48:32.2083438Z   SQL_ISO_URL: https://download.microsoft.com/download/3/8/d/38de7036-2433-4207-8eae-06e247e17b25/SQLServer2022-x64-ENU-Dev.iso
+ssas	3b. Wait for both services; versions, edition and server mode	2026-11-21T12:48:32.2084209Z   SQL_ISO_SHA256: 80D2CD75DD2B28098C0182F50AD86BD44F9B3A9F357C30FF617480A1497DAFFD
+ssas	3b. Wait for both services; versions, edition and server mode	2026-11-21T12:48:32.2086365Z   SETUP_LOG: C:\Program Files\Microsoft SQL Server\160\Setup Bootstrap\Log
+ssas	3b. Wait for both services; versions, edition and server mode	2026-11-21T12:48:32.2086892Z   pythonLocation: C:\hostedtoolcache\windows\Python\3.11.9\x64
+ssas	3b. Wait for both services; versions, edition and server mode	2026-11-21T12:48:32.2087377Z   PKG_CONFIG_PATH: C:\hostedtoolcache\windows\Python\3.11.9\x64/lib/pkgconfig
+ssas	3b. Wait for both services; versions, edition and server mode	2026-11-21T12:48:32.2087884Z   Python_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.11.9\x64
+ssas	3b. Wait for both services; versions, edition and server mode	2026-11-21T12:48:32.2088327Z   Python2_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.11.9\x64
+ssas	3b. Wait for both services; versions, edition and server mode	2026-11-21T12:48:32.2088767Z   Python3_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.11.9\x64
+ssas	3b. Wait for both services; versions, edition and server mode	2026-11-21T12:48:32.2089226Z   AMO_DIR: C:\Program Files\WindowsPowerShell\Modules\SqlServer\22.4.5.1
+ssas	3b. Wait for both services; versions, edition and server mode	2026-11-21T12:48:32.2089642Z ##[endgroup]
+ssas	3b. Wait for both services; versions, edition and server mode	2026-11-21T12:48:42.5966823Z 
+ssas	3b. Wait for both services; versions, edition and server mode	2026-11-21T12:48:42.5968171Z 
+ssas	3b. Wait for both services; versions, edition and server mode	2026-11-21T12:48:42.5977195Z Name      : MSSQLSERVER
+ssas	3b. Wait for both services; versions, edition and server mode	2026-11-21T12:48:42.5977951Z State     : Running
+ssas	3b. Wait for both services; versions, edition and server mode	2026-11-21T12:48:42.5979754Z StartMode : Auto
+ssas	3b. Wait for both services; versions, edition and server mode	2026-11-21T12:48:42.5981334Z StartName : NT Service\MSSQLSERVER
+ssas	3b. Wait for both services; versions, edition and server mode	2026-11-21T12:48:42.5982273Z PathName  : "C:\Program Files\Microsoft SQL Server\MSSQL16.MSSQLSERVER\MSSQL\Binn\sqlservr.exe" -sMSSQLSERVER
+ssas	3b. Wait for both services; versions, edition and server mode	2026-11-21T12:48:42.5982984Z 
+ssas	3b. Wait for both services; versions, edition and server mode	2026-11-21T12:48:42.5984151Z 
+ssas	3b. Wait for both services; versions, edition and server mode	2026-11-21T12:48:42.5984330Z 
+ssas	3b. Wait for both services; versions, edition and server mode	2026-11-21T12:48:42.7131366Z 
+ssas	3b. Wait for both services; versions, edition and server mode	2026-11-21T12:48:42.7131509Z 
+ssas	3b. Wait for both services; versions, edition and server mode	2026-11-21T12:48:42.7137161Z Name      : MSSQLServerOLAPService
+ssas	3b. Wait for both services; versions, edition and server mode	2026-11-21T12:48:42.7137696Z State     : Running
+ssas	3b. Wait for both services; versions, edition and server mode	2026-11-21T12:48:42.7139176Z StartMode : Auto
+ssas	3b. Wait for both services; versions, edition and server mode	2026-11-21T12:48:42.7140440Z StartName : NT Service\MSSQLServerOLAPService
+ssas	3b. Wait for both services; versions, edition and server mode	2026-11-21T12:48:42.7146424Z PathName  : "C:\Program Files\Microsoft SQL Server\MSAS16.MSSQLSERVER\OLAP\bin\msmdsrv.exe" -s "C:\Program 
+ssas	3b. Wait for both services; versions, edition and server mode	2026-11-21T12:48:42.7147518Z             Files\Microsoft SQL Server\MSAS16.MSSQLSERVER\OLAP\Config"
+ssas	3b. Wait for both services; versions, edition and server mode	2026-11-21T12:48:42.7148033Z 
+ssas	3b. Wait for both services; versions, edition and server mode	2026-11-21T12:48:42.7148929Z 
+ssas	3b. Wait for both services; versions, edition and server mode	2026-11-21T12:48:42.7149756Z 
+ssas	3b. Wait for both services; versions, edition and server mode	2026-11-21T12:48:42.7904955Z sqlcmd: C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\SQLCMD.EXE 16.0.1000.6
+ssas	3b. Wait for both services; versions, edition and server mode	2026-11-21T12:48:44.2620634Z Database Engine: 16.0.1000.6 | Developer Edition (64-bit) | Microsoft SQL Server 2022 (RTM) - 16.0.1000.6 (X64)  	Oct  8 2022 05:58:25  	Copyright (C) 2022 Microsoft Corporation 	Developer Edition (64-bit) on Windows Server 2022 Datacenter 10.0 <X64> (Build 20348: ) (Hypervisor) 
+ssas	3b. Wait for both services; versions, edition and server mode	2026-11-21T12:48:45.1841221Z AMO 19.96.1.0 from C:\Program Files\WindowsPowerShell\Modules\SqlServer\22.4.5.1
+ssas	3b. Wait for both services; versions, edition and server mode	2026-11-21T12:48:46.3776633Z Analysis Services product: Microsoft SQL Server Analysis Services
+ssas	3b. Wait for both services; versions, edition and server mode	2026-11-21T12:48:46.3790161Z Analysis Services version: 16.0.42.209
+ssas	3b. Wait for both services; versions, edition and server mode	2026-11-21T12:48:46.3817880Z Analysis Services edition: Developer64
+ssas	3b. Wait for both services; versions, edition and server mode	2026-11-21T12:48:46.3844077Z Analysis Services server mode (AMO ServerMode): Multidimensional
+ssas	3b. Wait for both services; versions, edition and server mode	2026-11-21T12:48:46.6432805Z msmdsrv.ini DeploymentMode: 0 (C:\Program Files\Microsoft SQL Server\MSAS16.MSSQLSERVER\OLAP\Config\msmdsrv.ini)
+ssas	4. Load the star with sqlcmd and check rows and totals	﻿2026-11-21T12:48:46.6794651Z ##[group]Run $ErrorActionPreference = 'Stop'
+ssas	4. Load the star with sqlcmd and check rows and totals	2026-11-21T12:48:46.6795171Z [36;1m$ErrorActionPreference = 'Stop'[0m
+ssas	4. Load the star with sqlcmd and check rows and totals	2026-11-21T12:48:46.6795606Z [36;1msqlcmd -S localhost -E -C -b -Q 'CREATE DATABASE P64SalesDW'[0m
+ssas	4. Load the star with sqlcmd and check rows and totals	2026-11-21T12:48:46.6796165Z [36;1mif ($LASTEXITCODE -ne 0) { throw "CREATE DATABASE exited with $LASTEXITCODE" }[0m
+ssas	4. Load the star with sqlcmd and check rows and totals	2026-11-21T12:48:46.6796695Z [36;1m# The same load as in docs/MANUAL_STEPS.md, step 1.[0m
+ssas	4. Load the star with sqlcmd and check rows and totals	2026-11-21T12:48:46.6797137Z [36;1msqlcmd -S localhost -E -C -d P64SalesDW -b -i sql/load.sql[0m
+ssas	4. Load the star with sqlcmd and check rows and totals	2026-11-21T12:48:46.6797671Z [36;1mif ($LASTEXITCODE -ne 0) { throw "sql/load.sql exited with $LASTEXITCODE" }[0m
+ssas	4. Load the star with sqlcmd and check rows and totals	2026-11-21T12:48:46.6798611Z [36;1m$query = 'SET NOCOUNT ON; SELECT (SELECT COUNT(*) FROM dbo.DimDate), (SELECT COUNT(*) FROM dbo.DimProduct), (SELECT COUNT(*) FROM dbo.DimCustomer), COUNT(*), SUM(Units), SUM(Revenue) FROM dbo.FactSales'[0m
+ssas	4. Load the star with sqlcmd and check rows and totals	2026-11-21T12:48:46.6799547Z [36;1m$row = sqlcmd -S localhost -E -C -d P64SalesDW -b -h -1 -W -s '|' -Q $query[0m
+ssas	4. Load the star with sqlcmd and check rows and totals	2026-11-21T12:48:46.6800185Z [36;1mif ($LASTEXITCODE -ne 0) { throw "the count query exited with $LASTEXITCODE" }[0m
+ssas	4. Load the star with sqlcmd and check rows and totals	2026-11-21T12:48:46.6800783Z [36;1m$values = (($row | Where-Object { $_ -match '\|' }) -split '\|') | ForEach-Object { [long]$_ }[0m
+ssas	4. Load the star with sqlcmd and check rows and totals	2026-11-21T12:48:46.6801454Z [36;1m# Rows: docs/runs/2026-11-18-mssql.md (seed 64); totals: 01_total and 02_units_by_year of the reference.[0m
+ssas	4. Load the star with sqlcmd and check rows and totals	2026-11-21T12:48:46.6802390Z [36;1m$totals = python -c "import json; r = json.load(open('docs/runs/expected-seed64.json', encoding='utf-8')); print(sum(x[1] for x in r['02_units_by_year']), r['01_total'][0][0])"[0m
+ssas	4. Load the star with sqlcmd and check rows and totals	2026-11-21T12:48:46.6803254Z [36;1mif ($LASTEXITCODE -ne 0) { throw 'Reading the reference totals failed.' }[0m
+ssas	4. Load the star with sqlcmd and check rows and totals	2026-11-21T12:48:46.6803779Z [36;1m$units, $revenue = $totals -split ' ' | ForEach-Object { [long]$_ }[0m
+ssas	4. Load the star with sqlcmd and check rows and totals	2026-11-21T12:48:46.6804233Z [36;1m$expected = [long[]](731, 6, 4, 1838, $units, $revenue)[0m
+ssas	4. Load the star with sqlcmd and check rows and totals	2026-11-21T12:48:46.6804753Z [36;1m$labels = 'DimDate', 'DimProduct', 'DimCustomer', 'FactSales', 'SUM(Units)', 'SUM(Revenue)'[0m
+ssas	4. Load the star with sqlcmd and check rows and totals	2026-11-21T12:48:46.6805401Z [36;1m$bad = @()[0m
+ssas	4. Load the star with sqlcmd and check rows and totals	2026-11-21T12:48:46.6805645Z [36;1mfor ($i = 0; $i -lt 6; $i++) {[0m
+ssas	4. Load the star with sqlcmd and check rows and totals	2026-11-21T12:48:46.6806080Z [36;1m  Write-Output ('{0}: {1} (expected {2})' -f $labels[$i], $values[$i], $expected[$i])[0m
+ssas	4. Load the star with sqlcmd and check rows and totals	2026-11-21T12:48:46.6806622Z [36;1m  if ($values[$i] -ne $expected[$i]) { $bad += $labels[$i] }[0m
+ssas	4. Load the star with sqlcmd and check rows and totals	2026-11-21T12:48:46.6806978Z [36;1m}[0m
+ssas	4. Load the star with sqlcmd and check rows and totals	2026-11-21T12:48:46.6807447Z [36;1m$line = 'star in SQL Server: ' + (($labels | ForEach-Object -Begin { $k = 0 } -Process { "$_ $($values[$k++])" }) -join ', ')[0m
+ssas	4. Load the star with sqlcmd and check rows and totals	2026-11-21T12:48:46.6808127Z [36;1mAdd-Content -Encoding UTF8 -Path "$env:EVIDENCE/summary.txt" -Value $line[0m
+ssas	4. Load the star with sqlcmd and check rows and totals	2026-11-21T12:48:46.6808560Z [36;1mWrite-Output $line[0m
+ssas	4. Load the star with sqlcmd and check rows and totals	2026-11-21T12:48:46.6809070Z [36;1mif ($values.Count -ne 6 -or $bad.Count -gt 0) { throw "The star differs from the seed 64 record: $($bad -join ', ')" }[0m
+ssas	4. Load the star with sqlcmd and check rows and totals	2026-11-21T12:48:46.6848455Z shell: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.EXE -command ". '{0}'"
+ssas	4. Load the star with sqlcmd and check rows and totals	2026-11-21T12:48:46.6848931Z env:
+ssas	4. Load the star with sqlcmd and check rows and totals	2026-11-21T12:48:46.6849150Z   PYTHONPATH: src
+ssas	4. Load the star with sqlcmd and check rows and totals	2026-11-21T12:48:46.6849389Z   EVIDENCE: reports/ssas
+ssas	4. Load the star with sqlcmd and check rows and totals	2026-11-21T12:48:46.6849646Z   SQLSERVER_MODULE_VERSION: 22.4.5.1
+ssas	4. Load the star with sqlcmd and check rows and totals	2026-11-21T12:48:46.6850273Z   SQL_ISO_URL: https://download.microsoft.com/download/3/8/d/38de7036-2433-4207-8eae-06e247e17b25/SQLServer2022-x64-ENU-Dev.iso
+ssas	4. Load the star with sqlcmd and check rows and totals	2026-11-21T12:48:46.6851009Z   SQL_ISO_SHA256: 80D2CD75DD2B28098C0182F50AD86BD44F9B3A9F357C30FF617480A1497DAFFD
+ssas	4. Load the star with sqlcmd and check rows and totals	2026-11-21T12:48:46.6851580Z   SETUP_LOG: C:\Program Files\Microsoft SQL Server\160\Setup Bootstrap\Log
+ssas	4. Load the star with sqlcmd and check rows and totals	2026-11-21T12:48:46.6852061Z   pythonLocation: C:\hostedtoolcache\windows\Python\3.11.9\x64
+ssas	4. Load the star with sqlcmd and check rows and totals	2026-11-21T12:48:46.6852546Z   PKG_CONFIG_PATH: C:\hostedtoolcache\windows\Python\3.11.9\x64/lib/pkgconfig
+ssas	4. Load the star with sqlcmd and check rows and totals	2026-11-21T12:48:46.6853033Z   Python_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.11.9\x64
+ssas	4. Load the star with sqlcmd and check rows and totals	2026-11-21T12:48:46.6853477Z   Python2_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.11.9\x64
+ssas	4. Load the star with sqlcmd and check rows and totals	2026-11-21T12:48:46.6855686Z   Python3_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.11.9\x64
+ssas	4. Load the star with sqlcmd and check rows and totals	2026-11-21T12:48:46.6856176Z   AMO_DIR: C:\Program Files\WindowsPowerShell\Modules\SqlServer\22.4.5.1
+ssas	4. Load the star with sqlcmd and check rows and totals	2026-11-21T12:48:46.6856591Z ##[endgroup]
+ssas	4. Load the star with sqlcmd and check rows and totals	2026-11-21T12:48:47.7414715Z DimDate: 731 (expected 731)
+ssas	4. Load the star with sqlcmd and check rows and totals	2026-11-21T12:48:47.7433301Z DimProduct: 6 (expected 6)
+ssas	4. Load the star with sqlcmd and check rows and totals	2026-11-21T12:48:47.7436095Z DimCustomer: 4 (expected 4)
+ssas	4. Load the star with sqlcmd and check rows and totals	2026-11-21T12:48:47.7438585Z FactSales: 1838 (expected 1838)
+ssas	4. Load the star with sqlcmd and check rows and totals	2026-11-21T12:48:47.7440962Z SUM(Units): 8422 (expected 8422)
+ssas	4. Load the star with sqlcmd and check rows and totals	2026-11-21T12:48:47.7443333Z SUM(Revenue): 870055 (expected 870055)
+ssas	4. Load the star with sqlcmd and check rows and totals	2026-11-21T12:48:47.8014791Z star in SQL Server: DimDate 731, DimProduct 6, DimCustomer 4, FactSales 1838, SUM(Units) 8422, SUM(Revenue) 870055
+ssas	5. Read access of the Analysis Services service account to the star	﻿2026-11-21T12:48:47.8350929Z ##[group]Run $ErrorActionPreference = 'Stop'
+ssas	5. Read access of the Analysis Services service account to the star	2026-11-21T12:48:47.8351412Z [36;1m$ErrorActionPreference = 'Stop'[0m
+ssas	5. Read access of the Analysis Services service account to the star	2026-11-21T12:48:47.8351965Z [36;1m$account = (Get-CimInstance Win32_Service -Filter "Name='MSSQLServerOLAPService'").StartName[0m
+ssas	5. Read access of the Analysis Services service account to the star	2026-11-21T12:48:47.8352630Z [36;1mif ($account -eq 'LocalSystem') { $account = 'NT AUTHORITY\SYSTEM' }[0m
+ssas	5. Read access of the Analysis Services service account to the star	2026-11-21T12:48:47.8353168Z [36;1mWrite-Output "Analysis Services service account: $account"[0m
+ssas	5. Read access of the Analysis Services service account to the star	2026-11-21T12:48:47.8353740Z [36;1m# sqlcmd reads scripting variables from the environment: no quoting of the account name.[0m
+ssas	5. Read access of the Analysis Services service account to the star	2026-11-21T12:48:47.8354234Z [36;1m$env:SsasAccount = $account[0m
+ssas	5. Read access of the Analysis Services service account to the star	2026-11-21T12:48:47.8354633Z [36;1msqlcmd -S localhost -E -C -d P64SalesDW -b -i sql/grant_ssas.sql[0m
+ssas	5. Read access of the Analysis Services service account to the star	2026-11-21T12:48:47.8355201Z [36;1mif ($LASTEXITCODE -ne 0) { throw "sql/grant_ssas.sql exited with $LASTEXITCODE" }[0m
+ssas	5. Read access of the Analysis Services service account to the star	2026-11-21T12:48:47.8355976Z [36;1mAdd-Content -Encoding UTF8 -Path "$env:EVIDENCE/summary.txt" -Value "SSAS service account with db_datareader on P64SalesDW: $account"[0m
+ssas	5. Read access of the Analysis Services service account to the star	2026-11-21T12:48:47.8394735Z shell: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.EXE -command ". '{0}'"
+ssas	5. Read access of the Analysis Services service account to the star	2026-11-21T12:48:47.8395200Z env:
+ssas	5. Read access of the Analysis Services service account to the star	2026-11-21T12:48:47.8395440Z   PYTHONPATH: src
+ssas	5. Read access of the Analysis Services service account to the star	2026-11-21T12:48:47.8395820Z   EVIDENCE: reports/ssas
+ssas	5. Read access of the Analysis Services service account to the star	2026-11-21T12:48:47.8396095Z   SQLSERVER_MODULE_VERSION: 22.4.5.1
+ssas	5. Read access of the Analysis Services service account to the star	2026-11-21T12:48:47.8396699Z   SQL_ISO_URL: https://download.microsoft.com/download/3/8/d/38de7036-2433-4207-8eae-06e247e17b25/SQLServer2022-x64-ENU-Dev.iso
+ssas	5. Read access of the Analysis Services service account to the star	2026-11-21T12:48:47.8397437Z   SQL_ISO_SHA256: 80D2CD75DD2B28098C0182F50AD86BD44F9B3A9F357C30FF617480A1497DAFFD
+ssas	5. Read access of the Analysis Services service account to the star	2026-11-21T12:48:47.8397975Z   SETUP_LOG: C:\Program Files\Microsoft SQL Server\160\Setup Bootstrap\Log
+ssas	5. Read access of the Analysis Services service account to the star	2026-11-21T12:48:47.8398444Z   pythonLocation: C:\hostedtoolcache\windows\Python\3.11.9\x64
+ssas	5. Read access of the Analysis Services service account to the star	2026-11-21T12:48:47.8398921Z   PKG_CONFIG_PATH: C:\hostedtoolcache\windows\Python\3.11.9\x64/lib/pkgconfig
+ssas	5. Read access of the Analysis Services service account to the star	2026-11-21T12:48:47.8399416Z   Python_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.11.9\x64
+ssas	5. Read access of the Analysis Services service account to the star	2026-11-21T12:48:47.8399854Z   Python2_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.11.9\x64
+ssas	5. Read access of the Analysis Services service account to the star	2026-11-21T12:48:47.8400292Z   Python3_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.11.9\x64
+ssas	5. Read access of the Analysis Services service account to the star	2026-11-21T12:48:47.8400750Z   AMO_DIR: C:\Program Files\WindowsPowerShell\Modules\SqlServer\22.4.5.1
+ssas	5. Read access of the Analysis Services service account to the star	2026-11-21T12:48:47.8401136Z ##[endgroup]
+ssas	5. Read access of the Analysis Services service account to the star	2026-11-21T12:48:48.2828427Z Analysis Services service account: NT Service\MSSQLServerOLAPService
+ssas	5. Read access of the Analysis Services service account to the star	2026-11-21T12:48:48.3669051Z principal                                                                                                                        database_role                                                                                                                   
+ssas	5. Read access of the Analysis Services service account to the star	2026-11-21T12:48:48.3670793Z -------------------------------------------------------------------------------------------------------------------------------- --------------------------------------------------------------------------------------------------------------------------------
+ssas	5. Read access of the Analysis Services service account to the star	2026-11-21T12:48:48.3672177Z NT Service\MSSQLServerOLAPService                                                                                                db_datareader                                                                                                                   
+ssas	6. Validate the cube model with AMO (scripts/Confirm-Model.ps1)	﻿2026-11-21T12:48:48.4590279Z ##[group]Run $ErrorActionPreference = 'Stop'
+ssas	6. Validate the cube model with AMO (scripts/Confirm-Model.ps1)	2026-11-21T12:48:48.4590712Z [36;1m$ErrorActionPreference = 'Stop'[0m
+ssas	6. Validate the cube model with AMO (scripts/Confirm-Model.ps1)	2026-11-21T12:48:48.4590978Z [36;1mtry {[0m
+ssas	6. Validate the cube model with AMO (scripts/Confirm-Model.ps1)	2026-11-21T12:48:48.4591446Z [36;1m  & .\scripts\Confirm-Model.ps1 -AmoDirectory $env:AMO_DIR | Tee-Object -FilePath "$env:EVIDENCE/amo-validate.txt"[0m
+ssas	6. Validate the cube model with AMO (scripts/Confirm-Model.ps1)	2026-11-21T12:48:48.4591970Z [36;1m} catch {[0m
+ssas	6. Validate the cube model with AMO (scripts/Confirm-Model.ps1)	2026-11-21T12:48:48.4592437Z [36;1m  Add-Content -Encoding UTF8 -Path "$env:EVIDENCE/amo-validate.txt" -Value "FAILED: $($_.Exception.Message)"[0m
+ssas	6. Validate the cube model with AMO (scripts/Confirm-Model.ps1)	2026-11-21T12:48:48.4592962Z [36;1m  throw[0m
+ssas	6. Validate the cube model with AMO (scripts/Confirm-Model.ps1)	2026-11-21T12:48:48.4593131Z [36;1m}[0m
+ssas	6. Validate the cube model with AMO (scripts/Confirm-Model.ps1)	2026-11-21T12:48:48.4593683Z [36;1mAdd-Content -Encoding UTF8 -Path "$env:EVIDENCE/summary.txt" -Value ('AMO Validate: ' + ((Get-Content "$env:EVIDENCE/amo-validate.txt") -join '; '))[0m
+ssas	6. Validate the cube model with AMO (scripts/Confirm-Model.ps1)	2026-11-21T12:48:48.4630605Z shell: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.EXE -command ". '{0}'"
+ssas	6. Validate the cube model with AMO (scripts/Confirm-Model.ps1)	2026-11-21T12:48:48.4631009Z env:
+ssas	6. Validate the cube model with AMO (scripts/Confirm-Model.ps1)	2026-11-21T12:48:48.4631190Z   PYTHONPATH: src
+ssas	6. Validate the cube model with AMO (scripts/Confirm-Model.ps1)	2026-11-21T12:48:48.4631407Z   EVIDENCE: reports/ssas
+ssas	6. Validate the cube model with AMO (scripts/Confirm-Model.ps1)	2026-11-21T12:48:48.4631627Z   SQLSERVER_MODULE_VERSION: 22.4.5.1
+ssas	6. Validate the cube model with AMO (scripts/Confirm-Model.ps1)	2026-11-21T12:48:48.4632182Z   SQL_ISO_URL: https://download.microsoft.com/download/3/8/d/38de7036-2433-4207-8eae-06e247e17b25/SQLServer2022-x64-ENU-Dev.iso
+ssas	6. Validate the cube model with AMO (scripts/Confirm-Model.ps1)	2026-11-21T12:48:48.4632878Z   SQL_ISO_SHA256: 80D2CD75DD2B28098C0182F50AD86BD44F9B3A9F357C30FF617480A1497DAFFD
+ssas	6. Validate the cube model with AMO (scripts/Confirm-Model.ps1)	2026-11-21T12:48:48.4633376Z   SETUP_LOG: C:\Program Files\Microsoft SQL Server\160\Setup Bootstrap\Log
+ssas	6. Validate the cube model with AMO (scripts/Confirm-Model.ps1)	2026-11-21T12:48:48.4633805Z   pythonLocation: C:\hostedtoolcache\windows\Python\3.11.9\x64
+ssas	6. Validate the cube model with AMO (scripts/Confirm-Model.ps1)	2026-11-21T12:48:48.4634240Z   PKG_CONFIG_PATH: C:\hostedtoolcache\windows\Python\3.11.9\x64/lib/pkgconfig
+ssas	6. Validate the cube model with AMO (scripts/Confirm-Model.ps1)	2026-11-21T12:48:48.4634663Z   Python_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.11.9\x64
+ssas	6. Validate the cube model with AMO (scripts/Confirm-Model.ps1)	2026-11-21T12:48:48.4635040Z   Python2_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.11.9\x64
+ssas	6. Validate the cube model with AMO (scripts/Confirm-Model.ps1)	2026-11-21T12:48:48.4635414Z   Python3_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.11.9\x64
+ssas	6. Validate the cube model with AMO (scripts/Confirm-Model.ps1)	2026-11-21T12:48:48.4635967Z   AMO_DIR: C:\Program Files\WindowsPowerShell\Modules\SqlServer\22.4.5.1
+ssas	6. Validate the cube model with AMO (scripts/Confirm-Model.ps1)	2026-11-21T12:48:48.4636298Z ##[endgroup]
+ssas	6. Validate the cube model with AMO (scripts/Confirm-Model.ps1)	2026-11-21T12:48:48.8032258Z AMO 19.96.1.0 from C:\Program Files\WindowsPowerShell\Modules\SqlServer\22.4.5.1
+ssas	6. Validate the cube model with AMO (scripts/Confirm-Model.ps1)	2026-11-21T12:48:49.5934969Z P64SalesCube: 3 dimensions, 1 measure group, 2 measures
+ssas	7. Create (cube/create.xmla) and ProcessFull (cube/process.xmla) with Invoke-ASCmd	﻿2026-11-21T12:48:49.6315352Z ##[group]Run $ErrorActionPreference = 'Stop'
+ssas	7. Create (cube/create.xmla) and ProcessFull (cube/process.xmla) with Invoke-ASCmd	2026-11-21T12:48:49.6315794Z [36;1m$ErrorActionPreference = 'Stop'[0m
+ssas	7. Create (cube/create.xmla) and ProcessFull (cube/process.xmla) with Invoke-ASCmd	2026-11-21T12:48:49.6316389Z [36;1m& .\scripts\Invoke-Xmla.ps1 -Server localhost -InputFile cube/create.xmla -OutFile "$env:EVIDENCE/create-response.xml"[0m
+ssas	7. Create (cube/create.xmla) and ProcessFull (cube/process.xmla) with Invoke-ASCmd	2026-11-21T12:48:49.6317309Z [36;1mAdd-Content -Encoding UTF8 -Path "$env:EVIDENCE/summary.txt" -Value 'Create (cube/create.xmla): no Exception or Error in the answer'[0m
+ssas	7. Create (cube/create.xmla) and ProcessFull (cube/process.xmla) with Invoke-ASCmd	2026-11-21T12:48:49.6317940Z [36;1m$watch = [Diagnostics.Stopwatch]::StartNew()[0m
+ssas	7. Create (cube/create.xmla) and ProcessFull (cube/process.xmla) with Invoke-ASCmd	2026-11-21T12:48:49.6318529Z [36;1m& .\scripts\Invoke-Xmla.ps1 -Server localhost -InputFile cube/process.xmla -OutFile "$env:EVIDENCE/process-response.xml"[0m
+ssas	7. Create (cube/create.xmla) and ProcessFull (cube/process.xmla) with Invoke-ASCmd	2026-11-21T12:48:49.6319402Z [36;1m$line = "ProcessFull (cube/process.xmla): no Exception or Error in the answer, $([math]::Round($watch.Elapsed.TotalSeconds, 1)) s"[0m
+ssas	7. Create (cube/create.xmla) and ProcessFull (cube/process.xmla) with Invoke-ASCmd	2026-11-21T12:48:49.6320085Z [36;1mAdd-Content -Encoding UTF8 -Path "$env:EVIDENCE/summary.txt" -Value $line[0m
+ssas	7. Create (cube/create.xmla) and ProcessFull (cube/process.xmla) with Invoke-ASCmd	2026-11-21T12:48:49.6320473Z [36;1mWrite-Output $line[0m
+ssas	7. Create (cube/create.xmla) and ProcessFull (cube/process.xmla) with Invoke-ASCmd	2026-11-21T12:48:49.6357860Z shell: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.EXE -command ". '{0}'"
+ssas	7. Create (cube/create.xmla) and ProcessFull (cube/process.xmla) with Invoke-ASCmd	2026-11-21T12:48:49.6358281Z env:
+ssas	7. Create (cube/create.xmla) and ProcessFull (cube/process.xmla) with Invoke-ASCmd	2026-11-21T12:48:49.6358448Z   PYTHONPATH: src
+ssas	7. Create (cube/create.xmla) and ProcessFull (cube/process.xmla) with Invoke-ASCmd	2026-11-21T12:48:49.6358631Z   EVIDENCE: reports/ssas
+ssas	7. Create (cube/create.xmla) and ProcessFull (cube/process.xmla) with Invoke-ASCmd	2026-11-21T12:48:49.6358840Z   SQLSERVER_MODULE_VERSION: 22.4.5.1
+ssas	7. Create (cube/create.xmla) and ProcessFull (cube/process.xmla) with Invoke-ASCmd	2026-11-21T12:48:49.6359381Z   SQL_ISO_URL: https://download.microsoft.com/download/3/8/d/38de7036-2433-4207-8eae-06e247e17b25/SQLServer2022-x64-ENU-Dev.iso
+ssas	7. Create (cube/create.xmla) and ProcessFull (cube/process.xmla) with Invoke-ASCmd	2026-11-21T12:48:49.6360056Z   SQL_ISO_SHA256: 80D2CD75DD2B28098C0182F50AD86BD44F9B3A9F357C30FF617480A1497DAFFD
+ssas	7. Create (cube/create.xmla) and ProcessFull (cube/process.xmla) with Invoke-ASCmd	2026-11-21T12:48:49.6360593Z   SETUP_LOG: C:\Program Files\Microsoft SQL Server\160\Setup Bootstrap\Log
+ssas	7. Create (cube/create.xmla) and ProcessFull (cube/process.xmla) with Invoke-ASCmd	2026-11-21T12:48:49.6361028Z   pythonLocation: C:\hostedtoolcache\windows\Python\3.11.9\x64
+ssas	7. Create (cube/create.xmla) and ProcessFull (cube/process.xmla) with Invoke-ASCmd	2026-11-21T12:48:49.6361457Z   PKG_CONFIG_PATH: C:\hostedtoolcache\windows\Python\3.11.9\x64/lib/pkgconfig
+ssas	7. Create (cube/create.xmla) and ProcessFull (cube/process.xmla) with Invoke-ASCmd	2026-11-21T12:48:49.6361889Z   Python_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.11.9\x64
+ssas	7. Create (cube/create.xmla) and ProcessFull (cube/process.xmla) with Invoke-ASCmd	2026-11-21T12:48:49.6362286Z   Python2_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.11.9\x64
+ssas	7. Create (cube/create.xmla) and ProcessFull (cube/process.xmla) with Invoke-ASCmd	2026-11-21T12:48:49.6362668Z   Python3_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.11.9\x64
+ssas	7. Create (cube/create.xmla) and ProcessFull (cube/process.xmla) with Invoke-ASCmd	2026-11-21T12:48:49.6363074Z   AMO_DIR: C:\Program Files\WindowsPowerShell\Modules\SqlServer\22.4.5.1
+ssas	7. Create (cube/create.xmla) and ProcessFull (cube/process.xmla) with Invoke-ASCmd	2026-11-21T12:48:49.6363403Z ##[endgroup]
+ssas	7. Create (cube/create.xmla) and ProcessFull (cube/process.xmla) with Invoke-ASCmd	2026-11-21T12:48:56.9450280Z cube/create.xmla executed on localhost: no Exception or Error in the XMLA answer (130 characters, saved in reports/ssas/create-response.xml)
+ssas	7. Create (cube/create.xmla) and ProcessFull (cube/process.xmla) with Invoke-ASCmd	2026-11-21T12:49:00.1308509Z cube/process.xmla executed on localhost: no Exception or Error in the XMLA answer (130 characters, saved in reports/ssas/process-response.xml)
+ssas	7. Create (cube/create.xmla) and ProcessFull (cube/process.xmla) with Invoke-ASCmd	2026-11-21T12:49:00.1400207Z ProcessFull (cube/process.xmla): no Exception or Error in the answer, 3.2 s
+ssas	8. Processed state, MOLAP storage and key level members	﻿2026-11-21T12:49:00.1751604Z ##[group]Run $ErrorActionPreference = 'Stop'
+ssas	8. Processed state, MOLAP storage and key level members	2026-11-21T12:49:00.1752042Z [36;1m$ErrorActionPreference = 'Stop'[0m
+ssas	8. Processed state, MOLAP storage and key level members	2026-11-21T12:49:00.1752697Z [36;1m$query = 'SET NOCOUNT ON; SELECT (SELECT COUNT(*) FROM dbo.DimDate), (SELECT COUNT(*) FROM dbo.DimProduct), (SELECT COUNT(*) FROM dbo.DimCustomer)'[0m
+ssas	8. Processed state, MOLAP storage and key level members	2026-11-21T12:49:00.1753436Z [36;1m$row = sqlcmd -S localhost -E -C -d P64SalesDW -b -h -1 -W -s '|' -Q $query[0m
+ssas	8. Processed state, MOLAP storage and key level members	2026-11-21T12:49:00.1753960Z [36;1mif ($LASTEXITCODE -ne 0) { throw "the count query exited with $LASTEXITCODE" }[0m
+ssas	8. Processed state, MOLAP storage and key level members	2026-11-21T12:49:00.1754517Z [36;1m$rows = (($row | Where-Object { $_ -match '\|' }) -split '\|') | ForEach-Object { [int]$_ }[0m
+ssas	8. Processed state, MOLAP storage and key level members	2026-11-21T12:49:00.1755039Z [36;1m$members = @{ Date = $rows[0]; Product = $rows[1]; Customer = $rows[2] }[0m
+ssas	8. Processed state, MOLAP storage and key level members	2026-11-21T12:49:00.1755377Z [36;1mtry {[0m
+ssas	8. Processed state, MOLAP storage and key level members	2026-11-21T12:49:00.1755925Z [36;1m  & .\scripts\Test-CubeState.ps1 -Server localhost -AmoDirectory $env:AMO_DIR -ExpectedMembers $members -OutDir "$env:EVIDENCE/cube-state" |[0m
+ssas	8. Processed state, MOLAP storage and key level members	2026-11-21T12:49:00.1756981Z [36;1m    Tee-Object -FilePath "$env:EVIDENCE/cube-state.txt"[0m
+ssas	8. Processed state, MOLAP storage and key level members	2026-11-21T12:49:00.1757289Z [36;1m} catch {[0m
+ssas	8. Processed state, MOLAP storage and key level members	2026-11-21T12:49:00.1757723Z [36;1m  Add-Content -Encoding UTF8 -Path "$env:EVIDENCE/cube-state.txt" -Value "FAILED: $($_.Exception.Message)"[0m
+ssas	8. Processed state, MOLAP storage and key level members	2026-11-21T12:49:00.1758202Z [36;1m  throw[0m
+ssas	8. Processed state, MOLAP storage and key level members	2026-11-21T12:49:00.1758364Z [36;1m}[0m
+ssas	8. Processed state, MOLAP storage and key level members	2026-11-21T12:49:00.1758581Z [36;1mGet-Content "$env:EVIDENCE/cube-state.txt" |[0m
+ssas	8. Processed state, MOLAP storage and key level members	2026-11-21T12:49:00.1759065Z [36;1m  Where-Object { $_ -cmatch '^(Database|Cube|Partition|members of|DISCOVER_PARTITION_STAT)' } |[0m
+ssas	8. Processed state, MOLAP storage and key level members	2026-11-21T12:49:00.1759696Z [36;1m  ForEach-Object { Add-Content -Encoding UTF8 -Path "$env:EVIDENCE/summary.txt" -Value $_ }[0m
+ssas	8. Processed state, MOLAP storage and key level members	2026-11-21T12:49:00.1798433Z shell: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.EXE -command ". '{0}'"
+ssas	8. Processed state, MOLAP storage and key level members	2026-11-21T12:49:00.1798871Z env:
+ssas	8. Processed state, MOLAP storage and key level members	2026-11-21T12:49:00.1799037Z   PYTHONPATH: src
+ssas	8. Processed state, MOLAP storage and key level members	2026-11-21T12:49:00.1799225Z   EVIDENCE: reports/ssas
+ssas	8. Processed state, MOLAP storage and key level members	2026-11-21T12:49:00.1799438Z   SQLSERVER_MODULE_VERSION: 22.4.5.1
+ssas	8. Processed state, MOLAP storage and key level members	2026-11-21T12:49:00.1800003Z   SQL_ISO_URL: https://download.microsoft.com/download/3/8/d/38de7036-2433-4207-8eae-06e247e17b25/SQLServer2022-x64-ENU-Dev.iso
+ssas	8. Processed state, MOLAP storage and key level members	2026-11-21T12:49:00.1800714Z   SQL_ISO_SHA256: 80D2CD75DD2B28098C0182F50AD86BD44F9B3A9F357C30FF617480A1497DAFFD
+ssas	8. Processed state, MOLAP storage and key level members	2026-11-21T12:49:00.1801206Z   SETUP_LOG: C:\Program Files\Microsoft SQL Server\160\Setup Bootstrap\Log
+ssas	8. Processed state, MOLAP storage and key level members	2026-11-21T12:49:00.1801640Z   pythonLocation: C:\hostedtoolcache\windows\Python\3.11.9\x64
+ssas	8. Processed state, MOLAP storage and key level members	2026-11-21T12:49:00.1802074Z   PKG_CONFIG_PATH: C:\hostedtoolcache\windows\Python\3.11.9\x64/lib/pkgconfig
+ssas	8. Processed state, MOLAP storage and key level members	2026-11-21T12:49:00.1802500Z   Python_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.11.9\x64
+ssas	8. Processed state, MOLAP storage and key level members	2026-11-21T12:49:00.1802879Z   Python2_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.11.9\x64
+ssas	8. Processed state, MOLAP storage and key level members	2026-11-21T12:49:00.1803258Z   Python3_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.11.9\x64
+ssas	8. Processed state, MOLAP storage and key level members	2026-11-21T12:49:00.1803664Z   AMO_DIR: C:\Program Files\WindowsPowerShell\Modules\SqlServer\22.4.5.1
+ssas	8. Processed state, MOLAP storage and key level members	2026-11-21T12:49:00.1803995Z ##[endgroup]
+ssas	8. Processed state, MOLAP storage and key level members	2026-11-21T12:49:01.2173102Z Database P64SalesCube: State Processed, LastProcessed 11/21/2026 12:49:00, EstimatedSize 273602
+ssas	8. Processed state, MOLAP storage and key level members	2026-11-21T12:49:01.2210686Z database state: Processed (expected Processed) ok
+ssas	8. Processed state, MOLAP storage and key level members	2026-11-21T12:49:01.2266816Z Dimension Date: State Processed, LastProcessed 11/21/2026 12:48:59
+ssas	8. Processed state, MOLAP storage and key level members	2026-11-21T12:49:01.2271200Z dimension Date state: Processed (expected Processed) ok
+ssas	8. Processed state, MOLAP storage and key level members	2026-11-21T12:49:01.2274743Z Dimension Product: State Processed, LastProcessed 11/21/2026 12:48:59
+ssas	8. Processed state, MOLAP storage and key level members	2026-11-21T12:49:01.2280832Z dimension Product state: Processed (expected Processed) ok
+ssas	8. Processed state, MOLAP storage and key level members	2026-11-21T12:49:01.2284172Z Dimension Customer: State Processed, LastProcessed 11/21/2026 12:48:59
+ssas	8. Processed state, MOLAP storage and key level members	2026-11-21T12:49:01.2288065Z dimension Customer state: Processed (expected Processed) ok
+ssas	8. Processed state, MOLAP storage and key level members	2026-11-21T12:49:01.2643611Z Cube Sales: State Processed, LastProcessed 11/21/2026 12:49:00, StorageMode Molap
+ssas	8. Processed state, MOLAP storage and key level members	2026-11-21T12:49:01.2648309Z cube state: Processed (expected Processed) ok
+ssas	8. Processed state, MOLAP storage and key level members	2026-11-21T12:49:01.2919658Z Measure group SalesLines: State Processed, StorageMode Molap
+ssas	8. Processed state, MOLAP storage and key level members	2026-11-21T12:49:01.3035839Z Partition SalesLines: State Processed, StorageMode Molap, LastProcessed 11/21/2026 12:49:00 PM, EstimatedSize 7358 bytes
+ssas	8. Processed state, MOLAP storage and key level members	2026-11-21T12:49:01.3039738Z partition SalesLines state: Processed (expected Processed) ok
+ssas	8. Processed state, MOLAP storage and key level members	2026-11-21T12:49:01.3050915Z partition SalesLines storage mode: Molap (expected Molap) ok
+ssas	8. Processed state, MOLAP storage and key level members	2026-11-21T12:49:01.3934027Z DISCOVER_PARTITION_STAT: DATABASE_NAME=P64SalesCube, CUBE_NAME=Sales, MEASURE_GROUP_NAME=SalesLines, PARTITION_NAME=SalesLines, AGGREGATION_SIZE=1774
+ssas	8. Processed state, MOLAP storage and key level members	2026-11-21T12:49:01.4415733Z members of [Date].[Calendar].[Day]: 731 (expected 731) ok
+ssas	8. Processed state, MOLAP storage and key level members	2026-11-21T12:49:01.4812292Z members of [Product].[Catalog].[Product]: 6 (expected 6) ok
+ssas	8. Processed state, MOLAP storage and key level members	2026-11-21T12:49:01.5080380Z members of [Customer].[Geography].[Customer]: 4 (expected 4) ok
+ssas	8. Processed state, MOLAP storage and key level members	2026-11-21T12:49:01.5101119Z Cube state: database, dimensions, cube and partition Processed; partition MOLAP; key level members match the star
+ssas	9. Execute the 10 MDX queries in SSAS and compare (scripts/Compare-Cube.ps1)	﻿2026-11-21T12:49:01.5583053Z ##[group]Run $ErrorActionPreference = 'Stop'
+ssas	9. Execute the 10 MDX queries in SSAS and compare (scripts/Compare-Cube.ps1)	2026-11-21T12:49:01.5583494Z [36;1m$ErrorActionPreference = 'Stop'[0m
+ssas	9. Execute the 10 MDX queries in SSAS and compare (scripts/Compare-Cube.ps1)	2026-11-21T12:49:01.5583751Z [36;1mtry {[0m
+ssas	9. Execute the 10 MDX queries in SSAS and compare (scripts/Compare-Cube.ps1)	2026-11-21T12:49:01.5584164Z [36;1m  & .\scripts\Compare-Cube.ps1 -Server localhost | Tee-Object -FilePath "$env:EVIDENCE/compare.txt"[0m
+ssas	9. Execute the 10 MDX queries in SSAS and compare (scripts/Compare-Cube.ps1)	2026-11-21T12:49:01.5584673Z [36;1m} finally {[0m
+ssas	9. Execute the 10 MDX queries in SSAS and compare (scripts/Compare-Cube.ps1)	2026-11-21T12:49:01.5585198Z [36;1m  $answers = Get-ChildItem -Directory reports/actual -ErrorAction SilentlyContinue | Sort-Object Name | Select-Object -Last 1[0m
+ssas	9. Execute the 10 MDX queries in SSAS and compare (scripts/Compare-Cube.ps1)	2026-11-21T12:49:01.5585975Z [36;1m  if ($answers) { [IO.File]::AppendAllText($env:GITHUB_ENV, "P64_ANSWERS=$($answers.FullName)`n") }[0m
+ssas	9. Execute the 10 MDX queries in SSAS and compare (scripts/Compare-Cube.ps1)	2026-11-21T12:49:01.5586567Z [36;1m  Get-Content "$env:EVIDENCE/compare.txt" -ErrorAction SilentlyContinue |[0m
+ssas	9. Execute the 10 MDX queries in SSAS and compare (scripts/Compare-Cube.ps1)	2026-11-21T12:49:01.5587094Z [36;1m    Where-Object { $_ -match 'answers match the reference|MDX cellsets match' } |[0m
+ssas	9. Execute the 10 MDX queries in SSAS and compare (scripts/Compare-Cube.ps1)	2026-11-21T12:49:01.5587701Z [36;1m    ForEach-Object { Add-Content -Encoding UTF8 -Path "$env:EVIDENCE/summary.txt" -Value $_ }[0m
+ssas	9. Execute the 10 MDX queries in SSAS and compare (scripts/Compare-Cube.ps1)	2026-11-21T12:49:01.5588188Z [36;1m}[0m
+ssas	9. Execute the 10 MDX queries in SSAS and compare (scripts/Compare-Cube.ps1)	2026-11-21T12:49:01.5626567Z shell: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.EXE -command ". '{0}'"
+ssas	9. Execute the 10 MDX queries in SSAS and compare (scripts/Compare-Cube.ps1)	2026-11-21T12:49:01.5626983Z env:
+ssas	9. Execute the 10 MDX queries in SSAS and compare (scripts/Compare-Cube.ps1)	2026-11-21T12:49:01.5627147Z   PYTHONPATH: src
+ssas	9. Execute the 10 MDX queries in SSAS and compare (scripts/Compare-Cube.ps1)	2026-11-21T12:49:01.5627338Z   EVIDENCE: reports/ssas
+ssas	9. Execute the 10 MDX queries in SSAS and compare (scripts/Compare-Cube.ps1)	2026-11-21T12:49:01.5627543Z   SQLSERVER_MODULE_VERSION: 22.4.5.1
+ssas	9. Execute the 10 MDX queries in SSAS and compare (scripts/Compare-Cube.ps1)	2026-11-21T12:49:01.5628088Z   SQL_ISO_URL: https://download.microsoft.com/download/3/8/d/38de7036-2433-4207-8eae-06e247e17b25/SQLServer2022-x64-ENU-Dev.iso
+ssas	9. Execute the 10 MDX queries in SSAS and compare (scripts/Compare-Cube.ps1)	2026-11-21T12:49:01.5628773Z   SQL_ISO_SHA256: 80D2CD75DD2B28098C0182F50AD86BD44F9B3A9F357C30FF617480A1497DAFFD
+ssas	9. Execute the 10 MDX queries in SSAS and compare (scripts/Compare-Cube.ps1)	2026-11-21T12:49:01.5629260Z   SETUP_LOG: C:\Program Files\Microsoft SQL Server\160\Setup Bootstrap\Log
+ssas	9. Execute the 10 MDX queries in SSAS and compare (scripts/Compare-Cube.ps1)	2026-11-21T12:49:01.5629706Z   pythonLocation: C:\hostedtoolcache\windows\Python\3.11.9\x64
+ssas	9. Execute the 10 MDX queries in SSAS and compare (scripts/Compare-Cube.ps1)	2026-11-21T12:49:01.5630146Z   PKG_CONFIG_PATH: C:\hostedtoolcache\windows\Python\3.11.9\x64/lib/pkgconfig
+ssas	9. Execute the 10 MDX queries in SSAS and compare (scripts/Compare-Cube.ps1)	2026-11-21T12:49:01.5630607Z   Python_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.11.9\x64
+ssas	9. Execute the 10 MDX queries in SSAS and compare (scripts/Compare-Cube.ps1)	2026-11-21T12:49:01.5630999Z   Python2_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.11.9\x64
+ssas	9. Execute the 10 MDX queries in SSAS and compare (scripts/Compare-Cube.ps1)	2026-11-21T12:49:01.5631381Z   Python3_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.11.9\x64
+ssas	9. Execute the 10 MDX queries in SSAS and compare (scripts/Compare-Cube.ps1)	2026-11-21T12:49:01.5631784Z   AMO_DIR: C:\Program Files\WindowsPowerShell\Modules\SqlServer\22.4.5.1
+ssas	9. Execute the 10 MDX queries in SSAS and compare (scripts/Compare-Cube.ps1)	2026-11-21T12:49:01.5632114Z ##[endgroup]
+ssas	9. Execute the 10 MDX queries in SSAS and compare (scripts/Compare-Cube.ps1)	2026-11-21T12:49:03.0039409Z answers: D:\a\ssas-mdx-sales-cube\ssas-mdx-sales-cube\reports\actual\20261121-124902
+ssas	9. Execute the 10 MDX queries in SSAS and compare (scripts/Compare-Cube.ps1)	2026-11-21T12:49:03.2546440Z 01_total | expected [[870055]] | SSAS [[870055]] | match yes
+ssas	9. Execute the 10 MDX queries in SSAS and compare (scripts/Compare-Cube.ps1)	2026-11-21T12:49:03.2548528Z 02_units_by_year | expected [['2024', 4232], ['2025', 4190]] | SSAS [['2024', 4232], ['2025', 4190]] | match yes
+ssas	9. Execute the 10 MDX queries in SSAS and compare (scripts/Compare-Cube.ps1)	2026-11-21T12:49:03.2551920Z 03_category | expected [['Office', 192840], ['Tech', 218900]] | SSAS [['Office', 192840], ['Tech', 218900]] | match yes
+ssas	9. Execute the 10 MDX queries in SSAS and compare (scripts/Compare-Cube.ps1)	2026-11-21T12:49:03.2554267Z 04_region | expected [['East', 201310], ['West', 210430]] | SSAS [['East', 201310], ['West', 210430]] | match yes
+ssas	9. Execute the 10 MDX queries in SSAS and compare (scripts/Compare-Cube.ps1)	2026-11-21T12:49:03.2557833Z 05_months | expected [['2025-01', 31130], ['2025-02', 31595], ['2025-03', 28625], ['2025-04', 35240], ['2025-05', 41575], ['2025-06', 35485], ['2025-07', 43185], ['2025-08', 30020], ['2025-09', 26565], ['2025-10', 32595], ['2025-11', 36900], ['2025-12', 38825]] | SSAS [['2025-01', 31130], ['2025-02', 31595], ['2025-03', 28625], ['2025-04', 35240], ['2025-05', 41575], ['2025-06', 35485], ['2025-07', 43185], ['2025-08', 30020], ['2025-09', 26565], ['2025-10', 32595], ['2025-11', 36900], ['2025-12', 38825]] | match yes
+ssas	9. Execute the 10 MDX queries in SSAS and compare (scripts/Compare-Cube.ps1)	2026-11-21T12:49:03.2560827Z 06_ytd_march | expected [[91350]] | SSAS [[91350]] | match yes
+ssas	9. Execute the 10 MDX queries in SSAS and compare (scripts/Compare-Cube.ps1)	2026-11-21T12:49:03.2561740Z 07_prior_march | expected [[42395]] | SSAS [[42395]] | match yes
+ssas	9. Execute the 10 MDX queries in SSAS and compare (scripts/Compare-Cube.ps1)	2026-11-21T12:49:03.2573674Z 08_march_change | expected [[-13770]] | SSAS [[-13770]] | match yes
+ssas	9. Execute the 10 MDX queries in SSAS and compare (scripts/Compare-Cube.ps1)	2026-11-21T12:49:03.2575971Z 09_top_products | expected [['Screen', 152640], ['Desk', 117000], ['Chair', 53370]] | SSAS [['Screen', 152640], ['Desk', 117000], ['Chair', 53370]] | match yes
+ssas	9. Execute the 10 MDX queries in SSAS and compare (scripts/Compare-Cube.ps1)	2026-11-21T12:49:03.2581043Z 10_east_office | expected [['Aspen', 48335], ['Birch', 47650]] | SSAS [['Aspen', 48335], ['Birch', 47650]] | match yes
+ssas	9. Execute the 10 MDX queries in SSAS and compare (scripts/Compare-Cube.ps1)	2026-11-21T12:49:03.2581881Z 10/10 SSAS answers match the reference
+ssas	9. Execute the 10 MDX queries in SSAS and compare (scripts/Compare-Cube.ps1)	2026-11-21T12:49:03.3205227Z 10 MDX cellsets match the reference
+ssas	10. Negative controls on the SSAS answers	﻿2026-11-21T12:49:03.3813759Z ##[group]Run $ErrorActionPreference = 'Stop'
+ssas	10. Negative controls on the SSAS answers	2026-11-21T12:49:03.3814214Z [36;1m$ErrorActionPreference = 'Stop'[0m
+ssas	10. Negative controls on the SSAS answers	2026-11-21T12:49:03.3814601Z [36;1mif (-not $env:P64_ANSWERS) { throw 'No folder of SSAS answers.' }[0m
+ssas	10. Negative controls on the SSAS answers	2026-11-21T12:49:03.3815019Z [36;1mWrite-Output "answers: $env:P64_ANSWERS"[0m
+ssas	10. Negative controls on the SSAS answers	2026-11-21T12:49:03.3815581Z [36;1mpython -m pytest -v -m slow tests/test_mondrian_answers.py | Tee-Object -FilePath "$env:EVIDENCE/negative.txt"[0m
+ssas	10. Negative controls on the SSAS answers	2026-11-21T12:49:03.3816098Z [36;1m$code = $LASTEXITCODE[0m
+ssas	10. Negative controls on the SSAS answers	2026-11-21T12:49:03.3816616Z [36;1m$last = Get-Content "$env:EVIDENCE/negative.txt" | Where-Object { $_ -match '(passed|failed|error)' } | Select-Object -Last 1[0m
+ssas	10. Negative controls on the SSAS answers	2026-11-21T12:49:03.3817556Z [36;1mAdd-Content -Encoding UTF8 -Path "$env:EVIDENCE/summary.txt" -Value "negative controls on the SSAS answers (tests/test_mondrian_answers.py): $last"[0m
+ssas	10. Negative controls on the SSAS answers	2026-11-21T12:49:03.3818242Z [36;1mif ($code -ne 0) { throw "pytest exited with $code" }[0m
+ssas	10. Negative controls on the SSAS answers	2026-11-21T12:49:03.3855571Z shell: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.EXE -command ". '{0}'"
+ssas	10. Negative controls on the SSAS answers	2026-11-21T12:49:03.3856025Z env:
+ssas	10. Negative controls on the SSAS answers	2026-11-21T12:49:03.3856193Z   PYTHONPATH: src
+ssas	10. Negative controls on the SSAS answers	2026-11-21T12:49:03.3856390Z   EVIDENCE: reports/ssas
+ssas	10. Negative controls on the SSAS answers	2026-11-21T12:49:03.3856603Z   SQLSERVER_MODULE_VERSION: 22.4.5.1
+ssas	10. Negative controls on the SSAS answers	2026-11-21T12:49:03.3857173Z   SQL_ISO_URL: https://download.microsoft.com/download/3/8/d/38de7036-2433-4207-8eae-06e247e17b25/SQLServer2022-x64-ENU-Dev.iso
+ssas	10. Negative controls on the SSAS answers	2026-11-21T12:49:03.3857885Z   SQL_ISO_SHA256: 80D2CD75DD2B28098C0182F50AD86BD44F9B3A9F357C30FF617480A1497DAFFD
+ssas	10. Negative controls on the SSAS answers	2026-11-21T12:49:03.3858375Z   SETUP_LOG: C:\Program Files\Microsoft SQL Server\160\Setup Bootstrap\Log
+ssas	10. Negative controls on the SSAS answers	2026-11-21T12:49:03.3858821Z   pythonLocation: C:\hostedtoolcache\windows\Python\3.11.9\x64
+ssas	10. Negative controls on the SSAS answers	2026-11-21T12:49:03.3859254Z   PKG_CONFIG_PATH: C:\hostedtoolcache\windows\Python\3.11.9\x64/lib/pkgconfig
+ssas	10. Negative controls on the SSAS answers	2026-11-21T12:49:03.3859679Z   Python_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.11.9\x64
+ssas	10. Negative controls on the SSAS answers	2026-11-21T12:49:03.3860063Z   Python2_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.11.9\x64
+ssas	10. Negative controls on the SSAS answers	2026-11-21T12:49:03.3860464Z   Python3_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.11.9\x64
+ssas	10. Negative controls on the SSAS answers	2026-11-21T12:49:03.3860868Z   AMO_DIR: C:\Program Files\WindowsPowerShell\Modules\SqlServer\22.4.5.1
+ssas	10. Negative controls on the SSAS answers	2026-11-21T12:49:03.3861371Z   P64_ANSWERS: D:\a\ssas-mdx-sales-cube\ssas-mdx-sales-cube\reports\actual\20261121-124902
+ssas	10. Negative controls on the SSAS answers	2026-11-21T12:49:03.3861808Z ##[endgroup]
+ssas	10. Negative controls on the SSAS answers	2026-11-21T12:49:03.6278460Z answers: D:\a\ssas-mdx-sales-cube\ssas-mdx-sales-cube\reports\actual\20261121-124902
+ssas	10. Negative controls on the SSAS answers	2026-11-21T12:49:04.1511378Z ============================= test session starts =============================
+ssas	10. Negative controls on the SSAS answers	2026-11-21T12:49:04.1513259Z platform win32 -- Python 3.11.9, pytest-8.4.2, pluggy-1.7.0 -- C:\hostedtoolcache\windows\Python\3.11.9\x64\python.exe
+ssas	10. Negative controls on the SSAS answers	2026-11-21T12:49:04.1514244Z cachedir: .pytest_cache
+ssas	10. Negative controls on the SSAS answers	2026-11-21T12:49:04.1517107Z rootdir: D:\a\ssas-mdx-sales-cube\ssas-mdx-sales-cube
+ssas	10. Negative controls on the SSAS answers	2026-11-21T12:49:04.1518370Z configfile: pyproject.toml
+ssas	10. Negative controls on the SSAS answers	2026-11-21T12:49:04.2118889Z collecting ... collected 23 items
+ssas	10. Negative controls on the SSAS answers	2026-11-21T12:49:04.2120137Z 
+ssas	10. Negative controls on the SSAS answers	2026-11-21T12:49:04.2181840Z tests/test_mondrian_answers.py::test_ten_mondrian_answers_match_the_reference PASSED [  4%]
+ssas	10. Negative controls on the SSAS answers	2026-11-21T12:49:04.2197026Z tests/test_mondrian_answers.py::test_a_changed_reference_value_fails[01_total] PASSED [  8%]
+ssas	10. Negative controls on the SSAS answers	2026-11-21T12:49:04.2219694Z tests/test_mondrian_answers.py::test_a_changed_reference_value_fails[02_units_by_year] PASSED [ 13%]
+ssas	10. Negative controls on the SSAS answers	2026-11-21T12:49:04.2245519Z tests/test_mondrian_answers.py::test_a_changed_reference_value_fails[03_category] PASSED [ 17%]
+ssas	10. Negative controls on the SSAS answers	2026-11-21T12:49:04.2275168Z tests/test_mondrian_answers.py::test_a_changed_reference_value_fails[04_region] PASSED [ 21%]
+ssas	10. Negative controls on the SSAS answers	2026-11-21T12:49:04.2310069Z tests/test_mondrian_answers.py::test_a_changed_reference_value_fails[05_months] PASSED [ 26%]
+ssas	10. Negative controls on the SSAS answers	2026-11-21T12:49:04.2346941Z tests/test_mondrian_answers.py::test_a_changed_reference_value_fails[06_ytd_march] PASSED [ 30%]
+ssas	10. Negative controls on the SSAS answers	2026-11-21T12:49:04.2388085Z tests/test_mondrian_answers.py::test_a_changed_reference_value_fails[07_prior_march] PASSED [ 34%]
+ssas	10. Negative controls on the SSAS answers	2026-11-21T12:49:04.2431297Z tests/test_mondrian_answers.py::test_a_changed_reference_value_fails[08_march_change] PASSED [ 39%]
+ssas	10. Negative controls on the SSAS answers	2026-11-21T12:49:04.2477667Z tests/test_mondrian_answers.py::test_a_changed_reference_value_fails[09_top_products] PASSED [ 43%]
+ssas	10. Negative controls on the SSAS answers	2026-11-21T12:49:04.2526910Z tests/test_mondrian_answers.py::test_a_changed_reference_value_fails[10_east_office] PASSED [ 47%]
+ssas	10. Negative controls on the SSAS answers	2026-11-21T12:49:04.2903072Z tests/test_mondrian_answers.py::test_a_changed_mondrian_value_fails[01_total] PASSED [ 52%]
+ssas	10. Negative controls on the SSAS answers	2026-11-21T12:49:04.3043863Z tests/test_mondrian_answers.py::test_a_changed_mondrian_value_fails[02_units_by_year] PASSED [ 56%]
+ssas	10. Negative controls on the SSAS answers	2026-11-21T12:49:04.3188328Z tests/test_mondrian_answers.py::test_a_changed_mondrian_value_fails[03_category] PASSED [ 60%]
+ssas	10. Negative controls on the SSAS answers	2026-11-21T12:49:04.3332314Z tests/test_mondrian_answers.py::test_a_changed_mondrian_value_fails[04_region] PASSED [ 65%]
+ssas	10. Negative controls on the SSAS answers	2026-11-21T12:49:04.3485083Z tests/test_mondrian_answers.py::test_a_changed_mondrian_value_fails[05_months] PASSED [ 69%]
+ssas	10. Negative controls on the SSAS answers	2026-11-21T12:49:04.3820885Z tests/test_mondrian_answers.py::test_a_changed_mondrian_value_fails[06_ytd_march] PASSED [ 73%]
+ssas	10. Negative controls on the SSAS answers	2026-11-21T12:49:04.3978171Z tests/test_mondrian_answers.py::test_a_changed_mondrian_value_fails[07_prior_march] PASSED [ 78%]
+ssas	10. Negative controls on the SSAS answers	2026-11-21T12:49:04.4137209Z tests/test_mondrian_answers.py::test_a_changed_mondrian_value_fails[08_march_change] PASSED [ 82%]
+ssas	10. Negative controls on the SSAS answers	2026-11-21T12:49:04.4304745Z tests/test_mondrian_answers.py::test_a_changed_mondrian_value_fails[09_top_products] PASSED [ 86%]
+ssas	10. Negative controls on the SSAS answers	2026-11-21T12:49:04.4473369Z tests/test_mondrian_answers.py::test_a_changed_mondrian_value_fails[10_east_office] PASSED [ 91%]
+ssas	10. Negative controls on the SSAS answers	2026-11-21T12:49:04.4817283Z tests/test_mondrian_answers.py::test_swapped_captions_fail PASSED        [ 95%]
+ssas	10. Negative controls on the SSAS answers	2026-11-21T12:49:04.5153737Z tests/test_mondrian_answers.py::test_a_missing_answer_fails PASSED       [100%]
+ssas	10. Negative controls on the SSAS answers	2026-11-21T12:49:04.5154823Z 
+ssas	10. Negative controls on the SSAS answers	2026-11-21T12:49:04.5157566Z ============================= 23 passed in 0.35s ==============================
+ssas	11. Summary	﻿2026-11-21T12:49:04.6303873Z ##[group]Run $ErrorActionPreference = 'Stop'
+ssas	11. Summary	2026-11-21T12:49:04.6304302Z [36;1m$ErrorActionPreference = 'Stop'[0m
+ssas	11. Summary	2026-11-21T12:49:04.6304597Z [36;1m$file = "$env:EVIDENCE/summary.txt"[0m
+ssas	11. Summary	2026-11-21T12:49:04.6305008Z [36;1m$lines = @(Get-Content -Encoding UTF8 $file -ErrorAction SilentlyContinue)[0m
+ssas	11. Summary	2026-11-21T12:49:04.6305636Z [36;1mforeach ($key in 'reference:', 'SQL Server media:', 'SQL Server setup:', 'SqlServer module:', 'Database Engine:',[0m
+ssas	11. Summary	2026-11-21T12:49:04.6306330Z [36;1m                 'Analysis Services server mode', 'star in SQL Server:', 'SSAS service account', 'AMO Validate:',[0m
+ssas	11. Summary	2026-11-21T12:49:04.6307026Z [36;1m                 'Create (', 'ProcessFull (', 'Cube state:', 'SSAS answers match the reference', 'negative controls') {[0m
+ssas	11. Summary	2026-11-21T12:49:04.6307657Z [36;1m  if (-not ($lines | Where-Object { $_.Contains($key) })) { $lines += "$key not reached" }[0m
+ssas	11. Summary	2026-11-21T12:49:04.6308057Z [36;1m}[0m
+ssas	11. Summary	2026-11-21T12:49:04.6308265Z [36;1m$lines | Set-Content -Encoding UTF8 $file[0m
+ssas	11. Summary	2026-11-21T12:49:04.6308565Z [36;1m$lines[0m
+ssas	11. Summary	2026-11-21T12:49:04.6308846Z [36;1m$markdown = @('### SSAS on Windows') + ($lines | ForEach-Object { "- $_" })[0m
+ssas	11. Summary	2026-11-21T12:49:04.6309358Z [36;1m[IO.File]::AppendAllText($env:GITHUB_STEP_SUMMARY, ($markdown -join "`n") + "`n")[0m
+ssas	11. Summary	2026-11-21T12:49:04.6354620Z shell: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.EXE -command ". '{0}'"
+ssas	11. Summary	2026-11-21T12:49:04.6355046Z env:
+ssas	11. Summary	2026-11-21T12:49:04.6355216Z   PYTHONPATH: src
+ssas	11. Summary	2026-11-21T12:49:04.6355408Z   EVIDENCE: reports/ssas
+ssas	11. Summary	2026-11-21T12:49:04.6355622Z   SQLSERVER_MODULE_VERSION: 22.4.5.1
+ssas	11. Summary	2026-11-21T12:49:04.6356306Z   SQL_ISO_URL: https://download.microsoft.com/download/3/8/d/38de7036-2433-4207-8eae-06e247e17b25/SQLServer2022-x64-ENU-Dev.iso
+ssas	11. Summary	2026-11-21T12:49:04.6356987Z   SQL_ISO_SHA256: 80D2CD75DD2B28098C0182F50AD86BD44F9B3A9F357C30FF617480A1497DAFFD
+ssas	11. Summary	2026-11-21T12:49:04.6357484Z   SETUP_LOG: C:\Program Files\Microsoft SQL Server\160\Setup Bootstrap\Log
+ssas	11. Summary	2026-11-21T12:49:04.6357925Z   pythonLocation: C:\hostedtoolcache\windows\Python\3.11.9\x64
+ssas	11. Summary	2026-11-21T12:49:04.6358355Z   PKG_CONFIG_PATH: C:\hostedtoolcache\windows\Python\3.11.9\x64/lib/pkgconfig
+ssas	11. Summary	2026-11-21T12:49:04.6358780Z   Python_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.11.9\x64
+ssas	11. Summary	2026-11-21T12:49:04.6359160Z   Python2_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.11.9\x64
+ssas	11. Summary	2026-11-21T12:49:04.6359547Z   Python3_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.11.9\x64
+ssas	11. Summary	2026-11-21T12:49:04.6359977Z   AMO_DIR: C:\Program Files\WindowsPowerShell\Modules\SqlServer\22.4.5.1
+ssas	11. Summary	2026-11-21T12:49:04.6360489Z   P64_ANSWERS: D:\a\ssas-mdx-sales-cube\ssas-mdx-sales-cube\reports\actual\20261121-124902
+ssas	11. Summary	2026-11-21T12:49:04.6360891Z ##[endgroup]
+ssas	11. Summary	2026-11-21T12:49:04.8861545Z reference: reports/expected.json equals docs/runs/expected-seed64.json (seed 64)
+ssas	11. Summary	2026-11-21T12:49:04.8863420Z SQL Server media: SQLServer2022-x64-ENU-Dev.iso, 1163053056 bytes, SHA-256 80D2CD75DD2B28098C0182F50AD86BD44F9B3A9F357C30FF617480A1497DAFFD
+ssas	11. Summary	2026-11-21T12:49:04.8865229Z SQL Server setup: exit code 0 in 4.3 min (features SQLENGINE,AS; ASSERVERMODE=MULTIDIMENSIONAL)
+ssas	11. Summary	2026-11-21T12:49:04.8866386Z SqlServer module: 22.4.5.1 at C:\Program Files\WindowsPowerShell\Modules\SqlServer\22.4.5.1
+ssas	11. Summary	2026-11-21T12:49:04.8868512Z Database Engine: 16.0.1000.6 | Developer Edition (64-bit) | Microsoft SQL Server 2022 (RTM) - 16.0.1000.6 (X64)  	Oct  8 2022 05:58:25  	Copyright (C) 2022 Microsoft Corporation 	Developer Edition (64-bit) on Windows Server 2022 Datacenter 10.0 <X64> (Build 20348: ) (Hypervisor) 
+ssas	11. Summary	2026-11-21T12:49:04.8870398Z Analysis Services version: 16.0.42.209
+ssas	11. Summary	2026-11-21T12:49:04.8870907Z Analysis Services edition: Developer64
+ssas	11. Summary	2026-11-21T12:49:04.8871518Z Analysis Services server mode (AMO ServerMode): Multidimensional
+ssas	11. Summary	2026-11-21T12:49:04.8872588Z msmdsrv.ini DeploymentMode: 0 (C:\Program Files\Microsoft SQL Server\MSAS16.MSSQLSERVER\OLAP\Config\msmdsrv.ini)
+ssas	11. Summary	2026-11-21T12:49:04.8873942Z star in SQL Server: DimDate 731, DimProduct 6, DimCustomer 4, FactSales 1838, SUM(Units) 8422, SUM(Revenue) 870055
+ssas	11. Summary	2026-11-21T12:49:04.8877793Z SSAS service account with db_datareader on P64SalesDW: NT Service\MSSQLServerOLAPService
+ssas	11. Summary	2026-11-21T12:49:04.8879219Z AMO Validate: AMO 19.96.1.0 from C:\Program Files\WindowsPowerShell\Modules\SqlServer\22.4.5.1; P64SalesCube: 3 dimensions, 1 measure group, 2 measures
+ssas	11. Summary	2026-11-21T12:49:04.8880486Z Create (cube/create.xmla): no Exception or Error in the answer
+ssas	11. Summary	2026-11-21T12:49:04.8881275Z ProcessFull (cube/process.xmla): no Exception or Error in the answer, 3.2 s
+ssas	11. Summary	2026-11-21T12:49:04.8882318Z Database P64SalesCube: State Processed, LastProcessed 11/21/2026 12:49:00, EstimatedSize 273602
+ssas	11. Summary	2026-11-21T12:49:04.8883357Z Cube Sales: State Processed, LastProcessed 11/21/2026 12:49:00, StorageMode Molap
+ssas	11. Summary	2026-11-21T12:49:04.8884552Z Partition SalesLines: State Processed, StorageMode Molap, LastProcessed 11/21/2026 12:49:00 PM, EstimatedSize 7358 bytes
+ssas	11. Summary	2026-11-21T12:49:04.8885787Z DISCOVER_PARTITION_STAT: DATABASE_NAME=P64SalesCube, CUBE_NAME=Sales, MEASURE_GROUP_NAME=SalesLines, PARTITION_NAME=SalesLines, AGGREGATION_SIZE=1774
+ssas	11. Summary	2026-11-21T12:49:04.8886633Z members of [Date].[Calendar].[Day]: 731 (expected 731) ok
+ssas	11. Summary	2026-11-21T12:49:04.8887210Z members of [Product].[Catalog].[Product]: 6 (expected 6) ok
+ssas	11. Summary	2026-11-21T12:49:04.8887628Z members of [Customer].[Geography].[Customer]: 4 (expected 4) ok
+ssas	11. Summary	2026-11-21T12:49:04.8888194Z Cube state: database, dimensions, cube and partition Processed; partition MOLAP; key level members match the star
+ssas	11. Summary	2026-11-21T12:49:04.8888717Z 10/10 SSAS answers match the reference
+ssas	11. Summary	2026-11-21T12:49:04.8888972Z 10 MDX cellsets match the reference
+ssas	11. Summary	2026-11-21T12:49:04.8889745Z negative controls on the SSAS answers (tests/test_mondrian_answers.py): ============================= 23 passed in 0.35s ==============================
+ssas	12. Upload the evidence	﻿2026-11-21T12:49:04.9244803Z ##[group]Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+ssas	12. Upload the evidence	2026-11-21T12:49:04.9245286Z with:
+ssas	12. Upload the evidence	2026-11-21T12:49:04.9245476Z   name: ssas-windows-evidence
+ssas	12. Upload the evidence	2026-11-21T12:49:04.9245932Z   path: reports/ssas/
+ssas	12. Upload the evidence	reports/actual/
+ssas	12. Upload the evidence	reports/expected.json
+ssas	12. Upload the evidence	reports/summary.txt
+ssas	12. Upload the evidence	
+ssas	12. Upload the evidence	2026-11-21T12:49:04.9246337Z   retention-days: 30
+ssas	12. Upload the evidence	2026-11-21T12:49:04.9246540Z   if-no-files-found: warn
+ssas	12. Upload the evidence	2026-11-21T12:49:04.9246758Z   compression-level: 6
+ssas	12. Upload the evidence	2026-11-21T12:49:04.9246948Z   overwrite: false
+ssas	12. Upload the evidence	2026-11-21T12:49:04.9247134Z   include-hidden-files: false
+ssas	12. Upload the evidence	2026-11-21T12:49:04.9247341Z   archive: true
+ssas	12. Upload the evidence	2026-11-21T12:49:04.9247507Z env:
+ssas	12. Upload the evidence	2026-11-21T12:49:04.9247708Z   PYTHONPATH: src
+ssas	12. Upload the evidence	2026-11-21T12:49:04.9247898Z   EVIDENCE: reports/ssas
+ssas	12. Upload the evidence	2026-11-21T12:49:04.9248110Z   SQLSERVER_MODULE_VERSION: 22.4.5.1
+ssas	12. Upload the evidence	2026-11-21T12:49:04.9248671Z   SQL_ISO_URL: https://download.microsoft.com/download/3/8/d/38de7036-2433-4207-8eae-06e247e17b25/SQLServer2022-x64-ENU-Dev.iso
+ssas	12. Upload the evidence	2026-11-21T12:49:04.9249356Z   SQL_ISO_SHA256: 80D2CD75DD2B28098C0182F50AD86BD44F9B3A9F357C30FF617480A1497DAFFD
+ssas	12. Upload the evidence	2026-11-21T12:49:04.9249873Z   SETUP_LOG: C:\Program Files\Microsoft SQL Server\160\Setup Bootstrap\Log
+ssas	12. Upload the evidence	2026-11-21T12:49:04.9250299Z   pythonLocation: C:\hostedtoolcache\windows\Python\3.11.9\x64
+ssas	12. Upload the evidence	2026-11-21T12:49:04.9250727Z   PKG_CONFIG_PATH: C:\hostedtoolcache\windows\Python\3.11.9\x64/lib/pkgconfig
+ssas	12. Upload the evidence	2026-11-21T12:49:04.9251153Z   Python_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.11.9\x64
+ssas	12. Upload the evidence	2026-11-21T12:49:04.9251533Z   Python2_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.11.9\x64
+ssas	12. Upload the evidence	2026-11-21T12:49:04.9251942Z   Python3_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.11.9\x64
+ssas	12. Upload the evidence	2026-11-21T12:49:04.9252361Z   AMO_DIR: C:\Program Files\WindowsPowerShell\Modules\SqlServer\22.4.5.1
+ssas	12. Upload the evidence	2026-11-21T12:49:04.9252864Z   P64_ANSWERS: D:\a\ssas-mdx-sales-cube\ssas-mdx-sales-cube\reports\actual\20261121-124902
+ssas	12. Upload the evidence	2026-11-21T12:49:04.9253267Z ##[endgroup]
+ssas	12. Upload the evidence	2026-11-21T12:49:05.1036726Z Multiple search paths detected. Calculating the least common ancestor of all paths
+ssas	12. Upload the evidence	2026-11-21T12:49:05.1040349Z The least common ancestor is D:\a\ssas-mdx-sales-cube\ssas-mdx-sales-cube\reports. This will be the root directory of the artifact
+ssas	12. Upload the evidence	2026-11-21T12:49:05.1041399Z With the provided path, there will be 24 files uploaded
+ssas	12. Upload the evidence	2026-11-21T12:49:05.1046257Z Artifact name is valid!
+ssas	12. Upload the evidence	2026-11-21T12:49:05.1048008Z Root directory input is valid!
+ssas	12. Upload the evidence	2026-11-21T12:49:05.4683264Z Uploading artifact: ssas-windows-evidence.zip
+ssas	12. Upload the evidence	2026-11-21T12:49:05.4722860Z Beginning upload of artifact content to blob storage
+ssas	12. Upload the evidence	2026-11-21T12:49:05.8542697Z Uploaded bytes 24198
+ssas	12. Upload the evidence	2026-11-21T12:49:05.9270627Z Finished uploading artifact content to blob storage!
+ssas	12. Upload the evidence	2026-11-21T12:49:05.9272387Z SHA256 digest of uploaded artifact is dd1d51d27730562e8a37d49fc3ff26024a5532ea3bdc64d71ab77d54714315c2
+ssas	12. Upload the evidence	2026-11-21T12:49:05.9273270Z Finalizing artifact upload
+ssas	12. Upload the evidence	2026-11-21T12:49:06.4249069Z Artifact ssas-windows-evidence successfully finalized. Artifact ID 14707907107
+ssas	12. Upload the evidence	2026-11-21T12:49:06.4250008Z Artifact ssas-windows-evidence has been successfully uploaded! Final size is 24198 bytes. Artifact ID is 14707907107
+ssas	12. Upload the evidence	2026-11-21T12:49:06.4255792Z Artifact download URL: https://github.com/brownjuly2003-code/ssas-mdx-sales-cube/actions/runs/44905240710/artifacts/14707907107
+ssas	Post Run actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0	﻿2026-11-21T12:49:06.4554822Z Post job cleanup.
+ssas	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	﻿2026-11-21T12:49:06.6107271Z Post job cleanup.
+ssas	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-21T12:49:06.8030682Z [command]"C:\Program Files\Git\bin\git.exe" version
+ssas	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-21T12:49:06.8305260Z git version 2.56.1.windows.1
+ssas	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-21T12:49:06.8359563Z Temporarily overriding HOME='D:\a\_temp\8dda6cb5-5fbe-4519-ae22-0fd2ea3c4f99' before making global git config changes
+ssas	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-21T12:49:06.8360459Z Adding repository directory to the temporary git global config as a safe directory
+ssas	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-21T12:49:06.8370794Z [command]"C:\Program Files\Git\bin\git.exe" config --global --add safe.directory D:\a\ssas-mdx-sales-cube\ssas-mdx-sales-cube
+ssas	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-21T12:49:06.8652139Z Removing SSH command configuration
+ssas	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-21T12:49:06.8661573Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp core\.sshCommand
+ssas	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-21T12:49:06.8953055Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\""
+ssas	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-21T12:49:07.3593689Z Removing HTTP extra header
+ssas	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-21T12:49:07.3603232Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+ssas	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-21T12:49:07.3891799Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\""
+ssas	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-21T12:49:07.8547577Z Removing includeIf entries pointing to credentials config files
+ssas	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-21T12:49:07.8558120Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp ^includeIf\.gitdir:
+ssas	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-21T12:49:07.8817208Z includeif.gitdir:D:/a/ssas-mdx-sales-cube/ssas-mdx-sales-cube/.git.path
+ssas	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-21T12:49:07.8818000Z includeif.gitdir:D:/a/ssas-mdx-sales-cube/ssas-mdx-sales-cube/.git/worktrees/*.path
+ssas	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-21T12:49:07.8818970Z includeif.gitdir:/github/workspace/.git.path
+ssas	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-21T12:49:07.8819455Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+ssas	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-21T12:49:07.8848570Z [command]"C:\Program Files\Git\bin\git.exe" config --local --get-all includeif.gitdir:D:/a/ssas-mdx-sales-cube/ssas-mdx-sales-cube/.git.path
+ssas	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-21T12:49:07.9106290Z D:\a\_temp\git-credentials-7ae2a46b-8bc7-4889-a9bc-ccc178fa7ad0.config
+ssas	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-21T12:49:07.9140210Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset includeif.gitdir:D:/a/ssas-mdx-sales-cube/ssas-mdx-sales-cube/.git.path D\:\\a\\_temp\\git\-credentials\-7ae2a46b\-8bc7\-4889\-a9bc\-ccc178fa7ad0\.config
+ssas	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-21T12:49:07.9432414Z [command]"C:\Program Files\Git\bin\git.exe" config --local --get-all includeif.gitdir:D:/a/ssas-mdx-sales-cube/ssas-mdx-sales-cube/.git/worktrees/*.path
+ssas	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-21T12:49:07.9694163Z D:\a\_temp\git-credentials-7ae2a46b-8bc7-4889-a9bc-ccc178fa7ad0.config
+ssas	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-21T12:49:07.9725918Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset includeif.gitdir:D:/a/ssas-mdx-sales-cube/ssas-mdx-sales-cube/.git/worktrees/*.path D\:\\a\\_temp\\git\-credentials\-7ae2a46b\-8bc7\-4889\-a9bc\-ccc178fa7ad0\.config
+ssas	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-21T12:49:08.0022605Z [command]"C:\Program Files\Git\bin\git.exe" config --local --get-all includeif.gitdir:/github/workspace/.git.path
+ssas	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-21T12:49:08.0284504Z /github/runner_temp/git-credentials-7ae2a46b-8bc7-4889-a9bc-ccc178fa7ad0.config
+ssas	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-21T12:49:08.0314330Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset includeif.gitdir:/github/workspace/.git.path \/github\/runner_temp\/git\-credentials\-7ae2a46b\-8bc7\-4889\-a9bc\-ccc178fa7ad0\.config
+ssas	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-21T12:49:08.0595642Z [command]"C:\Program Files\Git\bin\git.exe" config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+ssas	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-21T12:49:08.0842506Z /github/runner_temp/git-credentials-7ae2a46b-8bc7-4889-a9bc-ccc178fa7ad0.config
+ssas	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-21T12:49:08.0873476Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path \/github\/runner_temp\/git\-credentials\-7ae2a46b\-8bc7\-4889\-a9bc\-ccc178fa7ad0\.config
+ssas	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-21T12:49:08.1157088Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "git config --local --show-origin --name-only --get-regexp remote.origin.url"
+ssas	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-21T12:49:08.5452585Z Removing credentials config 'D:\a\_temp\git-credentials-7ae2a46b-8bc7-4889-a9bc-ccc178fa7ad0.config'
+ssas	Complete job	﻿2026-11-21T12:49:08.5638066Z Cleaning up orphan processes

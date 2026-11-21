@@ -1,0 +1,19 @@
+Database P64SalesCube: State Processed, LastProcessed 11/21/2026 12:49:00, EstimatedSize 273602
+database state: Processed (expected Processed) ok
+Dimension Date: State Processed, LastProcessed 11/21/2026 12:48:59
+dimension Date state: Processed (expected Processed) ok
+Dimension Product: State Processed, LastProcessed 11/21/2026 12:48:59
+dimension Product state: Processed (expected Processed) ok
+Dimension Customer: State Processed, LastProcessed 11/21/2026 12:48:59
+dimension Customer state: Processed (expected Processed) ok
+Cube Sales: State Processed, LastProcessed 11/21/2026 12:49:00, StorageMode Molap
+cube state: Processed (expected Processed) ok
+Measure group SalesLines: State Processed, StorageMode Molap
+Partition SalesLines: State Processed, StorageMode Molap, LastProcessed 11/21/2026 12:49:00 PM, EstimatedSize 7358 bytes
+partition SalesLines state: Processed (expected Processed) ok
+partition SalesLines storage mode: Molap (expected Molap) ok
+DISCOVER_PARTITION_STAT: DATABASE_NAME=P64SalesCube, CUBE_NAME=Sales, MEASURE_GROUP_NAME=SalesLines, PARTITION_NAME=SalesLines, AGGREGATION_SIZE=1774
+members of [Date].[Calendar].[Day]: 731 (expected 731) ok
+members of [Product].[Catalog].[Product]: 6 (expected 6) ok
+members of [Customer].[Geography].[Customer]: 4 (expected 4) ok
+Cube state: database, dimensions, cube and partition Processed; partition MOLAP; key level members match the star

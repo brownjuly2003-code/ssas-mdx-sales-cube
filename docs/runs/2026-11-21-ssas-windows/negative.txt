@@ -1,0 +1,32 @@
+============================= test session starts =============================
+platform win32 -- Python 3.11.9, pytest-8.4.2, pluggy-1.7.0 -- C:\hostedtoolcache\windows\Python\3.11.9\x64\python.exe
+cachedir: .pytest_cache
+rootdir: D:\a\ssas-mdx-sales-cube\ssas-mdx-sales-cube
+configfile: pyproject.toml
+collecting ... collected 23 items
+
+tests/test_mondrian_answers.py::test_ten_mondrian_answers_match_the_reference PASSED [  4%]
+tests/test_mondrian_answers.py::test_a_changed_reference_value_fails[01_total] PASSED [  8%]
+tests/test_mondrian_answers.py::test_a_changed_reference_value_fails[02_units_by_year] PASSED [ 13%]
+tests/test_mondrian_answers.py::test_a_changed_reference_value_fails[03_category] PASSED [ 17%]
+tests/test_mondrian_answers.py::test_a_changed_reference_value_fails[04_region] PASSED [ 21%]
+tests/test_mondrian_answers.py::test_a_changed_reference_value_fails[05_months] PASSED [ 26%]
+tests/test_mondrian_answers.py::test_a_changed_reference_value_fails[06_ytd_march] PASSED [ 30%]
+tests/test_mondrian_answers.py::test_a_changed_reference_value_fails[07_prior_march] PASSED [ 34%]
+tests/test_mondrian_answers.py::test_a_changed_reference_value_fails[08_march_change] PASSED [ 39%]
+tests/test_mondrian_answers.py::test_a_changed_reference_value_fails[09_top_products] PASSED [ 43%]
+tests/test_mondrian_answers.py::test_a_changed_reference_value_fails[10_east_office] PASSED [ 47%]
+tests/test_mondrian_answers.py::test_a_changed_mondrian_value_fails[01_total] PASSED [ 52%]
+tests/test_mondrian_answers.py::test_a_changed_mondrian_value_fails[02_units_by_year] PASSED [ 56%]
+tests/test_mondrian_answers.py::test_a_changed_mondrian_value_fails[03_category] PASSED [ 60%]
+tests/test_mondrian_answers.py::test_a_changed_mondrian_value_fails[04_region] PASSED [ 65%]
+tests/test_mondrian_answers.py::test_a_changed_mondrian_value_fails[05_months] PASSED [ 69%]
+tests/test_mondrian_answers.py::test_a_changed_mondrian_value_fails[06_ytd_march] PASSED [ 73%]
+tests/test_mondrian_answers.py::test_a_changed_mondrian_value_fails[07_prior_march] PASSED [ 78%]
+tests/test_mondrian_answers.py::test_a_changed_mondrian_value_fails[08_march_change] PASSED [ 82%]
+tests/test_mondrian_answers.py::test_a_changed_mondrian_value_fails[09_top_products] PASSED [ 86%]
+tests/test_mondrian_answers.py::test_a_changed_mondrian_value_fails[10_east_office] PASSED [ 91%]
+tests/test_mondrian_answers.py::test_swapped_captions_fail PASSED        [ 95%]
+tests/test_mondrian_answers.py::test_a_missing_answer_fails PASSED       [100%]
+
+============================= 23 passed in 0.35s ==============================

@@ -1,0 +1,13 @@
+answers: D:\a\ssas-mdx-sales-cube\ssas-mdx-sales-cube\reports\actual\20261121-124902
+01_total | expected [[870055]] | SSAS [[870055]] | match yes
+02_units_by_year | expected [['2024', 4232], ['2025', 4190]] | SSAS [['2024', 4232], ['2025', 4190]] | match yes
+03_category | expected [['Office', 192840], ['Tech', 218900]] | SSAS [['Office', 192840], ['Tech', 218900]] | match yes
+04_region | expected [['East', 201310], ['West', 210430]] | SSAS [['East', 201310], ['West', 210430]] | match yes
+05_months | expected [['2025-01', 31130], ['2025-02', 31595], ['2025-03', 28625], ['2025-04', 35240], ['2025-05', 41575], ['2025-06', 35485], ['2025-07', 43185], ['2025-08', 30020], ['2025-09', 26565], ['2025-10', 32595], ['2025-11', 36900], ['2025-12', 38825]] | SSAS [['2025-01', 31130], ['2025-02', 31595], ['2025-03', 28625], ['2025-04', 35240], ['2025-05', 41575], ['2025-06', 35485], ['2025-07', 43185], ['2025-08', 30020], ['2025-09', 26565], ['2025-10', 32595], ['2025-11', 36900], ['2025-12', 38825]] | match yes
+06_ytd_march | expected [[91350]] | SSAS [[91350]] | match yes
+07_prior_march | expected [[42395]] | SSAS [[42395]] | match yes
+08_march_change | expected [[-13770]] | SSAS [[-13770]] | match yes
+09_top_products | expected [['Screen', 152640], ['Desk', 117000], ['Chair', 53370]] | SSAS [['Screen', 152640], ['Desk', 117000], ['Chair', 53370]] | match yes
+10_east_office | expected [['Aspen', 48335], ['Birch', 47650]] | SSAS [['Aspen', 48335], ['Birch', 47650]] | match yes
+10/10 SSAS answers match the reference
+10 MDX cellsets match the reference

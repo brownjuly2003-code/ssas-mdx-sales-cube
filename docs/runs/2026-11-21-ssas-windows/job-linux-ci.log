@@ -1,0 +1,854 @@
+mssql	Set up job	﻿2026-11-21T12:42:26.4186998Z Current runner version: '2.338.2'
+mssql	Set up job	2026-11-21T12:42:26.4204100Z ##[group]Runner Image Provisioner
+mssql	Set up job	2026-11-21T12:42:26.4204760Z Hosted Compute Agent
+mssql	Set up job	2026-11-21T12:42:26.4205201Z Version: 20261111.635
+mssql	Set up job	2026-11-21T12:42:26.4205670Z Commit: b8a594ea514ff44cadb5342986c68b1eac6e22ed
+mssql	Set up job	2026-11-21T12:42:26.4206419Z Build Date: 2026-11-11T01:49:01Z
+mssql	Set up job	2026-11-21T12:42:26.4206931Z Worker ID: {4d721246-0506-4d45-9682-bf7babd8b6d8}
+mssql	Set up job	2026-11-21T12:42:26.4207442Z Region: us-east-1
+mssql	Set up job	2026-11-21T12:42:26.4207864Z Cloud: AWS
+mssql	Set up job	2026-11-21T12:42:26.4208244Z ##[endgroup]
+mssql	Set up job	2026-11-21T12:42:26.4209203Z ##[group]Operating System
+mssql	Set up job	2026-11-21T12:42:26.4209639Z Ubuntu
+mssql	Set up job	2026-11-21T12:42:26.4210025Z 26.04.1
+mssql	Set up job	2026-11-21T12:42:26.4210649Z LTS
+mssql	Set up job	2026-11-21T12:42:26.4211082Z ##[endgroup]
+mssql	Set up job	2026-11-21T12:42:26.4211489Z ##[group]Runner Image
+mssql	Set up job	2026-11-21T12:42:26.4211927Z Image: ubuntu-26.04
+mssql	Set up job	2026-11-21T12:42:26.4212334Z Version: 20261116.88.1
+mssql	Set up job	2026-11-21T12:42:26.4213080Z Included Software: https://github.com/actions/runner-images/blob/ubuntu26/20261116.88/images/ubuntu/Ubuntu2604-Readme.md
+mssql	Set up job	2026-11-21T12:42:26.4214384Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu26%2F20261116.88
+mssql	Set up job	2026-11-21T12:42:26.4215094Z ##[endgroup]
+mssql	Set up job	2026-11-21T12:42:26.4215926Z ##[group]GITHUB_TOKEN Permissions
+mssql	Set up job	2026-11-21T12:42:26.4217595Z Contents: read
+mssql	Set up job	2026-11-21T12:42:26.4218030Z Metadata: read
+mssql	Set up job	2026-11-21T12:42:26.4218435Z Packages: read
+mssql	Set up job	2026-11-21T12:42:26.4218827Z ##[endgroup]
+mssql	Set up job	2026-11-21T12:42:26.4220577Z Secret source: Actions
+mssql	Set up job	2026-11-21T12:42:26.4221317Z Cache mode: write
+mssql	Set up job	2026-11-21T12:42:26.4221949Z Prepare workflow directory
+mssql	Set up job	2026-11-21T12:42:26.4493856Z Prepare all required actions
+mssql	Set up job	2026-11-21T12:42:26.4529240Z Getting action download info
+mssql	Set up job	2026-11-21T12:42:26.5963496Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+mssql	Set up job	2026-11-21T12:42:28.1146070Z Download action repository 'actions/setup-python@v5' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+mssql	Set up job	2026-11-21T12:42:28.2557820Z Download action repository 'actions/setup-java@v4' (SHA:cf277c60eb25467037889841efdb72551f06f6c3)
+mssql	Set up job	2026-11-21T12:42:28.5409445Z Complete job name: mssql
+mssql	Run actions/checkout@v4	﻿2026-11-21T12:42:28.6213607Z ##[group]Run actions/checkout@v4
+mssql	Run actions/checkout@v4	2026-11-21T12:42:28.6214749Z with:
+mssql	Run actions/checkout@v4	2026-11-21T12:42:28.6215592Z   repository: brownjuly2003-code/ssas-mdx-sales-cube
+mssql	Run actions/checkout@v4	2026-11-21T12:42:28.6223081Z   token: ***
+mssql	Run actions/checkout@v4	2026-11-21T12:42:28.6223859Z   ssh-strict: true
+mssql	Run actions/checkout@v4	2026-11-21T12:42:28.6224624Z   ssh-user: git
+mssql	Run actions/checkout@v4	2026-11-21T12:42:28.6225417Z   persist-credentials: true
+mssql	Run actions/checkout@v4	2026-11-21T12:42:28.6226273Z   clean: true
+mssql	Run actions/checkout@v4	2026-11-21T12:42:28.6227059Z   sparse-checkout-cone-mode: true
+mssql	Run actions/checkout@v4	2026-11-21T12:42:28.6227964Z   fetch-depth: 1
+mssql	Run actions/checkout@v4	2026-11-21T12:42:28.6228714Z   fetch-tags: false
+mssql	Run actions/checkout@v4	2026-11-21T12:42:28.6229478Z   show-progress: true
+mssql	Run actions/checkout@v4	2026-11-21T12:42:28.6230400Z   lfs: false
+mssql	Run actions/checkout@v4	2026-11-21T12:42:28.6231165Z   submodules: false
+mssql	Run actions/checkout@v4	2026-11-21T12:42:28.6231933Z   set-safe-directory: true
+mssql	Run actions/checkout@v4	2026-11-21T12:42:28.6232776Z   allow-unsafe-pr-checkout: false
+mssql	Run actions/checkout@v4	2026-11-21T12:42:28.6233865Z env:
+mssql	Run actions/checkout@v4	2026-11-21T12:42:28.6234564Z   PYTHONPATH: src
+mssql	Run actions/checkout@v4	2026-11-21T12:42:28.6235351Z ##[endgroup]
+mssql	Run actions/checkout@v4	2026-11-21T12:42:29.8975852Z Syncing repository: brownjuly2003-code/ssas-mdx-sales-cube
+mssql	Run actions/checkout@v4	2026-11-21T12:42:29.8978025Z ##[group]Getting Git version info
+mssql	Run actions/checkout@v4	2026-11-21T12:42:29.8978698Z Working directory is '/home/runner/work/ssas-mdx-sales-cube/ssas-mdx-sales-cube'
+mssql	Run actions/checkout@v4	2026-11-21T12:42:29.8979728Z [command]/usr/bin/git version
+mssql	Run actions/checkout@v4	2026-11-21T12:42:29.8980116Z git version 2.56.1
+mssql	Run actions/checkout@v4	2026-11-21T12:42:29.8986886Z ##[endgroup]
+mssql	Run actions/checkout@v4	2026-11-21T12:42:29.8997788Z Temporarily overriding HOME='/home/runner/work/_temp/40591b11-7f6c-4162-b665-19fe12d965a1' before making global git config changes
+mssql	Run actions/checkout@v4	2026-11-21T12:42:29.8998915Z Adding repository directory to the temporary git global config as a safe directory
+mssql	Run actions/checkout@v4	2026-11-21T12:42:29.9001693Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/ssas-mdx-sales-cube/ssas-mdx-sales-cube
+mssql	Run actions/checkout@v4	2026-11-21T12:42:29.9412602Z Deleting the contents of '/home/runner/work/ssas-mdx-sales-cube/ssas-mdx-sales-cube'
+mssql	Run actions/checkout@v4	2026-11-21T12:42:29.9421603Z ##[group]Initializing the repository
+mssql	Run actions/checkout@v4	2026-11-21T12:42:29.9426559Z [command]/usr/bin/git init /home/runner/work/ssas-mdx-sales-cube/ssas-mdx-sales-cube
+mssql	Run actions/checkout@v4	2026-11-21T12:42:30.0255011Z hint: Using 'master' as the name for the initial branch. This default branch name
+mssql	Run actions/checkout@v4	2026-11-21T12:42:30.0255704Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+mssql	Run actions/checkout@v4	2026-11-21T12:42:30.0256187Z hint: to use in all of your new repositories, which will suppress this warning,
+mssql	Run actions/checkout@v4	2026-11-21T12:42:30.0256638Z hint: call:
+mssql	Run actions/checkout@v4	2026-11-21T12:42:30.0256902Z hint:
+mssql	Run actions/checkout@v4	2026-11-21T12:42:30.0257300Z hint: 	git config --global init.defaultBranch <name>
+mssql	Run actions/checkout@v4	2026-11-21T12:42:30.0257741Z hint:
+mssql	Run actions/checkout@v4	2026-11-21T12:42:30.0258079Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+mssql	Run actions/checkout@v4	2026-11-21T12:42:30.0258551Z hint: 'development'. The just-created branch can be renamed via this command:
+mssql	Run actions/checkout@v4	2026-11-21T12:42:30.0258968Z hint:
+mssql	Run actions/checkout@v4	2026-11-21T12:42:30.0259276Z hint: 	git branch -m <name>
+mssql	Run actions/checkout@v4	2026-11-21T12:42:30.0259552Z hint:
+mssql	Run actions/checkout@v4	2026-11-21T12:42:30.0259923Z hint: Disable this message with "git config set advice.defaultBranchName false"
+mssql	Run actions/checkout@v4	2026-11-21T12:42:30.0274511Z Initialized empty Git repository in /home/runner/work/ssas-mdx-sales-cube/ssas-mdx-sales-cube/.git/
+mssql	Run actions/checkout@v4	2026-11-21T12:42:30.0284872Z [command]/usr/bin/git remote add origin https://github.com/brownjuly2003-code/ssas-mdx-sales-cube
+mssql	Run actions/checkout@v4	2026-11-21T12:42:30.0340737Z ##[endgroup]
+mssql	Run actions/checkout@v4	2026-11-21T12:42:30.0341580Z ##[group]Disabling automatic garbage collection
+mssql	Run actions/checkout@v4	2026-11-21T12:42:30.0344493Z [command]/usr/bin/git config --local gc.auto 0
+mssql	Run actions/checkout@v4	2026-11-21T12:42:30.0366793Z ##[endgroup]
+mssql	Run actions/checkout@v4	2026-11-21T12:42:30.0367581Z ##[group]Setting up auth
+mssql	Run actions/checkout@v4	2026-11-21T12:42:30.0372468Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+mssql	Run actions/checkout@v4	2026-11-21T12:42:30.0395255Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+mssql	Run actions/checkout@v4	2026-11-21T12:42:30.3942534Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+mssql	Run actions/checkout@v4	2026-11-21T12:42:30.3964943Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+mssql	Run actions/checkout@v4	2026-11-21T12:42:30.4139478Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+mssql	Run actions/checkout@v4	2026-11-21T12:42:30.4161098Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+mssql	Run actions/checkout@v4	2026-11-21T12:42:30.4330689Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+mssql	Run actions/checkout@v4	2026-11-21T12:42:30.4354456Z ##[endgroup]
+mssql	Run actions/checkout@v4	2026-11-21T12:42:30.4355004Z ##[group]Fetching the repository
+mssql	Run actions/checkout@v4	2026-11-21T12:42:30.4360010Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +ed9510d2605091a161ed726af6c62f1e3f4778f8:refs/remotes/origin/main
+mssql	Run actions/checkout@v4	2026-11-21T12:42:30.6536109Z From https://github.com/brownjuly2003-code/ssas-mdx-sales-cube
+mssql	Run actions/checkout@v4	2026-11-21T12:42:30.6536680Z  * [new ref]         ed9510d2605091a161ed726af6c62f1e3f4778f8 -> origin/main
+mssql	Run actions/checkout@v4	2026-11-21T12:42:30.6540584Z ##[endgroup]
+mssql	Run actions/checkout@v4	2026-11-21T12:42:30.6541086Z ##[group]Determining the checkout info
+mssql	Run actions/checkout@v4	2026-11-21T12:42:30.6543002Z ##[endgroup]
+mssql	Run actions/checkout@v4	2026-11-21T12:42:30.6547400Z [command]/usr/bin/git sparse-checkout disable
+mssql	Run actions/checkout@v4	2026-11-21T12:42:30.6594542Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+mssql	Run actions/checkout@v4	2026-11-21T12:42:30.6614436Z ##[group]Checking out the ref
+mssql	Run actions/checkout@v4	2026-11-21T12:42:30.6618531Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+mssql	Run actions/checkout@v4	2026-11-21T12:42:30.6751075Z Switched to a new branch 'main'
+mssql	Run actions/checkout@v4	2026-11-21T12:42:30.6751667Z branch 'main' set up to track 'origin/main'.
+mssql	Run actions/checkout@v4	2026-11-21T12:42:30.6753912Z ##[endgroup]
+mssql	Run actions/checkout@v4	2026-11-21T12:42:30.6781946Z [command]/usr/bin/git log -1 --format=%H
+mssql	Run actions/checkout@v4	2026-11-21T12:42:30.6797877Z ed9510d2605091a161ed726af6c62f1e3f4778f8
+mssql	Run actions/setup-python@v5	﻿2026-11-21T12:42:30.6994053Z ##[group]Run actions/setup-python@v5
+mssql	Run actions/setup-python@v5	2026-11-21T12:42:30.6994383Z with:
+mssql	Run actions/setup-python@v5	2026-11-21T12:42:30.6994604Z   python-version: 3.11
+mssql	Run actions/setup-python@v5	2026-11-21T12:42:30.6994843Z   check-latest: false
+mssql	Run actions/setup-python@v5	2026-11-21T12:42:30.6996895Z   token: ***
+mssql	Run actions/setup-python@v5	2026-11-21T12:42:30.6997108Z   update-environment: true
+mssql	Run actions/setup-python@v5	2026-11-21T12:42:30.6997390Z   allow-prereleases: false
+mssql	Run actions/setup-python@v5	2026-11-21T12:42:30.6997637Z   freethreaded: false
+mssql	Run actions/setup-python@v5	2026-11-21T12:42:30.6997886Z env:
+mssql	Run actions/setup-python@v5	2026-11-21T12:42:30.6998098Z   PYTHONPATH: src
+mssql	Run actions/setup-python@v5	2026-11-21T12:42:30.6998311Z ##[endgroup]
+mssql	Run actions/setup-python@v5	2026-11-21T12:42:30.7992065Z ##[group]Installed versions
+mssql	Run actions/setup-python@v5	2026-11-21T12:42:31.1291419Z (node:2341) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+mssql	Run actions/setup-python@v5	2026-11-21T12:42:31.1292175Z (Use `node --trace-deprecation ...` to show where the warning was created)
+mssql	Run actions/setup-python@v5	2026-11-21T12:42:31.1292683Z Successfully set up CPython (3.11.18)
+mssql	Run actions/setup-python@v5	2026-11-21T12:42:31.1293323Z ##[endgroup]
+mssql	Run python -m pip install -r requirements.txt	﻿2026-11-21T12:42:31.1399422Z ##[group]Run python -m pip install -r requirements.txt
+mssql	Run python -m pip install -r requirements.txt	2026-11-21T12:42:31.1399917Z [36;1mpython -m pip install -r requirements.txt[0m
+mssql	Run python -m pip install -r requirements.txt	2026-11-21T12:42:31.1981191Z shell: /usr/bin/bash -e {0}
+mssql	Run python -m pip install -r requirements.txt	2026-11-21T12:42:31.1981566Z env:
+mssql	Run python -m pip install -r requirements.txt	2026-11-21T12:42:31.1981874Z   PYTHONPATH: src
+mssql	Run python -m pip install -r requirements.txt	2026-11-21T12:42:31.1982196Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.18/x64
+mssql	Run python -m pip install -r requirements.txt	2026-11-21T12:42:31.1982636Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib/pkgconfig
+mssql	Run python -m pip install -r requirements.txt	2026-11-21T12:42:31.1983067Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+mssql	Run python -m pip install -r requirements.txt	2026-11-21T12:42:31.1983412Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+mssql	Run python -m pip install -r requirements.txt	2026-11-21T12:42:31.1983779Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+mssql	Run python -m pip install -r requirements.txt	2026-11-21T12:42:31.1984125Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib
+mssql	Run python -m pip install -r requirements.txt	2026-11-21T12:42:31.1984434Z ##[endgroup]
+mssql	Run python -m pip install -r requirements.txt	2026-11-21T12:42:35.6382266Z Collecting pandas==2.3.2 (from -r requirements.txt (line 1))
+mssql	Run python -m pip install -r requirements.txt	2026-11-21T12:42:35.6551753Z   Downloading pandas-2.3.2-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (91 kB)
+mssql	Run python -m pip install -r requirements.txt	2026-11-21T12:42:35.6926080Z Collecting pytest==8.4.2 (from -r requirements.txt (line 2))
+mssql	Run python -m pip install -r requirements.txt	2026-11-21T12:42:35.6954928Z   Downloading pytest-8.4.2-py3-none-any.whl.metadata (7.7 kB)
+mssql	Run python -m pip install -r requirements.txt	2026-11-21T12:42:35.7177440Z Collecting PyYAML==6.0.4 (from -r requirements.txt (line 3))
+mssql	Run python -m pip install -r requirements.txt	2026-11-21T12:42:35.7203711Z   Downloading pyyaml-6.0.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.3 kB)
+mssql	Run python -m pip install -r requirements.txt	2026-11-21T12:42:35.9114922Z Collecting ruff==0.15.22 (from -r requirements.txt (line 4))
+mssql	Run python -m pip install -r requirements.txt	2026-11-21T12:42:35.9141334Z   Downloading ruff-0.15.22-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (26 kB)
+mssql	Run python -m pip install -r requirements.txt	2026-11-21T12:42:36.0208551Z Collecting numpy>=1.23.2 (from pandas==2.3.2->-r requirements.txt (line 1))
+mssql	Run python -m pip install -r requirements.txt	2026-11-21T12:42:36.0365858Z   Downloading numpy-2.4.6-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (6.6 kB)
+mssql	Run python -m pip install -r requirements.txt	2026-11-21T12:42:36.0451893Z Collecting python-dateutil>=2.8.2 (from pandas==2.3.2->-r requirements.txt (line 1))
+mssql	Run python -m pip install -r requirements.txt	2026-11-21T12:42:36.0479457Z   Downloading python_dateutil-4.0.0-py3-none-any.whl.metadata (7.3 kB)
+mssql	Run python -m pip install -r requirements.txt	2026-11-21T12:42:36.0678009Z Collecting pytz>=2020.1 (from pandas==2.3.2->-r requirements.txt (line 1))
+mssql	Run python -m pip install -r requirements.txt	2026-11-21T12:42:36.0713925Z   Downloading pytz-2026.6-py2.py3-none-any.whl.metadata (22 kB)
+mssql	Run python -m pip install -r requirements.txt	2026-11-21T12:42:36.0814446Z Collecting tzdata>=2022.7 (from pandas==2.3.2->-r requirements.txt (line 1))
+mssql	Run python -m pip install -r requirements.txt	2026-11-21T12:42:36.0843723Z   Downloading tzdata-2026.6-py2.py3-none-any.whl.metadata (1.4 kB)
+mssql	Run python -m pip install -r requirements.txt	2026-11-21T12:42:36.0916227Z Collecting iniconfig>=1 (from pytest==8.4.2->-r requirements.txt (line 2))
+mssql	Run python -m pip install -r requirements.txt	2026-11-21T12:42:36.0940066Z   Downloading iniconfig-2.3.1-py3-none-any.whl.metadata (2.8 kB)
+mssql	Run python -m pip install -r requirements.txt	2026-11-21T12:42:36.1031443Z Collecting packaging>=20 (from pytest==8.4.2->-r requirements.txt (line 2))
+mssql	Run python -m pip install -r requirements.txt	2026-11-21T12:42:36.1064728Z   Downloading packaging-26.3-py3-none-any.whl.metadata (3.5 kB)
+mssql	Run python -m pip install -r requirements.txt	2026-11-21T12:42:36.1137248Z Collecting pluggy<2,>=1.5 (from pytest==8.4.2->-r requirements.txt (line 2))
+mssql	Run python -m pip install -r requirements.txt	2026-11-21T12:42:36.1162826Z   Downloading pluggy-1.7.0-py3-none-any.whl.metadata (5.0 kB)
+mssql	Run python -m pip install -r requirements.txt	2026-11-21T12:42:36.1272880Z Collecting pygments>=2.7.2 (from pytest==8.4.2->-r requirements.txt (line 2))
+mssql	Run python -m pip install -r requirements.txt	2026-11-21T12:42:36.1297287Z   Downloading pygments-2.21.0-py3-none-any.whl.metadata (2.5 kB)
+mssql	Run python -m pip install -r requirements.txt	2026-11-21T12:42:36.1382611Z Downloading pandas-2.3.2-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)
+mssql	Run python -m pip install -r requirements.txt	2026-11-21T12:42:36.2263956Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.4/12.4 MB 228.4 MB/s  0:00:00
+mssql	Run python -m pip install -r requirements.txt	2026-11-21T12:42:36.2288674Z Downloading pytest-8.4.2-py3-none-any.whl (365 kB)
+mssql	Run python -m pip install -r requirements.txt	2026-11-21T12:42:36.2340082Z Downloading pyyaml-6.0.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (828 kB)
+mssql	Run python -m pip install -r requirements.txt	2026-11-21T12:42:36.2377426Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 828.0/828.0 kB 252.4 MB/s  0:00:00
+mssql	Run python -m pip install -r requirements.txt	2026-11-21T12:42:36.2402058Z Downloading ruff-0.15.22-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (11.4 MB)
+mssql	Run python -m pip install -r requirements.txt	2026-11-21T12:42:36.2697912Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 11.4/11.4 MB 397.2 MB/s  0:00:00
+mssql	Run python -m pip install -r requirements.txt	2026-11-21T12:42:36.2722659Z Downloading pluggy-1.7.0-py3-none-any.whl (27 kB)
+mssql	Run python -m pip install -r requirements.txt	2026-11-21T12:42:36.2763396Z Downloading iniconfig-2.3.1-py3-none-any.whl (7.6 kB)
+mssql	Run python -m pip install -r requirements.txt	2026-11-21T12:42:36.2800593Z Downloading numpy-2.4.6-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.9 MB)
+mssql	Run python -m pip install -r requirements.txt	2026-11-21T12:42:36.3231590Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.9/16.9 MB 402.7 MB/s  0:00:00
+mssql	Run python -m pip install -r requirements.txt	2026-11-21T12:42:36.3256364Z Downloading packaging-26.3-py3-none-any.whl (129 kB)
+mssql	Run python -m pip install -r requirements.txt	2026-11-21T12:42:36.3296057Z Downloading pygments-2.21.0-py3-none-any.whl (1.3 MB)
+mssql	Run python -m pip install -r requirements.txt	2026-11-21T12:42:36.3338874Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 339.1 MB/s  0:00:00
+mssql	Run python -m pip install -r requirements.txt	2026-11-21T12:42:36.3364860Z Downloading python_dateutil-4.0.0-py3-none-any.whl (92 kB)
+mssql	Run python -m pip install -r requirements.txt	2026-11-21T12:42:36.3402703Z Downloading pytz-2026.6-py2.py3-none-any.whl (506 kB)
+mssql	Run python -m pip install -r requirements.txt	2026-11-21T12:42:36.3447539Z Downloading tzdata-2026.6-py2.py3-none-any.whl (348 kB)
+mssql	Run python -m pip install -r requirements.txt	2026-11-21T12:42:36.8099141Z Installing collected packages: pytz, tzdata, ruff, PyYAML, pygments, pluggy, packaging, numpy, iniconfig, python-dateutil, pytest, pandas
+mssql	Run python -m pip install -r requirements.txt	2026-11-21T12:42:41.3521496Z 
+mssql	Run python -m pip install -r requirements.txt	2026-11-21T12:42:41.3531312Z Successfully installed PyYAML-6.0.4 iniconfig-2.3.1 numpy-2.4.6 packaging-26.3 pandas-2.3.2 pluggy-1.7.0 pygments-2.21.0 pytest-8.4.2 python-dateutil-4.0.0 pytz-2026.6 ruff-0.15.22 tzdata-2026.6
+mssql	Run python -m sales_cube --output reports	﻿2026-11-21T12:42:41.4282825Z ##[group]Run python -m sales_cube --output reports
+mssql	Run python -m sales_cube --output reports	2026-11-21T12:42:41.4283212Z [36;1mpython -m sales_cube --output reports[0m
+mssql	Run python -m sales_cube --output reports	2026-11-21T12:42:41.4302375Z shell: /usr/bin/bash -e {0}
+mssql	Run python -m sales_cube --output reports	2026-11-21T12:42:41.4302698Z env:
+mssql	Run python -m sales_cube --output reports	2026-11-21T12:42:41.4302908Z   PYTHONPATH: src
+mssql	Run python -m sales_cube --output reports	2026-11-21T12:42:41.4303231Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.18/x64
+mssql	Run python -m sales_cube --output reports	2026-11-21T12:42:41.4303634Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib/pkgconfig
+mssql	Run python -m sales_cube --output reports	2026-11-21T12:42:41.4303991Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+mssql	Run python -m sales_cube --output reports	2026-11-21T12:42:41.4304353Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+mssql	Run python -m sales_cube --output reports	2026-11-21T12:42:41.4304681Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+mssql	Run python -m sales_cube --output reports	2026-11-21T12:42:41.4305035Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib
+mssql	Run python -m sales_cube --output reports	2026-11-21T12:42:41.4305353Z ##[endgroup]
+mssql	Start SQL Server Developer	﻿2026-11-21T12:42:41.9246979Z ##[group]Run set -eu
+mssql	Start SQL Server Developer	2026-11-21T12:42:41.9247246Z [36;1mset -eu[0m
+mssql	Start SQL Server Developer	2026-11-21T12:42:41.9247461Z [36;1mumask 077[0m
+mssql	Start SQL Server Developer	2026-11-21T12:42:41.9247766Z [36;1mecho "MSSQL_SA_PASSWORD=Aa1!$(openssl rand -hex 24)" > .env[0m
+mssql	Start SQL Server Developer	2026-11-21T12:42:41.9248097Z [36;1mdocker compose down -v --remove-orphans[0m
+mssql	Start SQL Server Developer	2026-11-21T12:42:41.9248400Z [36;1mdocker compose up -d --wait --wait-timeout 240[0m
+mssql	Start SQL Server Developer	2026-11-21T12:42:41.9266072Z shell: /usr/bin/bash -e {0}
+mssql	Start SQL Server Developer	2026-11-21T12:42:41.9266381Z env:
+mssql	Start SQL Server Developer	2026-11-21T12:42:41.9266582Z   PYTHONPATH: src
+mssql	Start SQL Server Developer	2026-11-21T12:42:41.9266846Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.18/x64
+mssql	Start SQL Server Developer	2026-11-21T12:42:41.9267250Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib/pkgconfig
+mssql	Start SQL Server Developer	2026-11-21T12:42:41.9267591Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+mssql	Start SQL Server Developer	2026-11-21T12:42:41.9268042Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+mssql	Start SQL Server Developer	2026-11-21T12:42:41.9268373Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+mssql	Start SQL Server Developer	2026-11-21T12:42:41.9268706Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib
+mssql	Start SQL Server Developer	2026-11-21T12:42:41.9269093Z ##[endgroup]
+mssql	Start SQL Server Developer	2026-11-21T12:42:45.2924343Z  Image mcr.microsoft.com/mssql/server:2022-CU18-ubuntu-22.04@sha256:ea73825f3d88a23c355ac2f9fdc6bd960fec90171c12c572109b36a558f77bb8 Pulling 
+mssql	Start SQL Server Developer	2026-11-21T12:42:45.4721650Z  d9043883789c Pulling fs layer 0B
+mssql	Start SQL Server Developer	2026-11-21T12:42:45.4725324Z  86752e6fd4ef Pulling fs layer 0B
+mssql	Start SQL Server Developer	2026-11-21T12:42:45.4725539Z  186a7f1a30ef Pulling fs layer 0B
+mssql	Start SQL Server Developer	2026-11-21T12:42:45.5964398Z  186a7f1a30ef Downloading 19.92MB
+mssql	Start SQL Server Developer	2026-11-21T12:42:45.5980506Z  d9043883789c Downloading 11.53MB
+mssql	Start SQL Server Developer	2026-11-21T12:42:45.5981103Z  86752e6fd4ef Downloading 8.389MB
+mssql	Start SQL Server Developer	2026-11-21T12:42:45.6960490Z  d9043883789c Downloading 33.55MB
+mssql	Start SQL Server Developer	2026-11-21T12:42:45.6960926Z  86752e6fd4ef Downloading 31.58MB
+mssql	Start SQL Server Developer	2026-11-21T12:42:45.6961203Z  186a7f1a30ef Downloading 48.23MB
+mssql	Start SQL Server Developer	2026-11-21T12:42:45.7948062Z  d9043883789c Downloading 53.48MB
+mssql	Start SQL Server Developer	2026-11-21T12:42:45.7962439Z  86752e6fd4ef Download complete 0B
+mssql	Start SQL Server Developer	2026-11-21T12:42:45.7962839Z  186a7f1a30ef Downloading 69.21MB
+mssql	Start SQL Server Developer	2026-11-21T12:42:45.7983601Z  86752e6fd4ef Extracting 1B
+mssql	Start SQL Server Developer	2026-11-21T12:42:45.8974487Z  d9043883789c Downloading 78.64MB
+mssql	Start SQL Server Developer	2026-11-21T12:42:45.8975363Z  186a7f1a30ef Downloading 97.52MB
+mssql	Start SQL Server Developer	2026-11-21T12:42:45.8991649Z  86752e6fd4ef Extracting 1B
+mssql	Start SQL Server Developer	2026-11-21T12:42:45.9960737Z  d9043883789c Download complete 0B
+mssql	Start SQL Server Developer	2026-11-21T12:42:45.9961154Z  186a7f1a30ef Downloading 127.9MB
+mssql	Start SQL Server Developer	2026-11-21T12:42:45.9968635Z  86752e6fd4ef Extracting 1B
+mssql	Start SQL Server Developer	2026-11-21T12:42:46.0955632Z  186a7f1a30ef Downloading 159.4MB
+mssql	Start SQL Server Developer	2026-11-21T12:42:46.0964683Z  86752e6fd4ef Extracting 1B
+mssql	Start SQL Server Developer	2026-11-21T12:42:46.1947095Z  186a7f1a30ef Downloading 185.6MB
+mssql	Start SQL Server Developer	2026-11-21T12:42:46.1954067Z  86752e6fd4ef Extracting 1B
+mssql	Start SQL Server Developer	2026-11-21T12:42:46.2945434Z  186a7f1a30ef Downloading 216MB
+mssql	Start SQL Server Developer	2026-11-21T12:42:46.2952063Z  86752e6fd4ef Pull complete 0B
+mssql	Start SQL Server Developer	2026-11-21T12:42:46.3945159Z  186a7f1a30ef Downloading 242.2MB
+mssql	Start SQL Server Developer	2026-11-21T12:42:46.4946598Z  186a7f1a30ef Downloading 271.6MB
+mssql	Start SQL Server Developer	2026-11-21T12:42:46.5950050Z  186a7f1a30ef Downloading 304.1MB
+mssql	Start SQL Server Developer	2026-11-21T12:42:46.6946925Z  186a7f1a30ef Downloading 333.4MB
+mssql	Start SQL Server Developer	2026-11-21T12:42:46.7945973Z  186a7f1a30ef Downloading 364.9MB
+mssql	Start SQL Server Developer	2026-11-21T12:42:46.8945481Z  186a7f1a30ef Downloading 397.4MB
+mssql	Start SQL Server Developer	2026-11-21T12:42:46.9948234Z  186a7f1a30ef Downloading 424.7MB
+mssql	Start SQL Server Developer	2026-11-21T12:42:47.0947382Z  186a7f1a30ef Downloading 454MB
+mssql	Start SQL Server Developer	2026-11-21T12:42:47.1948043Z  186a7f1a30ef Downloading 485.5MB
+mssql	Start SQL Server Developer	2026-11-21T12:42:47.2947914Z  186a7f1a30ef Downloading 496.1MB
+mssql	Start SQL Server Developer	2026-11-21T12:42:47.3948112Z  186a7f1a30ef Downloading 496.1MB
+mssql	Start SQL Server Developer	2026-11-21T12:42:47.4949121Z  186a7f1a30ef Downloading 496.1MB
+mssql	Start SQL Server Developer	2026-11-21T12:42:47.5951632Z  186a7f1a30ef Downloading 496.1MB
+mssql	Start SQL Server Developer	2026-11-21T12:42:47.6954124Z  186a7f1a30ef Downloading 496.1MB
+mssql	Start SQL Server Developer	2026-11-21T12:42:47.7945894Z  186a7f1a30ef Downloading 496.1MB
+mssql	Start SQL Server Developer	2026-11-21T12:42:47.8948467Z  186a7f1a30ef Downloading 496.1MB
+mssql	Start SQL Server Developer	2026-11-21T12:42:47.9953287Z  186a7f1a30ef Downloading 496.1MB
+mssql	Start SQL Server Developer	2026-11-21T12:42:48.0949051Z  186a7f1a30ef Download complete 0B
+mssql	Start SQL Server Developer	2026-11-21T12:42:48.0966689Z  186a7f1a30ef Extracting 1B
+mssql	Start SQL Server Developer	2026-11-21T12:42:48.1969252Z  186a7f1a30ef Extracting 1B
+mssql	Start SQL Server Developer	2026-11-21T12:42:48.2957642Z  186a7f1a30ef Extracting 1B
+mssql	Start SQL Server Developer	2026-11-21T12:42:48.3969114Z  186a7f1a30ef Extracting 1B
+mssql	Start SQL Server Developer	2026-11-21T12:42:48.4984424Z  186a7f1a30ef Extracting 1B
+mssql	Start SQL Server Developer	2026-11-21T12:42:48.5976560Z  186a7f1a30ef Extracting 1B
+mssql	Start SQL Server Developer	2026-11-21T12:42:48.6966246Z  186a7f1a30ef Extracting 1B
+mssql	Start SQL Server Developer	2026-11-21T12:42:48.7964468Z  186a7f1a30ef Extracting 1B
+mssql	Start SQL Server Developer	2026-11-21T12:42:48.9004085Z  186a7f1a30ef Extracting 1B
+mssql	Start SQL Server Developer	2026-11-21T12:42:48.9960528Z  186a7f1a30ef Extracting 1B
+mssql	Start SQL Server Developer	2026-11-21T12:42:49.0959027Z  186a7f1a30ef Extracting 1B
+mssql	Start SQL Server Developer	2026-11-21T12:42:49.1992205Z  186a7f1a30ef Extracting 2B
+mssql	Start SQL Server Developer	2026-11-21T12:42:49.2962290Z  186a7f1a30ef Extracting 2B
+mssql	Start SQL Server Developer	2026-11-21T12:42:49.3961609Z  186a7f1a30ef Extracting 2B
+mssql	Start SQL Server Developer	2026-11-21T12:42:49.4958483Z  186a7f1a30ef Extracting 2B
+mssql	Start SQL Server Developer	2026-11-21T12:42:49.5982884Z  186a7f1a30ef Extracting 2B
+mssql	Start SQL Server Developer	2026-11-21T12:42:49.6963944Z  186a7f1a30ef Extracting 2B
+mssql	Start SQL Server Developer	2026-11-21T12:42:49.7969131Z  186a7f1a30ef Extracting 2B
+mssql	Start SQL Server Developer	2026-11-21T12:42:49.8976273Z  186a7f1a30ef Extracting 2B
+mssql	Start SQL Server Developer	2026-11-21T12:42:49.9962395Z  186a7f1a30ef Extracting 2B
+mssql	Start SQL Server Developer	2026-11-21T12:42:50.0961189Z  186a7f1a30ef Extracting 2B
+mssql	Start SQL Server Developer	2026-11-21T12:42:50.1979701Z  186a7f1a30ef Extracting 3B
+mssql	Start SQL Server Developer	2026-11-21T12:42:50.2967520Z  186a7f1a30ef Extracting 3B
+mssql	Start SQL Server Developer	2026-11-21T12:42:50.3969977Z  186a7f1a30ef Extracting 3B
+mssql	Start SQL Server Developer	2026-11-21T12:42:50.4971044Z  186a7f1a30ef Extracting 3B
+mssql	Start SQL Server Developer	2026-11-21T12:42:50.5963971Z  186a7f1a30ef Extracting 3B
+mssql	Start SQL Server Developer	2026-11-21T12:42:50.6966024Z  186a7f1a30ef Extracting 3B
+mssql	Start SQL Server Developer	2026-11-21T12:42:50.7974597Z  186a7f1a30ef Extracting 3B
+mssql	Start SQL Server Developer	2026-11-21T12:42:50.8965873Z  186a7f1a30ef Extracting 3B
+mssql	Start SQL Server Developer	2026-11-21T12:42:50.9966029Z  186a7f1a30ef Extracting 3B
+mssql	Start SQL Server Developer	2026-11-21T12:42:51.0989365Z  186a7f1a30ef Extracting 4B
+mssql	Start SQL Server Developer	2026-11-21T12:42:51.1962291Z  186a7f1a30ef Extracting 4B
+mssql	Start SQL Server Developer	2026-11-21T12:42:51.2962964Z  186a7f1a30ef Extracting 4B
+mssql	Start SQL Server Developer	2026-11-21T12:42:51.3965087Z  186a7f1a30ef Extracting 4B
+mssql	Start SQL Server Developer	2026-11-21T12:42:51.4978551Z  186a7f1a30ef Extracting 4B
+mssql	Start SQL Server Developer	2026-11-21T12:42:51.5981751Z  186a7f1a30ef Extracting 4B
+mssql	Start SQL Server Developer	2026-11-21T12:42:51.6972655Z  186a7f1a30ef Extracting 4B
+mssql	Start SQL Server Developer	2026-11-21T12:42:51.7992781Z  186a7f1a30ef Extracting 4B
+mssql	Start SQL Server Developer	2026-11-21T12:42:51.8967750Z  186a7f1a30ef Extracting 4B
+mssql	Start SQL Server Developer	2026-11-21T12:42:51.9990142Z  186a7f1a30ef Extracting 4B
+mssql	Start SQL Server Developer	2026-11-21T12:42:52.0986445Z  186a7f1a30ef Extracting 5B
+mssql	Start SQL Server Developer	2026-11-21T12:42:52.1968444Z  186a7f1a30ef Extracting 5B
+mssql	Start SQL Server Developer	2026-11-21T12:42:52.2962863Z  186a7f1a30ef Extracting 5B
+mssql	Start SQL Server Developer	2026-11-21T12:42:52.3983877Z  186a7f1a30ef Extracting 5B
+mssql	Start SQL Server Developer	2026-11-21T12:42:52.4969280Z  186a7f1a30ef Extracting 5B
+mssql	Start SQL Server Developer	2026-11-21T12:42:52.5970134Z  186a7f1a30ef Extracting 5B
+mssql	Start SQL Server Developer	2026-11-21T12:42:52.6959338Z  d9043883789c Extracting 1B
+mssql	Start SQL Server Developer	2026-11-21T12:42:52.6980935Z  186a7f1a30ef Pull complete 0B
+mssql	Start SQL Server Developer	2026-11-21T12:42:52.7962562Z  d9043883789c Extracting 1B
+mssql	Start SQL Server Developer	2026-11-21T12:42:52.8957996Z  d9043883789c Extracting 1B
+mssql	Start SQL Server Developer	2026-11-21T12:42:52.9979070Z  d9043883789c Extracting 1B
+mssql	Start SQL Server Developer	2026-11-21T12:42:53.0964140Z  d9043883789c Extracting 1B
+mssql	Start SQL Server Developer	2026-11-21T12:42:53.1958636Z  d9043883789c Extracting 1B
+mssql	Start SQL Server Developer	2026-11-21T12:42:53.2963401Z  d9043883789c Extracting 1B
+mssql	Start SQL Server Developer	2026-11-21T12:42:53.3968002Z  d9043883789c Extracting 1B
+mssql	Start SQL Server Developer	2026-11-21T12:42:53.4952164Z  d9043883789c Pull complete 0B
+mssql	Start SQL Server Developer	2026-11-21T12:42:53.5000873Z  Image mcr.microsoft.com/mssql/server:2022-CU18-ubuntu-22.04@sha256:ea73825f3d88a23c355ac2f9fdc6bd960fec90171c12c572109b36a558f77bb8 Pulled 
+mssql	Start SQL Server Developer	2026-11-21T12:42:53.5094299Z  Network ssas-mdx-sales-cube_default Creating 
+mssql	Start SQL Server Developer	2026-11-21T12:42:53.5292075Z  Network ssas-mdx-sales-cube_default Created 
+mssql	Start SQL Server Developer	2026-11-21T12:42:53.5295374Z  Container ssas-mdx-sales-cube-mssql-1 Creating 
+mssql	Start SQL Server Developer	2026-11-21T12:42:59.3586806Z  Container ssas-mdx-sales-cube-mssql-1 Created 
+mssql	Start SQL Server Developer	2026-11-21T12:42:59.3619646Z  Container ssas-mdx-sales-cube-mssql-1 Starting 
+mssql	Start SQL Server Developer	2026-11-21T12:43:00.1130851Z  Container ssas-mdx-sales-cube-mssql-1 Started 
+mssql	Start SQL Server Developer	2026-11-21T12:43:00.1131763Z  Container ssas-mdx-sales-cube-mssql-1 Waiting 
+mssql	Start SQL Server Developer	2026-11-21T12:43:05.6142530Z  Container ssas-mdx-sales-cube-mssql-1 Healthy 
+mssql	Check the sqlcmd load and compare the stored rows	﻿2026-11-21T12:43:05.6196662Z ##[group]Run python -m pytest -v -m slow tests/test_mssql.py
+mssql	Check the sqlcmd load and compare the stored rows	2026-11-21T12:43:05.6197010Z [36;1mpython -m pytest -v -m slow tests/test_mssql.py[0m
+mssql	Check the sqlcmd load and compare the stored rows	2026-11-21T12:43:05.6214879Z shell: /usr/bin/bash -e {0}
+mssql	Check the sqlcmd load and compare the stored rows	2026-11-21T12:43:05.6215084Z env:
+mssql	Check the sqlcmd load and compare the stored rows	2026-11-21T12:43:05.6215233Z   PYTHONPATH: src
+mssql	Check the sqlcmd load and compare the stored rows	2026-11-21T12:43:05.6215446Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.18/x64
+mssql	Check the sqlcmd load and compare the stored rows	2026-11-21T12:43:05.6215758Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib/pkgconfig
+mssql	Check the sqlcmd load and compare the stored rows	2026-11-21T12:43:05.6216060Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+mssql	Check the sqlcmd load and compare the stored rows	2026-11-21T12:43:05.6216338Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+mssql	Check the sqlcmd load and compare the stored rows	2026-11-21T12:43:05.6216608Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+mssql	Check the sqlcmd load and compare the stored rows	2026-11-21T12:43:05.6216876Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib
+mssql	Check the sqlcmd load and compare the stored rows	2026-11-21T12:43:05.6217106Z ##[endgroup]
+mssql	Check the sqlcmd load and compare the stored rows	2026-11-21T12:43:06.1767825Z ============================= test session starts ==============================
+mssql	Check the sqlcmd load and compare the stored rows	2026-11-21T12:43:06.1768563Z platform linux -- Python 3.11.18, pytest-8.4.2, pluggy-1.7.0 -- /opt/hostedtoolcache/Python/3.11.18/x64/bin/python
+mssql	Check the sqlcmd load and compare the stored rows	2026-11-21T12:43:06.1769476Z cachedir: .pytest_cache
+mssql	Check the sqlcmd load and compare the stored rows	2026-11-21T12:43:06.1769837Z rootdir: /home/runner/work/ssas-mdx-sales-cube/ssas-mdx-sales-cube
+mssql	Check the sqlcmd load and compare the stored rows	2026-11-21T12:43:06.1770406Z configfile: pyproject.toml
+mssql	Check the sqlcmd load and compare the stored rows	2026-11-21T12:43:06.4297148Z collecting ... collected 8 items
+mssql	Check the sqlcmd load and compare the stored rows	2026-11-21T12:43:06.4297445Z 
+mssql	Check the sqlcmd load and compare the stored rows	2026-11-21T12:43:07.0605864Z tests/test_mssql.py::test_text_columns_cover_every_character_column_of_the_star PASSED [ 12%]
+mssql	Check the sqlcmd load and compare the stored rows	2026-11-21T12:43:07.1404984Z tests/test_mssql.py::test_trailing_space_in_the_printed_value_and_in_the_length PASSED [ 25%]
+mssql	Check the sqlcmd load and compare the stored rows	2026-11-21T12:43:07.2980031Z tests/test_mssql.py::test_loaded_rows[DimDate] PASSED                    [ 37%]
+mssql	Check the sqlcmd load and compare the stored rows	2026-11-21T12:43:07.4485281Z tests/test_mssql.py::test_loaded_rows[DimProduct] PASSED                 [ 50%]
+mssql	Check the sqlcmd load and compare the stored rows	2026-11-21T12:43:07.5972832Z tests/test_mssql.py::test_loaded_rows[DimCustomer] PASSED                [ 62%]
+mssql	Check the sqlcmd load and compare the stored rows	2026-11-21T12:43:07.6825331Z tests/test_mssql.py::test_loaded_rows[FactSales] PASSED                  [ 75%]
+mssql	Check the sqlcmd load and compare the stored rows	2026-11-21T12:43:08.3096617Z tests/test_mssql.py::test_repeat_load_preserves_existing_star PASSED     [ 87%]
+mssql	Check the sqlcmd load and compare the stored rows	2026-11-21T12:43:08.7131358Z tests/test_mssql.py::test_load_rejects_another_database PASSED           [100%]
+mssql	Check the sqlcmd load and compare the stored rows	2026-11-21T12:43:08.7132007Z 
+mssql	Check the sqlcmd load and compare the stored rows	2026-11-21T12:43:08.7132242Z ============================== 8 passed in 2.49s ===============================
+mssql	Run actions/setup-java@v4	﻿2026-11-21T12:43:08.7709105Z ##[group]Run actions/setup-java@v4
+mssql	Run actions/setup-java@v4	2026-11-21T12:43:08.7709342Z with:
+mssql	Run actions/setup-java@v4	2026-11-21T12:43:08.7709497Z   distribution: temurin
+mssql	Run actions/setup-java@v4	2026-11-21T12:43:08.7709673Z   java-version: 17
+mssql	Run actions/setup-java@v4	2026-11-21T12:43:08.7709833Z   java-package: jdk
+mssql	Run actions/setup-java@v4	2026-11-21T12:43:08.7709994Z   check-latest: false
+mssql	Run actions/setup-java@v4	2026-11-21T12:43:08.7710150Z   server-id: github
+mssql	Run actions/setup-java@v4	2026-11-21T12:43:08.7710510Z   server-username: GITHUB_ACTOR
+mssql	Run actions/setup-java@v4	2026-11-21T12:43:08.7710715Z   server-password: GITHUB_TOKEN
+mssql	Run actions/setup-java@v4	2026-11-21T12:43:08.7710907Z   overwrite-settings: true
+mssql	Run actions/setup-java@v4	2026-11-21T12:43:08.7711085Z   job-status: success
+mssql	Run actions/setup-java@v4	2026-11-21T12:43:08.7713016Z   token: ***
+mssql	Run actions/setup-java@v4	2026-11-21T12:43:08.7713183Z env:
+mssql	Run actions/setup-java@v4	2026-11-21T12:43:08.7713332Z   PYTHONPATH: src
+mssql	Run actions/setup-java@v4	2026-11-21T12:43:08.7713557Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.18/x64
+mssql	Run actions/setup-java@v4	2026-11-21T12:43:08.7713873Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib/pkgconfig
+mssql	Run actions/setup-java@v4	2026-11-21T12:43:08.7714189Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+mssql	Run actions/setup-java@v4	2026-11-21T12:43:08.7714471Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+mssql	Run actions/setup-java@v4	2026-11-21T12:43:08.7714786Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+mssql	Run actions/setup-java@v4	2026-11-21T12:43:08.7715064Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib
+mssql	Run actions/setup-java@v4	2026-11-21T12:43:08.7715299Z ##[endgroup]
+mssql	Run actions/setup-java@v4	2026-11-21T12:43:08.9005130Z ##[warning]setup-java v4 is deprecated and will no longer receive updates. Please migrate to actions/setup-java@v5.
+mssql	Run actions/setup-java@v4	2026-11-21T12:43:08.9010553Z ##[group]Installed distributions
+mssql	Run actions/setup-java@v4	2026-11-21T12:43:08.9038852Z Resolved Java 17.0.21+9 from tool-cache
+mssql	Run actions/setup-java@v4	2026-11-21T12:43:08.9039177Z Setting Java 17.0.21+9 as the default
+mssql	Run actions/setup-java@v4	2026-11-21T12:43:08.9045562Z (node:3853) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+mssql	Run actions/setup-java@v4	2026-11-21T12:43:08.9046313Z (Use `node --trace-deprecation ...` to show where the warning was created)
+mssql	Run actions/setup-java@v4	2026-11-21T12:43:08.9047873Z Creating toolchains.xml for JDK version 17 from temurin
+mssql	Run actions/setup-java@v4	2026-11-21T12:43:08.9113364Z Writing to /home/runner/.m2/toolchains.xml
+mssql	Run actions/setup-java@v4	2026-11-21T12:43:08.9113635Z 
+mssql	Run actions/setup-java@v4	2026-11-21T12:43:08.9113767Z Java configuration:
+mssql	Run actions/setup-java@v4	2026-11-21T12:43:08.9113996Z   Distribution: temurin
+mssql	Run actions/setup-java@v4	2026-11-21T12:43:08.9114478Z   Version: 17.0.21+9
+mssql	Run actions/setup-java@v4	2026-11-21T12:43:08.9114855Z   Path: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.21-9/x64
+mssql	Run actions/setup-java@v4	2026-11-21T12:43:08.9115163Z 
+mssql	Run actions/setup-java@v4	2026-11-21T12:43:08.9115514Z ##[endgroup]
+mssql	Run actions/setup-java@v4	2026-11-21T12:43:08.9127568Z Creating settings.xml with server-id: github
+mssql	Run actions/setup-java@v4	2026-11-21T12:43:08.9128228Z Writing to /home/runner/.m2/settings.xml
+mssql	Download Mondrian 3.2 and check the SHA-256 of every jar	﻿2026-11-21T12:43:08.9249670Z ##[group]Run bash scripts/fetch-mondrian.sh reports/mondrian/lib
+mssql	Download Mondrian 3.2 and check the SHA-256 of every jar	2026-11-21T12:43:08.9250745Z [36;1mbash scripts/fetch-mondrian.sh reports/mondrian/lib[0m
+mssql	Download Mondrian 3.2 and check the SHA-256 of every jar	2026-11-21T12:43:08.9273910Z shell: /usr/bin/bash -e {0}
+mssql	Download Mondrian 3.2 and check the SHA-256 of every jar	2026-11-21T12:43:08.9274173Z env:
+mssql	Download Mondrian 3.2 and check the SHA-256 of every jar	2026-11-21T12:43:08.9274369Z   PYTHONPATH: src
+mssql	Download Mondrian 3.2 and check the SHA-256 of every jar	2026-11-21T12:43:08.9274662Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.18/x64
+mssql	Download Mondrian 3.2 and check the SHA-256 of every jar	2026-11-21T12:43:08.9275149Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib/pkgconfig
+mssql	Download Mondrian 3.2 and check the SHA-256 of every jar	2026-11-21T12:43:08.9275594Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+mssql	Download Mondrian 3.2 and check the SHA-256 of every jar	2026-11-21T12:43:08.9275995Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+mssql	Download Mondrian 3.2 and check the SHA-256 of every jar	2026-11-21T12:43:08.9276391Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+mssql	Download Mondrian 3.2 and check the SHA-256 of every jar	2026-11-21T12:43:08.9276810Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib
+mssql	Download Mondrian 3.2 and check the SHA-256 of every jar	2026-11-21T12:43:08.9277260Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.21-9/x64
+mssql	Download Mondrian 3.2 and check the SHA-256 of every jar	2026-11-21T12:43:08.9277766Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.21-9/x64
+mssql	Download Mondrian 3.2 and check the SHA-256 of every jar	2026-11-21T12:43:08.9278217Z ##[endgroup]
+mssql	Download Mondrian 3.2 and check the SHA-256 of every jar	2026-11-21T12:43:09.6372590Z mondrian-3.2.0-13661-JS-3.jar: OK
+mssql	Download Mondrian 3.2 and check the SHA-256 of every jar	2026-11-21T12:43:09.6374613Z olap4j-0.9.7.309-JS-3.jar: OK
+mssql	Download Mondrian 3.2 and check the SHA-256 of every jar	2026-11-21T12:43:09.6375280Z eigenbase-xom-1.3.0.11999.jar: OK
+mssql	Download Mondrian 3.2 and check the SHA-256 of every jar	2026-11-21T12:43:09.6375598Z eigenbase-properties-1.1.0.10924.jar: OK
+mssql	Download Mondrian 3.2 and check the SHA-256 of every jar	2026-11-21T12:43:09.6375918Z eigenbase-resgen-1.3.0.11873.jar: OK
+mssql	Download Mondrian 3.2 and check the SHA-256 of every jar	2026-11-21T12:43:09.6377792Z javacup-0.10k.jar: OK
+mssql	Download Mondrian 3.2 and check the SHA-256 of every jar	2026-11-21T12:43:09.6378606Z commons-dbcp-1.2.jar: OK
+mssql	Download Mondrian 3.2 and check the SHA-256 of every jar	2026-11-21T12:43:09.6378852Z commons-pool-1.2.jar: OK
+mssql	Download Mondrian 3.2 and check the SHA-256 of every jar	2026-11-21T12:43:09.6382043Z commons-vfs-1.0.jar: OK
+mssql	Download Mondrian 3.2 and check the SHA-256 of every jar	2026-11-21T12:43:09.6383020Z commons-math-1.0.jar: OK
+mssql	Download Mondrian 3.2 and check the SHA-256 of every jar	2026-11-21T12:43:09.6387134Z commons-collections-3.2.2.jar: OK
+mssql	Download Mondrian 3.2 and check the SHA-256 of every jar	2026-11-21T12:43:09.6387541Z commons-logging-1.0.4.jar: OK
+mssql	Download Mondrian 3.2 and check the SHA-256 of every jar	2026-11-21T12:43:09.6389911Z reload4j-1.2.25.jar: OK
+mssql	Download Mondrian 3.2 and check the SHA-256 of every jar	2026-11-21T12:43:09.6400143Z mssql-jdbc-12.8.1.jre11.jar: OK
+mssql	Execute the 10 MDX queries on Mondrian 3.2 over the star in SQL Server	﻿2026-11-21T12:43:09.6430831Z ##[group]Run set -eu
+mssql	Execute the 10 MDX queries on Mondrian 3.2 over the star in SQL Server	2026-11-21T12:43:09.6431057Z [36;1mset -eu[0m
+mssql	Execute the 10 MDX queries on Mondrian 3.2 over the star in SQL Server	2026-11-21T12:43:09.6431360Z [36;1mpython -m sales_cube.mondrian statements --queries mdx --output reports/mondrian/statements[0m
+mssql	Execute the 10 MDX queries on Mondrian 3.2 over the star in SQL Server	2026-11-21T12:43:09.6431740Z [36;1mset -a; . ./.env; set +a[0m
+mssql	Execute the 10 MDX queries on Mondrian 3.2 over the star in SQL Server	2026-11-21T12:43:09.6432177Z [36;1mexport MONDRIAN_JDBC_URL='jdbc:sqlserver://127.0.0.1:14330;databaseName=P64SalesDW;encrypt=true;trustServerCertificate=true'[0m
+mssql	Execute the 10 MDX queries on Mondrian 3.2 over the star in SQL Server	2026-11-21T12:43:09.6432681Z [36;1mexport MONDRIAN_JDBC_USER=sa MONDRIAN_JDBC_PASSWORD="$MSSQL_SA_PASSWORD"[0m
+mssql	Execute the 10 MDX queries on Mondrian 3.2 over the star in SQL Server	2026-11-21T12:43:09.6432980Z [36;1mjava -version 2>&1 | head -n 1[0m
+mssql	Execute the 10 MDX queries on Mondrian 3.2 over the star in SQL Server	2026-11-21T12:43:09.6433336Z [36;1mjavac -d reports/mondrian/classes -cp 'reports/mondrian/lib/*' mondrian/RunMdx.java[0m
+mssql	Execute the 10 MDX queries on Mondrian 3.2 over the star in SQL Server	2026-11-21T12:43:09.6433713Z [36;1mjava -Xmx384m -Dmondrian.olap.SsasCompatibleNaming=true \[0m
+mssql	Execute the 10 MDX queries on Mondrian 3.2 over the star in SQL Server	2026-11-21T12:43:09.6434024Z [36;1m  -cp 'reports/mondrian/classes:reports/mondrian/lib/*' \[0m
+mssql	Execute the 10 MDX queries on Mondrian 3.2 over the star in SQL Server	2026-11-21T12:43:09.6434374Z [36;1m  RunMdx reports/mondrian/statements reports/mondrian/answers cube/mondrian.xml[0m
+mssql	Execute the 10 MDX queries on Mondrian 3.2 over the star in SQL Server	2026-11-21T12:43:09.6452496Z shell: /usr/bin/bash -e {0}
+mssql	Execute the 10 MDX queries on Mondrian 3.2 over the star in SQL Server	2026-11-21T12:43:09.6452690Z env:
+mssql	Execute the 10 MDX queries on Mondrian 3.2 over the star in SQL Server	2026-11-21T12:43:09.6452844Z   PYTHONPATH: src
+mssql	Execute the 10 MDX queries on Mondrian 3.2 over the star in SQL Server	2026-11-21T12:43:09.6453072Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.18/x64
+mssql	Execute the 10 MDX queries on Mondrian 3.2 over the star in SQL Server	2026-11-21T12:43:09.6453395Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib/pkgconfig
+mssql	Execute the 10 MDX queries on Mondrian 3.2 over the star in SQL Server	2026-11-21T12:43:09.6453706Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+mssql	Execute the 10 MDX queries on Mondrian 3.2 over the star in SQL Server	2026-11-21T12:43:09.6453991Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+mssql	Execute the 10 MDX queries on Mondrian 3.2 over the star in SQL Server	2026-11-21T12:43:09.6454268Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+mssql	Execute the 10 MDX queries on Mondrian 3.2 over the star in SQL Server	2026-11-21T12:43:09.6454542Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib
+mssql	Execute the 10 MDX queries on Mondrian 3.2 over the star in SQL Server	2026-11-21T12:43:09.6454853Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.21-9/x64
+mssql	Execute the 10 MDX queries on Mondrian 3.2 over the star in SQL Server	2026-11-21T12:43:09.6455199Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.21-9/x64
+mssql	Execute the 10 MDX queries on Mondrian 3.2 over the star in SQL Server	2026-11-21T12:43:09.6455471Z ##[endgroup]
+mssql	Execute the 10 MDX queries on Mondrian 3.2 over the star in SQL Server	2026-11-21T12:43:09.6744356Z statements written to reports/mondrian/statements; final ';' dropped in 10
+mssql	Execute the 10 MDX queries on Mondrian 3.2 over the star in SQL Server	2026-11-21T12:43:09.6744766Z changed for Mondrian: ['09_top_products']
+mssql	Execute the 10 MDX queries on Mondrian 3.2 over the star in SQL Server	2026-11-21T12:43:09.6745490Z 09_top_products: '.Properties("KEY0", TYPED)' -> '.Properties("KEY0")' (the Mondrian 3.2 parser has no TYPED flag and reads it as a member name; KEY0 is declared in cube/mondrian.xml as a numeric property of the ProductKey column, so the tie-break gets the same number)
+mssql	Execute the 10 MDX queries on Mondrian 3.2 over the star in SQL Server	2026-11-21T12:43:11.5487943Z openjdk version "17.0.21" 2026-10-20
+mssql	Execute the 10 MDX queries on Mondrian 3.2 over the star in SQL Server	2026-11-21T12:43:13.7658829Z log4j:WARN No appenders could be found for logger (mondrian.olap.MondrianProperties).
+mssql	Execute the 10 MDX queries on Mondrian 3.2 over the star in SQL Server	2026-11-21T12:43:13.7659731Z log4j:WARN Please initialize the log4j system properly.
+mssql	Execute the 10 MDX queries on Mondrian 3.2 over the star in SQL Server	2026-11-21T12:43:13.7660725Z log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more info.
+mssql	Execute the 10 MDX queries on Mondrian 3.2 over the star in SQL Server	2026-11-21T12:43:14.8177814Z java 17.0.21
+mssql	Execute the 10 MDX queries on Mondrian 3.2 over the star in SQL Server	2026-11-21T12:43:14.8206201Z jdbc driver 12.8.1.0
+mssql	Execute the 10 MDX queries on Mondrian 3.2 over the star in SQL Server	2026-11-21T12:43:14.8247205Z sql server Microsoft SQL Server 2022 (RTM-CU18) (KB5050771) - 16.0.4185.3 (X64)
+mssql	Execute the 10 MDX queries on Mondrian 3.2 over the star in SQL Server	2026-11-21T12:43:14.8260734Z mondrian.olap.SsasCompatibleNaming=true
+mssql	Execute the 10 MDX queries on Mondrian 3.2 over the star in SQL Server	2026-11-21T12:43:15.4216894Z 01_total: answered in 56 ms
+mssql	Execute the 10 MDX queries on Mondrian 3.2 over the star in SQL Server	2026-11-21T12:43:15.4508245Z 02_units_by_year: answered in 28 ms
+mssql	Execute the 10 MDX queries on Mondrian 3.2 over the star in SQL Server	2026-11-21T12:43:15.4814645Z 03_category: answered in 28 ms
+mssql	Execute the 10 MDX queries on Mondrian 3.2 over the star in SQL Server	2026-11-21T12:43:15.5004468Z 04_region: answered in 20 ms
+mssql	Execute the 10 MDX queries on Mondrian 3.2 over the star in SQL Server	2026-11-21T12:43:15.5197594Z 05_months: answered in 19 ms
+mssql	Execute the 10 MDX queries on Mondrian 3.2 over the star in SQL Server	2026-11-21T12:43:15.5349765Z 06_ytd_march: answered in 15 ms
+mssql	Execute the 10 MDX queries on Mondrian 3.2 over the star in SQL Server	2026-11-21T12:43:15.5426374Z 07_prior_march: answered in 7 ms
+mssql	Execute the 10 MDX queries on Mondrian 3.2 over the star in SQL Server	2026-11-21T12:43:15.5445773Z 08_march_change: answered in 1 ms
+mssql	Execute the 10 MDX queries on Mondrian 3.2 over the star in SQL Server	2026-11-21T12:43:15.5640159Z 09_top_products: answered in 19 ms
+mssql	Execute the 10 MDX queries on Mondrian 3.2 over the star in SQL Server	2026-11-21T12:43:15.5840132Z 10_east_office: answered in 19 ms
+mssql	Execute the 10 MDX queries on Mondrian 3.2 over the star in SQL Server	2026-11-21T12:43:15.5840651Z 10 queries, 0 failed
+mssql	Mondrian answers against the reference, query by query	﻿2026-11-21T12:43:15.5941342Z ##[group]Run python -m sales_cube.mondrian report docs/runs/expected-seed64.json reports/mondrian/answers
+mssql	Mondrian answers against the reference, query by query	2026-11-21T12:43:15.5941881Z [36;1mpython -m sales_cube.mondrian report docs/runs/expected-seed64.json reports/mondrian/answers[0m
+mssql	Mondrian answers against the reference, query by query	2026-11-21T12:43:15.5959738Z shell: /usr/bin/bash -e {0}
+mssql	Mondrian answers against the reference, query by query	2026-11-21T12:43:15.5959931Z env:
+mssql	Mondrian answers against the reference, query by query	2026-11-21T12:43:15.5960085Z   PYTHONPATH: src
+mssql	Mondrian answers against the reference, query by query	2026-11-21T12:43:15.5960443Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.18/x64
+mssql	Mondrian answers against the reference, query by query	2026-11-21T12:43:15.5960783Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib/pkgconfig
+mssql	Mondrian answers against the reference, query by query	2026-11-21T12:43:15.5961096Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+mssql	Mondrian answers against the reference, query by query	2026-11-21T12:43:15.5961378Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+mssql	Mondrian answers against the reference, query by query	2026-11-21T12:43:15.5961652Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+mssql	Mondrian answers against the reference, query by query	2026-11-21T12:43:15.5961925Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib
+mssql	Mondrian answers against the reference, query by query	2026-11-21T12:43:15.5962232Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.21-9/x64
+mssql	Mondrian answers against the reference, query by query	2026-11-21T12:43:15.5962605Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.21-9/x64
+mssql	Mondrian answers against the reference, query by query	2026-11-21T12:43:15.5962874Z ##[endgroup]
+mssql	Mondrian answers against the reference, query by query	2026-11-21T12:43:15.6565376Z 01_total | expected [[870055]] | Mondrian [[870055]] | match yes
+mssql	Mondrian answers against the reference, query by query	2026-11-21T12:43:15.6566121Z 02_units_by_year | expected [['2024', 4232], ['2025', 4190]] | Mondrian [['2024', 4232], ['2025', 4190]] | match yes
+mssql	Mondrian answers against the reference, query by query	2026-11-21T12:43:15.6566789Z 03_category | expected [['Office', 192840], ['Tech', 218900]] | Mondrian [['Office', 192840], ['Tech', 218900]] | match yes
+mssql	Mondrian answers against the reference, query by query	2026-11-21T12:43:15.6567493Z 04_region | expected [['East', 201310], ['West', 210430]] | Mondrian [['East', 201310], ['West', 210430]] | match yes
+mssql	Mondrian answers against the reference, query by query	2026-11-21T12:43:15.6568981Z 05_months | expected [['2025-01', 31130], ['2025-02', 31595], ['2025-03', 28625], ['2025-04', 35240], ['2025-05', 41575], ['2025-06', 35485], ['2025-07', 43185], ['2025-08', 30020], ['2025-09', 26565], ['2025-10', 32595], ['2025-11', 36900], ['2025-12', 38825]] | Mondrian [['2025-01', 31130], ['2025-02', 31595], ['2025-03', 28625], ['2025-04', 35240], ['2025-05', 41575], ['2025-06', 35485], ['2025-07', 43185], ['2025-08', 30020], ['2025-09', 26565], ['2025-10', 32595], ['2025-11', 36900], ['2025-12', 38825]] | match yes
+mssql	Mondrian answers against the reference, query by query	2026-11-21T12:43:15.6570768Z 06_ytd_march | expected [[91350]] | Mondrian [[91350]] | match yes
+mssql	Mondrian answers against the reference, query by query	2026-11-21T12:43:15.6571270Z 07_prior_march | expected [[42395]] | Mondrian [[42395]] | match yes
+mssql	Mondrian answers against the reference, query by query	2026-11-21T12:43:15.6571745Z 08_march_change | expected [[-13770]] | Mondrian [[-13770]] | match yes
+mssql	Mondrian answers against the reference, query by query	2026-11-21T12:43:15.6572688Z 09_top_products | expected [['Screen', 152640], ['Desk', 117000], ['Chair', 53370]] | Mondrian [['Screen', 152640], ['Desk', 117000], ['Chair', 53370]] | match yes
+mssql	Mondrian answers against the reference, query by query	2026-11-21T12:43:15.6573495Z 10_east_office | expected [['Aspen', 48335], ['Birch', 47650]] | Mondrian [['Aspen', 48335], ['Birch', 47650]] | match yes
+mssql	Mondrian answers against the reference, query by query	2026-11-21T12:43:15.6574023Z 10/10 Mondrian answers match the reference
+mssql	Compare the answers with the code written for SSAS answers	﻿2026-11-21T12:43:15.6636719Z ##[group]Run python -m sales_cube.cellset docs/runs/expected-seed64.json reports/mondrian/answers --queries mdx
+mssql	Compare the answers with the code written for SSAS answers	2026-11-21T12:43:15.6637278Z [36;1mpython -m sales_cube.cellset docs/runs/expected-seed64.json reports/mondrian/answers --queries mdx[0m
+mssql	Compare the answers with the code written for SSAS answers	2026-11-21T12:43:15.6654469Z shell: /usr/bin/bash -e {0}
+mssql	Compare the answers with the code written for SSAS answers	2026-11-21T12:43:15.6654672Z env:
+mssql	Compare the answers with the code written for SSAS answers	2026-11-21T12:43:15.6654842Z   PYTHONPATH: src
+mssql	Compare the answers with the code written for SSAS answers	2026-11-21T12:43:15.6655058Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.18/x64
+mssql	Compare the answers with the code written for SSAS answers	2026-11-21T12:43:15.6655376Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib/pkgconfig
+mssql	Compare the answers with the code written for SSAS answers	2026-11-21T12:43:15.6655694Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+mssql	Compare the answers with the code written for SSAS answers	2026-11-21T12:43:15.6655963Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+mssql	Compare the answers with the code written for SSAS answers	2026-11-21T12:43:15.6656234Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+mssql	Compare the answers with the code written for SSAS answers	2026-11-21T12:43:15.6656505Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib
+mssql	Compare the answers with the code written for SSAS answers	2026-11-21T12:43:15.6656817Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.21-9/x64
+mssql	Compare the answers with the code written for SSAS answers	2026-11-21T12:43:15.6657193Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.21-9/x64
+mssql	Compare the answers with the code written for SSAS answers	2026-11-21T12:43:15.6657466Z ##[endgroup]
+mssql	Compare the answers with the code written for SSAS answers	2026-11-21T12:43:15.6917702Z 10 MDX cellsets match the reference
+mssql	Negative controls on the Mondrian answers	﻿2026-11-21T12:43:15.6978951Z ##[group]Run python -m pytest -v -m slow tests/test_mondrian_answers.py
+mssql	Negative controls on the Mondrian answers	2026-11-21T12:43:15.6979318Z [36;1mpython -m pytest -v -m slow tests/test_mondrian_answers.py[0m
+mssql	Negative controls on the Mondrian answers	2026-11-21T12:43:15.6995111Z shell: /usr/bin/bash -e {0}
+mssql	Negative controls on the Mondrian answers	2026-11-21T12:43:15.6995302Z env:
+mssql	Negative controls on the Mondrian answers	2026-11-21T12:43:15.6995470Z   PYTHONPATH: src
+mssql	Negative controls on the Mondrian answers	2026-11-21T12:43:15.6995687Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.18/x64
+mssql	Negative controls on the Mondrian answers	2026-11-21T12:43:15.6995999Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib/pkgconfig
+mssql	Negative controls on the Mondrian answers	2026-11-21T12:43:15.6996305Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+mssql	Negative controls on the Mondrian answers	2026-11-21T12:43:15.6996583Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+mssql	Negative controls on the Mondrian answers	2026-11-21T12:43:15.6996856Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+mssql	Negative controls on the Mondrian answers	2026-11-21T12:43:15.6997128Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib
+mssql	Negative controls on the Mondrian answers	2026-11-21T12:43:15.6997431Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.21-9/x64
+mssql	Negative controls on the Mondrian answers	2026-11-21T12:43:15.6997768Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.21-9/x64
+mssql	Negative controls on the Mondrian answers	2026-11-21T12:43:15.6998078Z ##[endgroup]
+mssql	Negative controls on the Mondrian answers	2026-11-21T12:43:15.8070747Z ============================= test session starts ==============================
+mssql	Negative controls on the Mondrian answers	2026-11-21T12:43:15.8071346Z platform linux -- Python 3.11.18, pytest-8.4.2, pluggy-1.7.0 -- /opt/hostedtoolcache/Python/3.11.18/x64/bin/python
+mssql	Negative controls on the Mondrian answers	2026-11-21T12:43:15.8071836Z cachedir: .pytest_cache
+mssql	Negative controls on the Mondrian answers	2026-11-21T12:43:15.8072114Z rootdir: /home/runner/work/ssas-mdx-sales-cube/ssas-mdx-sales-cube
+mssql	Negative controls on the Mondrian answers	2026-11-21T12:43:15.8072389Z configfile: pyproject.toml
+mssql	Negative controls on the Mondrian answers	2026-11-21T12:43:15.8141237Z collecting ... collected 23 items
+mssql	Negative controls on the Mondrian answers	2026-11-21T12:43:15.8141410Z 
+mssql	Negative controls on the Mondrian answers	2026-11-21T12:43:15.8159632Z tests/test_mondrian_answers.py::test_ten_mondrian_answers_match_the_reference PASSED [  4%]
+mssql	Negative controls on the Mondrian answers	2026-11-21T12:43:15.8167109Z tests/test_mondrian_answers.py::test_a_changed_reference_value_fails[01_total] PASSED [  8%]
+mssql	Negative controls on the Mondrian answers	2026-11-21T12:43:15.8174632Z tests/test_mondrian_answers.py::test_a_changed_reference_value_fails[02_units_by_year] PASSED [ 13%]
+mssql	Negative controls on the Mondrian answers	2026-11-21T12:43:15.8182615Z tests/test_mondrian_answers.py::test_a_changed_reference_value_fails[03_category] PASSED [ 17%]
+mssql	Negative controls on the Mondrian answers	2026-11-21T12:43:15.8191010Z tests/test_mondrian_answers.py::test_a_changed_reference_value_fails[04_region] PASSED [ 21%]
+mssql	Negative controls on the Mondrian answers	2026-11-21T12:43:15.8200154Z tests/test_mondrian_answers.py::test_a_changed_reference_value_fails[05_months] PASSED [ 26%]
+mssql	Negative controls on the Mondrian answers	2026-11-21T12:43:15.8210136Z tests/test_mondrian_answers.py::test_a_changed_reference_value_fails[06_ytd_march] PASSED [ 30%]
+mssql	Negative controls on the Mondrian answers	2026-11-21T12:43:15.8220530Z tests/test_mondrian_answers.py::test_a_changed_reference_value_fails[07_prior_march] PASSED [ 34%]
+mssql	Negative controls on the Mondrian answers	2026-11-21T12:43:15.8231609Z tests/test_mondrian_answers.py::test_a_changed_reference_value_fails[08_march_change] PASSED [ 39%]
+mssql	Negative controls on the Mondrian answers	2026-11-21T12:43:15.8242720Z tests/test_mondrian_answers.py::test_a_changed_reference_value_fails[09_top_products] PASSED [ 43%]
+mssql	Negative controls on the Mondrian answers	2026-11-21T12:43:15.8254205Z tests/test_mondrian_answers.py::test_a_changed_reference_value_fails[10_east_office] PASSED [ 47%]
+mssql	Negative controls on the Mondrian answers	2026-11-21T12:43:15.8275385Z tests/test_mondrian_answers.py::test_a_changed_mondrian_value_fails[01_total] PASSED [ 52%]
+mssql	Negative controls on the Mondrian answers	2026-11-21T12:43:15.8290043Z tests/test_mondrian_answers.py::test_a_changed_mondrian_value_fails[02_units_by_year] PASSED [ 56%]
+mssql	Negative controls on the Mondrian answers	2026-11-21T12:43:15.8305210Z tests/test_mondrian_answers.py::test_a_changed_mondrian_value_fails[03_category] PASSED [ 60%]
+mssql	Negative controls on the Mondrian answers	2026-11-21T12:43:15.8320644Z tests/test_mondrian_answers.py::test_a_changed_mondrian_value_fails[04_region] PASSED [ 65%]
+mssql	Negative controls on the Mondrian answers	2026-11-21T12:43:15.8345562Z tests/test_mondrian_answers.py::test_a_changed_mondrian_value_fails[05_months] PASSED [ 69%]
+mssql	Negative controls on the Mondrian answers	2026-11-21T12:43:15.8363062Z tests/test_mondrian_answers.py::test_a_changed_mondrian_value_fails[06_ytd_march] PASSED [ 73%]
+mssql	Negative controls on the Mondrian answers	2026-11-21T12:43:15.8380085Z tests/test_mondrian_answers.py::test_a_changed_mondrian_value_fails[07_prior_march] PASSED [ 78%]
+mssql	Negative controls on the Mondrian answers	2026-11-21T12:43:15.8398489Z tests/test_mondrian_answers.py::test_a_changed_mondrian_value_fails[08_march_change] PASSED [ 82%]
+mssql	Negative controls on the Mondrian answers	2026-11-21T12:43:15.8418120Z tests/test_mondrian_answers.py::test_a_changed_mondrian_value_fails[09_top_products] PASSED [ 86%]
+mssql	Negative controls on the Mondrian answers	2026-11-21T12:43:15.8437876Z tests/test_mondrian_answers.py::test_a_changed_mondrian_value_fails[10_east_office] PASSED [ 91%]
+mssql	Negative controls on the Mondrian answers	2026-11-21T12:43:15.8457150Z tests/test_mondrian_answers.py::test_swapped_captions_fail PASSED        [ 95%]
+mssql	Negative controls on the Mondrian answers	2026-11-21T12:43:15.8685786Z tests/test_mondrian_answers.py::test_a_missing_answer_fails PASSED       [100%]
+mssql	Negative controls on the Mondrian answers	2026-11-21T12:43:15.8686066Z 
+mssql	Negative controls on the Mondrian answers	2026-11-21T12:43:15.8686182Z ============================== 23 passed in 0.04s ==============================
+mssql	Remove the stand	﻿2026-11-21T12:43:15.8881582Z ##[group]Run if test -f .env; then docker compose down -v --remove-orphans && rm -f .env; fi
+mssql	Remove the stand	2026-11-21T12:43:15.8882033Z [36;1mif test -f .env; then docker compose down -v --remove-orphans && rm -f .env; fi[0m
+mssql	Remove the stand	2026-11-21T12:43:15.8900682Z shell: /usr/bin/bash -e {0}
+mssql	Remove the stand	2026-11-21T12:43:15.8900875Z env:
+mssql	Remove the stand	2026-11-21T12:43:15.8901026Z   PYTHONPATH: src
+mssql	Remove the stand	2026-11-21T12:43:15.8901242Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.18/x64
+mssql	Remove the stand	2026-11-21T12:43:15.8901553Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib/pkgconfig
+mssql	Remove the stand	2026-11-21T12:43:15.8901853Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+mssql	Remove the stand	2026-11-21T12:43:15.8902127Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+mssql	Remove the stand	2026-11-21T12:43:15.8902510Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+mssql	Remove the stand	2026-11-21T12:43:15.8902791Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib
+mssql	Remove the stand	2026-11-21T12:43:15.8903106Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.21-9/x64
+mssql	Remove the stand	2026-11-21T12:43:15.8903495Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.21-9/x64
+mssql	Remove the stand	2026-11-21T12:43:15.8903773Z ##[endgroup]
+mssql	Remove the stand	2026-11-21T12:43:15.9357052Z  Container ssas-mdx-sales-cube-mssql-1 Stopping 
+mssql	Remove the stand	2026-11-21T12:43:26.0798627Z  Container ssas-mdx-sales-cube-mssql-1 Stopped 
+mssql	Remove the stand	2026-11-21T12:43:26.0799087Z  Container ssas-mdx-sales-cube-mssql-1 Removing 
+mssql	Remove the stand	2026-11-21T12:43:26.0857775Z  Container ssas-mdx-sales-cube-mssql-1 Removed 
+mssql	Remove the stand	2026-11-21T12:43:26.0862905Z  Network ssas-mdx-sales-cube_default Removing 
+mssql	Remove the stand	2026-11-21T12:43:26.1407238Z  Network ssas-mdx-sales-cube_default Removed 
+mssql	Post Run actions/setup-java@v4	﻿2026-11-21T12:43:26.1509610Z Post job cleanup.
+mssql	Post Run actions/setup-java@v4	2026-11-21T12:43:26.2505111Z (node:4132) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+mssql	Post Run actions/setup-java@v4	2026-11-21T12:43:26.2506456Z (Use `node --trace-deprecation ...` to show where the warning was created)
+mssql	Post Run actions/setup-python@v5	﻿2026-11-21T12:43:26.2651610Z Post job cleanup.
+mssql	Post Run actions/setup-python@v5	2026-11-21T12:43:26.3580536Z (node:4140) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+mssql	Post Run actions/setup-python@v5	2026-11-21T12:43:26.3581330Z (Use `node --trace-deprecation ...` to show where the warning was created)
+mssql	Post Run actions/checkout@v4	﻿2026-11-21T12:43:26.3737718Z Post job cleanup.
+mssql	Post Run actions/checkout@v4	2026-11-21T12:43:26.4404941Z [command]/usr/bin/git version
+mssql	Post Run actions/checkout@v4	2026-11-21T12:43:26.4450902Z git version 2.56.1
+mssql	Post Run actions/checkout@v4	2026-11-21T12:43:26.4482250Z Temporarily overriding HOME='/home/runner/work/_temp/af97fbd9-e839-40ec-a8db-80cbf48cffa6' before making global git config changes
+mssql	Post Run actions/checkout@v4	2026-11-21T12:43:26.4483026Z Adding repository directory to the temporary git global config as a safe directory
+mssql	Post Run actions/checkout@v4	2026-11-21T12:43:26.4486971Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/ssas-mdx-sales-cube/ssas-mdx-sales-cube
+mssql	Post Run actions/checkout@v4	2026-11-21T12:43:26.4517960Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+mssql	Post Run actions/checkout@v4	2026-11-21T12:43:26.4545576Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+mssql	Post Run actions/checkout@v4	2026-11-21T12:43:26.4770964Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+mssql	Post Run actions/checkout@v4	2026-11-21T12:43:26.4787310Z http.https://github.com/.extraheader
+mssql	Post Run actions/checkout@v4	2026-11-21T12:43:26.4794929Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+mssql	Post Run actions/checkout@v4	2026-11-21T12:43:26.4822458Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+mssql	Post Run actions/checkout@v4	2026-11-21T12:43:26.5007851Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+mssql	Post Run actions/checkout@v4	2026-11-21T12:43:26.5028990Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+mssql	Complete job	﻿2026-11-21T12:43:26.5329770Z Cleaning up orphan processes
+mssql	Complete job	2026-11-21T12:43:26.5579241Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-java@v4, actions/setup-python@v5. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+offline	Set up job	﻿2026-11-21T12:42:26.5166751Z Current runner version: '2.338.2'
+offline	Set up job	2026-11-21T12:42:26.5201408Z ##[group]Runner Image Provisioner
+offline	Set up job	2026-11-21T12:42:26.5202634Z Hosted Compute Agent
+offline	Set up job	2026-11-21T12:42:26.5203760Z Version: 20261111.635
+offline	Set up job	2026-11-21T12:42:26.5204675Z Commit: b8a594ea514ff44cadb5342986c68b1eac6e22ed
+offline	Set up job	2026-11-21T12:42:26.5206334Z Build Date: 2026-11-11T01:49:01Z
+offline	Set up job	2026-11-21T12:42:26.5207267Z Worker ID: {95f426a7-e85c-4334-a016-3ad027c3a8ad}
+offline	Set up job	2026-11-21T12:42:26.5208241Z Region: eastus2
+offline	Set up job	2026-11-21T12:42:26.5208968Z Cloud: Azure
+offline	Set up job	2026-11-21T12:42:26.5209739Z ##[endgroup]
+offline	Set up job	2026-11-21T12:42:26.5211957Z ##[group]Operating System
+offline	Set up job	2026-11-21T12:42:26.5212807Z Ubuntu
+offline	Set up job	2026-11-21T12:42:26.5213869Z 26.04.1
+offline	Set up job	2026-11-21T12:42:26.5214585Z LTS
+offline	Set up job	2026-11-21T12:42:26.5215364Z ##[endgroup]
+offline	Set up job	2026-11-21T12:42:26.5216200Z ##[group]Runner Image
+offline	Set up job	2026-11-21T12:42:26.5217056Z Image: ubuntu-26.04
+offline	Set up job	2026-11-21T12:42:26.5217831Z Version: 20261116.202.1
+offline	Set up job	2026-11-21T12:42:26.5219340Z Included Software: https://github.com/actions/runner-images/blob/ubuntu26/20261116.202/images/ubuntu/Ubuntu2604-Readme.md
+offline	Set up job	2026-11-21T12:42:26.5221921Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu26%2F20261116.202
+offline	Set up job	2026-11-21T12:42:26.5223490Z ##[endgroup]
+offline	Set up job	2026-11-21T12:42:26.5225236Z ##[group]GITHUB_TOKEN Permissions
+offline	Set up job	2026-11-21T12:42:26.5228246Z Contents: read
+offline	Set up job	2026-11-21T12:42:26.5229199Z Metadata: read
+offline	Set up job	2026-11-21T12:42:26.5229965Z Packages: read
+offline	Set up job	2026-11-21T12:42:26.5230765Z ##[endgroup]
+offline	Set up job	2026-11-21T12:42:26.5233866Z Secret source: Actions
+offline	Set up job	2026-11-21T12:42:26.5235324Z Cache mode: write
+offline	Set up job	2026-11-21T12:42:26.5236605Z Prepare workflow directory
+offline	Set up job	2026-11-21T12:42:26.5783686Z Prepare all required actions
+offline	Set up job	2026-11-21T12:42:26.5854686Z Getting action download info
+offline	Set up job	2026-11-21T12:42:26.7373862Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+offline	Set up job	2026-11-21T12:42:26.8237151Z Download action repository 'actions/setup-python@v5' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+offline	Set up job	2026-11-21T12:42:26.9690735Z Complete job name: offline
+offline	Run actions/checkout@v4	﻿2026-11-21T12:42:27.0539248Z ##[group]Run actions/checkout@v4
+offline	Run actions/checkout@v4	2026-11-21T12:42:27.0540229Z with:
+offline	Run actions/checkout@v4	2026-11-21T12:42:27.0540864Z   repository: brownjuly2003-code/ssas-mdx-sales-cube
+offline	Run actions/checkout@v4	2026-11-21T12:42:27.0545303Z   token: ***
+offline	Run actions/checkout@v4	2026-11-21T12:42:27.0545814Z   ssh-strict: true
+offline	Run actions/checkout@v4	2026-11-21T12:42:27.0546479Z   ssh-user: git
+offline	Run actions/checkout@v4	2026-11-21T12:42:27.0547065Z   persist-credentials: true
+offline	Run actions/checkout@v4	2026-11-21T12:42:27.0547867Z   clean: true
+offline	Run actions/checkout@v4	2026-11-21T12:42:27.0548480Z   sparse-checkout-cone-mode: true
+offline	Run actions/checkout@v4	2026-11-21T12:42:27.0549176Z   fetch-depth: 1
+offline	Run actions/checkout@v4	2026-11-21T12:42:27.0549680Z   fetch-tags: false
+offline	Run actions/checkout@v4	2026-11-21T12:42:27.0550179Z   show-progress: true
+offline	Run actions/checkout@v4	2026-11-21T12:42:27.0550735Z   lfs: false
+offline	Run actions/checkout@v4	2026-11-21T12:42:27.0551248Z   submodules: false
+offline	Run actions/checkout@v4	2026-11-21T12:42:27.0551773Z   set-safe-directory: true
+offline	Run actions/checkout@v4	2026-11-21T12:42:27.0552364Z   allow-unsafe-pr-checkout: false
+offline	Run actions/checkout@v4	2026-11-21T12:42:27.0553274Z env:
+offline	Run actions/checkout@v4	2026-11-21T12:42:27.0554601Z   PYTHONPATH: src
+offline	Run actions/checkout@v4	2026-11-21T12:42:27.0555156Z ##[endgroup]
+offline	Run actions/checkout@v4	2026-11-21T12:42:27.3326877Z Syncing repository: brownjuly2003-code/ssas-mdx-sales-cube
+offline	Run actions/checkout@v4	2026-11-21T12:42:27.3331600Z ##[group]Getting Git version info
+offline	Run actions/checkout@v4	2026-11-21T12:42:27.3334231Z Working directory is '/home/runner/work/ssas-mdx-sales-cube/ssas-mdx-sales-cube'
+offline	Run actions/checkout@v4	2026-11-21T12:42:27.3337561Z [command]/usr/bin/git version
+offline	Run actions/checkout@v4	2026-11-21T12:42:27.3339116Z git version 2.56.1
+offline	Run actions/checkout@v4	2026-11-21T12:42:27.3344937Z ##[endgroup]
+offline	Run actions/checkout@v4	2026-11-21T12:42:27.3355115Z Temporarily overriding HOME='/home/runner/work/_temp/e1a9b179-635a-4d6d-b200-f8af314f3ca4' before making global git config changes
+offline	Run actions/checkout@v4	2026-11-21T12:42:27.3359484Z Adding repository directory to the temporary git global config as a safe directory
+offline	Run actions/checkout@v4	2026-11-21T12:42:27.3363784Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/ssas-mdx-sales-cube/ssas-mdx-sales-cube
+offline	Run actions/checkout@v4	2026-11-21T12:42:27.3411427Z Deleting the contents of '/home/runner/work/ssas-mdx-sales-cube/ssas-mdx-sales-cube'
+offline	Run actions/checkout@v4	2026-11-21T12:42:27.3416046Z ##[group]Initializing the repository
+offline	Run actions/checkout@v4	2026-11-21T12:42:27.3418880Z [command]/usr/bin/git init /home/runner/work/ssas-mdx-sales-cube/ssas-mdx-sales-cube
+offline	Run actions/checkout@v4	2026-11-21T12:42:27.3536053Z hint: Using 'master' as the name for the initial branch. This default branch name
+offline	Run actions/checkout@v4	2026-11-21T12:42:27.3539498Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+offline	Run actions/checkout@v4	2026-11-21T12:42:27.3542863Z hint: to use in all of your new repositories, which will suppress this warning,
+offline	Run actions/checkout@v4	2026-11-21T12:42:27.3546039Z hint: call:
+offline	Run actions/checkout@v4	2026-11-21T12:42:27.3547484Z hint:
+offline	Run actions/checkout@v4	2026-11-21T12:42:27.3549453Z hint: 	git config --global init.defaultBranch <name>
+offline	Run actions/checkout@v4	2026-11-21T12:42:27.3552058Z hint:
+offline	Run actions/checkout@v4	2026-11-21T12:42:27.3556565Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+offline	Run actions/checkout@v4	2026-11-21T12:42:27.3561070Z hint: 'development'. The just-created branch can be renamed via this command:
+offline	Run actions/checkout@v4	2026-11-21T12:42:27.3565181Z hint:
+offline	Run actions/checkout@v4	2026-11-21T12:42:27.3567224Z hint: 	git branch -m <name>
+offline	Run actions/checkout@v4	2026-11-21T12:42:27.3569317Z hint:
+offline	Run actions/checkout@v4	2026-11-21T12:42:27.3572059Z hint: Disable this message with "git config set advice.defaultBranchName false"
+offline	Run actions/checkout@v4	2026-11-21T12:42:27.3576762Z Initialized empty Git repository in /home/runner/work/ssas-mdx-sales-cube/ssas-mdx-sales-cube/.git/
+offline	Run actions/checkout@v4	2026-11-21T12:42:27.3584381Z [command]/usr/bin/git remote add origin https://github.com/brownjuly2003-code/ssas-mdx-sales-cube
+offline	Run actions/checkout@v4	2026-11-21T12:42:27.3611902Z ##[endgroup]
+offline	Run actions/checkout@v4	2026-11-21T12:42:27.3614854Z ##[group]Disabling automatic garbage collection
+offline	Run actions/checkout@v4	2026-11-21T12:42:27.3617433Z [command]/usr/bin/git config --local gc.auto 0
+offline	Run actions/checkout@v4	2026-11-21T12:42:27.3649338Z ##[endgroup]
+offline	Run actions/checkout@v4	2026-11-21T12:42:27.3651971Z ##[group]Setting up auth
+offline	Run actions/checkout@v4	2026-11-21T12:42:27.3655167Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+offline	Run actions/checkout@v4	2026-11-21T12:42:27.3687500Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+offline	Run actions/checkout@v4	2026-11-21T12:42:27.4100512Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+offline	Run actions/checkout@v4	2026-11-21T12:42:27.4139801Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+offline	Run actions/checkout@v4	2026-11-21T12:42:27.4370587Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+offline	Run actions/checkout@v4	2026-11-21T12:42:27.4403016Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+offline	Run actions/checkout@v4	2026-11-21T12:42:27.4624652Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+offline	Run actions/checkout@v4	2026-11-21T12:42:27.4670301Z ##[endgroup]
+offline	Run actions/checkout@v4	2026-11-21T12:42:27.4672317Z ##[group]Fetching the repository
+offline	Run actions/checkout@v4	2026-11-21T12:42:27.4682134Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +ed9510d2605091a161ed726af6c62f1e3f4778f8:refs/remotes/origin/main
+offline	Run actions/checkout@v4	2026-11-21T12:42:27.7358271Z From https://github.com/brownjuly2003-code/ssas-mdx-sales-cube
+offline	Run actions/checkout@v4	2026-11-21T12:42:27.7361201Z  * [new ref]         ed9510d2605091a161ed726af6c62f1e3f4778f8 -> origin/main
+offline	Run actions/checkout@v4	2026-11-21T12:42:27.7366599Z ##[endgroup]
+offline	Run actions/checkout@v4	2026-11-21T12:42:27.7368885Z ##[group]Determining the checkout info
+offline	Run actions/checkout@v4	2026-11-21T12:42:27.7371763Z ##[endgroup]
+offline	Run actions/checkout@v4	2026-11-21T12:42:27.7373599Z [command]/usr/bin/git sparse-checkout disable
+offline	Run actions/checkout@v4	2026-11-21T12:42:27.7435757Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+offline	Run actions/checkout@v4	2026-11-21T12:42:27.7470160Z ##[group]Checking out the ref
+offline	Run actions/checkout@v4	2026-11-21T12:42:27.7473046Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+offline	Run actions/checkout@v4	2026-11-21T12:42:27.7579277Z Switched to a new branch 'main'
+offline	Run actions/checkout@v4	2026-11-21T12:42:27.7586784Z branch 'main' set up to track 'origin/main'.
+offline	Run actions/checkout@v4	2026-11-21T12:42:27.7591567Z ##[endgroup]
+offline	Run actions/checkout@v4	2026-11-21T12:42:27.7633908Z [command]/usr/bin/git log -1 --format=%H
+offline	Run actions/checkout@v4	2026-11-21T12:42:27.7656845Z ed9510d2605091a161ed726af6c62f1e3f4778f8
+offline	Run actions/setup-python@v5	﻿2026-11-21T12:42:27.8024194Z ##[group]Run actions/setup-python@v5
+offline	Run actions/setup-python@v5	2026-11-21T12:42:27.8025542Z with:
+offline	Run actions/setup-python@v5	2026-11-21T12:42:27.8026469Z   python-version: 3.11
+offline	Run actions/setup-python@v5	2026-11-21T12:42:27.8027638Z   check-latest: false
+offline	Run actions/setup-python@v5	2026-11-21T12:42:27.8038000Z   token: ***
+offline	Run actions/setup-python@v5	2026-11-21T12:42:27.8038988Z   update-environment: true
+offline	Run actions/setup-python@v5	2026-11-21T12:42:27.8040137Z   allow-prereleases: false
+offline	Run actions/setup-python@v5	2026-11-21T12:42:27.8041207Z   freethreaded: false
+offline	Run actions/setup-python@v5	2026-11-21T12:42:27.8042140Z env:
+offline	Run actions/setup-python@v5	2026-11-21T12:42:27.8043008Z   PYTHONPATH: src
+offline	Run actions/setup-python@v5	2026-11-21T12:42:27.8044032Z ##[endgroup]
+offline	Run actions/setup-python@v5	2026-11-21T12:42:27.9394536Z ##[group]Installed versions
+offline	Run actions/setup-python@v5	2026-11-21T12:42:27.9548626Z (node:2375) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+offline	Run actions/setup-python@v5	2026-11-21T12:42:27.9550683Z (Use `node --trace-deprecation ...` to show where the warning was created)
+offline	Run actions/setup-python@v5	2026-11-21T12:42:27.9552044Z Successfully set up CPython (3.11.18)
+offline	Run actions/setup-python@v5	2026-11-21T12:42:27.9553900Z ##[endgroup]
+offline	Run python -m pip install -r requirements.txt	﻿2026-11-21T12:42:27.9717332Z ##[group]Run python -m pip install -r requirements.txt
+offline	Run python -m pip install -r requirements.txt	2026-11-21T12:42:27.9718579Z [36;1mpython -m pip install -r requirements.txt[0m
+offline	Run python -m pip install -r requirements.txt	2026-11-21T12:42:27.9764641Z shell: /usr/bin/bash -e {0}
+offline	Run python -m pip install -r requirements.txt	2026-11-21T12:42:27.9765975Z env:
+offline	Run python -m pip install -r requirements.txt	2026-11-21T12:42:27.9766992Z   PYTHONPATH: src
+offline	Run python -m pip install -r requirements.txt	2026-11-21T12:42:27.9767915Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.18/x64
+offline	Run python -m pip install -r requirements.txt	2026-11-21T12:42:27.9768977Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib/pkgconfig
+offline	Run python -m pip install -r requirements.txt	2026-11-21T12:42:27.9770087Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+offline	Run python -m pip install -r requirements.txt	2026-11-21T12:42:27.9771129Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+offline	Run python -m pip install -r requirements.txt	2026-11-21T12:42:27.9772132Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+offline	Run python -m pip install -r requirements.txt	2026-11-21T12:42:27.9773120Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib
+offline	Run python -m pip install -r requirements.txt	2026-11-21T12:42:27.9774333Z ##[endgroup]
+offline	Run python -m pip install -r requirements.txt	2026-11-21T12:42:28.8795275Z Collecting pandas==2.3.2 (from -r requirements.txt (line 1))
+offline	Run python -m pip install -r requirements.txt	2026-11-21T12:42:28.9148812Z   Downloading pandas-2.3.2-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (91 kB)
+offline	Run python -m pip install -r requirements.txt	2026-11-21T12:42:28.9690666Z Collecting pytest==8.4.2 (from -r requirements.txt (line 2))
+offline	Run python -m pip install -r requirements.txt	2026-11-21T12:42:28.9775648Z   Downloading pytest-8.4.2-py3-none-any.whl.metadata (7.7 kB)
+offline	Run python -m pip install -r requirements.txt	2026-11-21T12:42:29.0153248Z Collecting PyYAML==6.0.4 (from -r requirements.txt (line 3))
+offline	Run python -m pip install -r requirements.txt	2026-11-21T12:42:29.0226078Z   Downloading pyyaml-6.0.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.3 kB)
+offline	Run python -m pip install -r requirements.txt	2026-11-21T12:42:29.3317900Z Collecting ruff==0.15.22 (from -r requirements.txt (line 4))
+offline	Run python -m pip install -r requirements.txt	2026-11-21T12:42:29.3387945Z   Downloading ruff-0.15.22-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (26 kB)
+offline	Run python -m pip install -r requirements.txt	2026-11-21T12:42:29.5219352Z Collecting numpy>=1.23.2 (from pandas==2.3.2->-r requirements.txt (line 1))
+offline	Run python -m pip install -r requirements.txt	2026-11-21T12:42:29.5292589Z   Downloading numpy-2.4.6-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (6.6 kB)
+offline	Run python -m pip install -r requirements.txt	2026-11-21T12:42:29.6446846Z Collecting python-dateutil>=2.8.2 (from pandas==2.3.2->-r requirements.txt (line 1))
+offline	Run python -m pip install -r requirements.txt	2026-11-21T12:42:29.6517307Z   Downloading python_dateutil-4.0.0-py3-none-any.whl.metadata (7.3 kB)
+offline	Run python -m pip install -r requirements.txt	2026-11-21T12:42:29.6857637Z Collecting pytz>=2020.1 (from pandas==2.3.2->-r requirements.txt (line 1))
+offline	Run python -m pip install -r requirements.txt	2026-11-21T12:42:29.6932249Z   Downloading pytz-2026.6-py2.py3-none-any.whl.metadata (22 kB)
+offline	Run python -m pip install -r requirements.txt	2026-11-21T12:42:29.7114581Z Collecting tzdata>=2022.7 (from pandas==2.3.2->-r requirements.txt (line 1))
+offline	Run python -m pip install -r requirements.txt	2026-11-21T12:42:29.7184018Z   Downloading tzdata-2026.6-py2.py3-none-any.whl.metadata (1.4 kB)
+offline	Run python -m pip install -r requirements.txt	2026-11-21T12:42:29.7335788Z Collecting iniconfig>=1 (from pytest==8.4.2->-r requirements.txt (line 2))
+offline	Run python -m pip install -r requirements.txt	2026-11-21T12:42:29.7404565Z   Downloading iniconfig-2.3.1-py3-none-any.whl.metadata (2.8 kB)
+offline	Run python -m pip install -r requirements.txt	2026-11-21T12:42:29.7584536Z Collecting packaging>=20 (from pytest==8.4.2->-r requirements.txt (line 2))
+offline	Run python -m pip install -r requirements.txt	2026-11-21T12:42:29.7659963Z   Downloading packaging-26.3-py3-none-any.whl.metadata (3.5 kB)
+offline	Run python -m pip install -r requirements.txt	2026-11-21T12:42:29.7928744Z Collecting pluggy<2,>=1.5 (from pytest==8.4.2->-r requirements.txt (line 2))
+offline	Run python -m pip install -r requirements.txt	2026-11-21T12:42:29.8000557Z   Downloading pluggy-1.7.0-py3-none-any.whl.metadata (5.0 kB)
+offline	Run python -m pip install -r requirements.txt	2026-11-21T12:42:29.8202638Z Collecting pygments>=2.7.2 (from pytest==8.4.2->-r requirements.txt (line 2))
+offline	Run python -m pip install -r requirements.txt	2026-11-21T12:42:29.8269432Z   Downloading pygments-2.21.0-py3-none-any.whl.metadata (2.5 kB)
+offline	Run python -m pip install -r requirements.txt	2026-11-21T12:42:29.8413420Z Downloading pandas-2.3.2-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)
+offline	Run python -m pip install -r requirements.txt	2026-11-21T12:42:29.9764228Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.4/12.4 MB 97.3 MB/s  0:00:00
+offline	Run python -m pip install -r requirements.txt	2026-11-21T12:42:29.9840700Z Downloading pytest-8.4.2-py3-none-any.whl (365 kB)
+offline	Run python -m pip install -r requirements.txt	2026-11-21T12:42:29.9963668Z Downloading pyyaml-6.0.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (828 kB)
+offline	Run python -m pip install -r requirements.txt	2026-11-21T12:42:30.0025468Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 828.0/828.0 kB 138.0 MB/s  0:00:00
+offline	Run python -m pip install -r requirements.txt	2026-11-21T12:42:30.0100885Z Downloading ruff-0.15.22-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (11.4 MB)
+offline	Run python -m pip install -r requirements.txt	2026-11-21T12:42:30.0915901Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 11.4/11.4 MB 140.9 MB/s  0:00:00
+offline	Run python -m pip install -r requirements.txt	2026-11-21T12:42:30.0989795Z Downloading pluggy-1.7.0-py3-none-any.whl (27 kB)
+offline	Run python -m pip install -r requirements.txt	2026-11-21T12:42:30.1086950Z Downloading iniconfig-2.3.1-py3-none-any.whl (7.6 kB)
+offline	Run python -m pip install -r requirements.txt	2026-11-21T12:42:30.1180106Z Downloading numpy-2.4.6-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.9 MB)
+offline	Run python -m pip install -r requirements.txt	2026-11-21T12:42:30.2405602Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.9/16.9 MB 138.7 MB/s  0:00:00
+offline	Run python -m pip install -r requirements.txt	2026-11-21T12:42:30.2481723Z Downloading packaging-26.3-py3-none-any.whl (129 kB)
+offline	Run python -m pip install -r requirements.txt	2026-11-21T12:42:30.2584221Z Downloading pygments-2.21.0-py3-none-any.whl (1.3 MB)
+offline	Run python -m pip install -r requirements.txt	2026-11-21T12:42:30.2656152Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 198.0 MB/s  0:00:00
+offline	Run python -m pip install -r requirements.txt	2026-11-21T12:42:30.2725809Z Downloading python_dateutil-4.0.0-py3-none-any.whl (92 kB)
+offline	Run python -m pip install -r requirements.txt	2026-11-21T12:42:30.2822162Z Downloading pytz-2026.6-py2.py3-none-any.whl (506 kB)
+offline	Run python -m pip install -r requirements.txt	2026-11-21T12:42:30.2936109Z Downloading tzdata-2026.6-py2.py3-none-any.whl (348 kB)
+offline	Run python -m pip install -r requirements.txt	2026-11-21T12:42:30.4784533Z Installing collected packages: pytz, tzdata, ruff, PyYAML, pygments, pluggy, packaging, numpy, iniconfig, python-dateutil, pytest, pandas
+offline	Run python -m pip install -r requirements.txt	2026-11-21T12:42:36.6869389Z 
+offline	Run python -m pip install -r requirements.txt	2026-11-21T12:42:36.6884758Z Successfully installed PyYAML-6.0.4 iniconfig-2.3.1 numpy-2.4.6 packaging-26.3 pandas-2.3.2 pluggy-1.7.0 pygments-2.21.0 pytest-8.4.2 python-dateutil-4.0.0 pytz-2026.6 ruff-0.15.22 tzdata-2026.6
+offline	Run python -m pytest -q	﻿2026-11-21T12:42:36.7786629Z ##[group]Run python -m pytest -q
+offline	Run python -m pytest -q	2026-11-21T12:42:36.7787060Z [36;1mpython -m pytest -q[0m
+offline	Run python -m pytest -q	2026-11-21T12:42:36.7811350Z shell: /usr/bin/bash -e {0}
+offline	Run python -m pytest -q	2026-11-21T12:42:36.7811777Z env:
+offline	Run python -m pytest -q	2026-11-21T12:42:36.7812077Z   PYTHONPATH: src
+offline	Run python -m pytest -q	2026-11-21T12:42:36.7812442Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.18/x64
+offline	Run python -m pytest -q	2026-11-21T12:42:36.7813034Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib/pkgconfig
+offline	Run python -m pytest -q	2026-11-21T12:42:36.7813688Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+offline	Run python -m pytest -q	2026-11-21T12:42:36.7814163Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+offline	Run python -m pytest -q	2026-11-21T12:42:36.7814638Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+offline	Run python -m pytest -q	2026-11-21T12:42:36.7815122Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib
+offline	Run python -m pytest -q	2026-11-21T12:42:36.7815598Z ##[endgroup]
+offline	Run python -m pytest -q	2026-11-21T12:42:37.7624841Z ...........................................................              [100%]
+offline	Run python -m pytest -q	2026-11-21T12:42:37.7626311Z 59 passed, 31 deselected in 0.70s
+offline	Run ruff format --check . && ruff check .	﻿2026-11-21T12:42:37.8308852Z ##[group]Run ruff format --check . && ruff check .
+offline	Run ruff format --check . && ruff check .	2026-11-21T12:42:37.8309335Z [36;1mruff format --check . && ruff check .[0m
+offline	Run ruff format --check . && ruff check .	2026-11-21T12:42:37.8331694Z shell: /usr/bin/bash -e {0}
+offline	Run ruff format --check . && ruff check .	2026-11-21T12:42:37.8332124Z env:
+offline	Run ruff format --check . && ruff check .	2026-11-21T12:42:37.8332548Z   PYTHONPATH: src
+offline	Run ruff format --check . && ruff check .	2026-11-21T12:42:37.8333062Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.18/x64
+offline	Run ruff format --check . && ruff check .	2026-11-21T12:42:37.8333848Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib/pkgconfig
+offline	Run ruff format --check . && ruff check .	2026-11-21T12:42:37.8334445Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+offline	Run ruff format --check . && ruff check .	2026-11-21T12:42:37.8334975Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+offline	Run ruff format --check . && ruff check .	2026-11-21T12:42:37.8335557Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+offline	Run ruff format --check . && ruff check .	2026-11-21T12:42:37.8336100Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib
+offline	Run ruff format --check . && ruff check .	2026-11-21T12:42:37.8336776Z ##[endgroup]
+offline	Run ruff format --check . && ruff check .	2026-11-21T12:42:37.8452535Z 13 files already formatted
+offline	Run ruff format --check . && ruff check .	2026-11-21T12:42:37.8522024Z All checks passed!
+offline	Run python -m sales_cube --output reports	﻿2026-11-21T12:42:37.8564483Z ##[group]Run python -m sales_cube --output reports
+offline	Run python -m sales_cube --output reports	2026-11-21T12:42:37.8564978Z [36;1mpython -m sales_cube --output reports[0m
+offline	Run python -m sales_cube --output reports	2026-11-21T12:42:37.8584709Z shell: /usr/bin/bash -e {0}
+offline	Run python -m sales_cube --output reports	2026-11-21T12:42:37.8585081Z env:
+offline	Run python -m sales_cube --output reports	2026-11-21T12:42:37.8585425Z   PYTHONPATH: src
+offline	Run python -m sales_cube --output reports	2026-11-21T12:42:37.8585811Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.18/x64
+offline	Run python -m sales_cube --output reports	2026-11-21T12:42:37.8586402Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib/pkgconfig
+offline	Run python -m sales_cube --output reports	2026-11-21T12:42:37.8586919Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+offline	Run python -m sales_cube --output reports	2026-11-21T12:42:37.8587372Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+offline	Run python -m sales_cube --output reports	2026-11-21T12:42:37.8587842Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+offline	Run python -m sales_cube --output reports	2026-11-21T12:42:37.8588305Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib
+offline	Run python -m sales_cube --output reports	2026-11-21T12:42:37.8588731Z ##[endgroup]
+offline	Run cat reports/summary.txt	﻿2026-11-21T12:42:38.2307413Z ##[group]Run cat reports/summary.txt
+offline	Run cat reports/summary.txt	2026-11-21T12:42:38.2307856Z [36;1mcat reports/summary.txt[0m
+offline	Run cat reports/summary.txt	2026-11-21T12:42:38.2330960Z shell: /usr/bin/bash -e {0}
+offline	Run cat reports/summary.txt	2026-11-21T12:42:38.2331355Z env:
+offline	Run cat reports/summary.txt	2026-11-21T12:42:38.2331654Z   PYTHONPATH: src
+offline	Run cat reports/summary.txt	2026-11-21T12:42:38.2332075Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.18/x64
+offline	Run cat reports/summary.txt	2026-11-21T12:42:38.2332681Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib/pkgconfig
+offline	Run cat reports/summary.txt	2026-11-21T12:42:38.2333221Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+offline	Run cat reports/summary.txt	2026-11-21T12:42:38.2333954Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+offline	Run cat reports/summary.txt	2026-11-21T12:42:38.2334445Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+offline	Run cat reports/summary.txt	2026-11-21T12:42:38.2334929Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib
+offline	Run cat reports/summary.txt	2026-11-21T12:42:38.2335352Z ##[endgroup]
+offline	Run cat reports/summary.txt	2026-11-21T12:42:38.2404671Z seed=64
+offline	Run cat reports/summary.txt	2026-11-21T12:42:38.2405219Z DimDate: 731
+offline	Run cat reports/summary.txt	2026-11-21T12:42:38.2405660Z DimProduct: 6
+offline	Run cat reports/summary.txt	2026-11-21T12:42:38.2406156Z DimCustomer: 4
+offline	Run cat reports/summary.txt	2026-11-21T12:42:38.2406484Z FactSales: 1838
+offline	Run cat reports/summary.txt	2026-11-21T12:42:38.2406947Z 01_total: [[870055]]
+offline	Run cat reports/summary.txt	2026-11-21T12:42:38.2407303Z 02_units_by_year: [['2024', 4232], ['2025', 4190]]
+offline	Run cat reports/summary.txt	2026-11-21T12:42:38.2407839Z 03_category: [['Office', 192840], ['Tech', 218900]]
+offline	Run cat reports/summary.txt	2026-11-21T12:42:38.2408399Z 04_region: [['East', 201310], ['West', 210430]]
+offline	Run cat reports/summary.txt	2026-11-21T12:42:38.2409490Z 05_months: [['2025-01', 31130], ['2025-02', 31595], ['2025-03', 28625], ['2025-04', 35240], ['2025-05', 41575], ['2025-06', 35485], ['2025-07', 43185], ['2025-08', 30020], ['2025-09', 26565], ['2025-10', 32595], ['2025-11', 36900], ['2025-12', 38825]]
+offline	Run cat reports/summary.txt	2026-11-21T12:42:38.2410400Z 06_ytd_march: [[91350]]
+offline	Run cat reports/summary.txt	2026-11-21T12:42:38.2410779Z 07_prior_march: [[42395]]
+offline	Run cat reports/summary.txt	2026-11-21T12:42:38.2411157Z 08_march_change: [[-13770]]
+offline	Run cat reports/summary.txt	2026-11-21T12:42:38.2411570Z 09_top_products: [['Screen', 152640], ['Desk', 117000], ['Chair', 53370]]
+offline	Run cat reports/summary.txt	2026-11-21T12:42:38.2412060Z 10_east_office: [['Aspen', 48335], ['Birch', 47650]]
+offline	Post Run actions/setup-python@v5	﻿2026-11-21T12:42:38.2520996Z Post job cleanup.
+offline	Post Run actions/setup-python@v5	2026-11-21T12:42:38.3757767Z (node:2448) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+offline	Post Run actions/setup-python@v5	2026-11-21T12:42:38.3758546Z (Use `node --trace-deprecation ...` to show where the warning was created)
+offline	Post Run actions/checkout@v4	﻿2026-11-21T12:42:38.3949209Z Post job cleanup.
+offline	Post Run actions/checkout@v4	2026-11-21T12:42:38.4825488Z [command]/usr/bin/git version
+offline	Post Run actions/checkout@v4	2026-11-21T12:42:38.4872202Z git version 2.56.1
+offline	Post Run actions/checkout@v4	2026-11-21T12:42:38.4914713Z Temporarily overriding HOME='/home/runner/work/_temp/33569920-6168-42c0-bde3-c819f06668d7' before making global git config changes
+offline	Post Run actions/checkout@v4	2026-11-21T12:42:38.4916062Z Adding repository directory to the temporary git global config as a safe directory
+offline	Post Run actions/checkout@v4	2026-11-21T12:42:38.4920968Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/ssas-mdx-sales-cube/ssas-mdx-sales-cube
+offline	Post Run actions/checkout@v4	2026-11-21T12:42:38.4965356Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+offline	Post Run actions/checkout@v4	2026-11-21T12:42:38.5002364Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+offline	Post Run actions/checkout@v4	2026-11-21T12:42:38.5339726Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+offline	Post Run actions/checkout@v4	2026-11-21T12:42:38.5379712Z http.https://github.com/.extraheader
+offline	Post Run actions/checkout@v4	2026-11-21T12:42:38.5406858Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+offline	Post Run actions/checkout@v4	2026-11-21T12:42:38.5465442Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+offline	Post Run actions/checkout@v4	2026-11-21T12:42:38.5811100Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+offline	Post Run actions/checkout@v4	2026-11-21T12:42:38.5869549Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+offline	Complete job	﻿2026-11-21T12:42:38.6280122Z Cleaning up orphan processes
+offline	Complete job	2026-11-21T12:42:38.6626151Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-python@v5. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
