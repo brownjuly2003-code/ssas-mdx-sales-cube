@@ -1,0 +1,5 @@
+SELECT {[Measures].[Revenue]} ON COLUMNS,
+       NON EMPTY TopCount([Product].[Catalog].[Product].Members, 3,
+           [Measures].[Revenue] * 1000 - [Product].[Catalog].CurrentMember.Properties("KEY0", TYPED)) ON ROWS
+FROM [Sales]
+WHERE ([Date].[Calendar].[Year].&[2025]);

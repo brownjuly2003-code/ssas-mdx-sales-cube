@@ -1,0 +1,80 @@
+name: Sales cube
+on:
+  push:
+    paths-ignore: ['**.md']
+  pull_request:
+    paths-ignore: ['**.md']
+concurrency:
+  group: sales-cube-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  offline:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    env:
+      PYTHONPATH: src
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install -r requirements.txt
+      - run: python -m pytest -q
+      - run: ruff format --check . && ruff check .
+      - run: python -m sales_cube --output reports
+      - run: cat reports/summary.txt
+  mssql:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    env:
+      PYTHONPATH: src
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install -r requirements.txt
+      - run: python -m sales_cube --output reports
+      - name: Start SQL Server Developer
+        id: ready
+        run: |
+          set -eu
+          umask 077
+          echo "MSSQL_SA_PASSWORD=Aa1!$(openssl rand -hex 24)" > .env
+          docker compose down -v --remove-orphans
+          docker compose up -d --wait --wait-timeout 240
+      - name: Check the sqlcmd load and compare the stored rows
+        if: steps.ready.outcome == 'success'
+        run: python -m pytest -v -m slow tests/test_mssql.py
+      # Substitute engine, not SSAS: Mondrian 3.2 executes the MDX over the same star.
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+      - name: Download Mondrian 3.2 and check the SHA-256 of every jar
+        run: bash scripts/fetch-mondrian.sh reports/mondrian/lib
+      - name: Execute the 10 MDX queries on Mondrian 3.2 over the star in SQL Server
+        id: mondrian
+        if: steps.ready.outcome == 'success'
+        run: |
+          set -eu
+          python -m sales_cube.mondrian statements --queries mdx --output reports/mondrian/statements
+          set -a; . ./.env; set +a
+          export MONDRIAN_JDBC_URL='jdbc:sqlserver://127.0.0.1:14330;databaseName=P64SalesDW;encrypt=true;trustServerCertificate=true'
+          export MONDRIAN_JDBC_USER=sa MONDRIAN_JDBC_PASSWORD="$MSSQL_SA_PASSWORD"
+          java -version 2>&1 | head -n 1
+          javac -d reports/mondrian/classes -cp 'reports/mondrian/lib/*' mondrian/RunMdx.java
+          java -Xmx384m -Dmondrian.olap.SsasCompatibleNaming=true \
+            -cp 'reports/mondrian/classes:reports/mondrian/lib/*' \
+            RunMdx reports/mondrian/statements reports/mondrian/answers cube/mondrian.xml
+      - name: Mondrian answers against the reference, query by query
+        if: always() && steps.mondrian.outcome != 'skipped'
+        run: python -m sales_cube.mondrian report docs/runs/expected-seed64.json reports/mondrian/answers
+      - name: Compare the answers with the code written for SSAS answers
+        run: python -m sales_cube.cellset docs/runs/expected-seed64.json reports/mondrian/answers --queries mdx
+      - name: Negative controls on the Mondrian answers
+        run: python -m pytest -v -m slow tests/test_mondrian_answers.py
+      - name: Remove the stand
+        if: always()
+        run: if test -f .env; then docker compose down -v --remove-orphans && rm -f .env; fi

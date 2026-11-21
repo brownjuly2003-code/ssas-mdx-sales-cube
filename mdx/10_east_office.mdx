@@ -1,0 +1,4 @@
+SELECT {[Measures].[Revenue]} ON COLUMNS,
+       NON EMPTY [Customer].[Geography].[Region].&[East].Children ON ROWS
+FROM [Sales]
+WHERE ([Date].[Calendar].[Year].&[2025], [Product].[Catalog].[Category].&[Office]);

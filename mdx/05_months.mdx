@@ -1,0 +1,3 @@
+SELECT {[Measures].[Revenue]} ON COLUMNS,
+       NON EMPTY [Date].[Calendar].[Year].&[2025].Children ON ROWS
+FROM [Sales];

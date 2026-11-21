@@ -1,0 +1,5 @@
+WITH MEMBER [Measures].[Revenue YTD] AS
+     Sum(PeriodsToDate([Date].[Calendar].[Year], [Date].[Calendar].CurrentMember), [Measures].[Revenue])
+SELECT {[Measures].[Revenue YTD]} ON COLUMNS
+FROM [Sales]
+WHERE ([Date].[Calendar].[Month].&[202503]);

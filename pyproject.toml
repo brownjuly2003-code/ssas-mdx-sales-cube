@@ -1,0 +1,7 @@
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+addopts = "-m 'not slow'"
+markers = ["slow: requires the SQL Server Docker Compose stand"]
+
+[tool.ruff]
+target-version = "py311"

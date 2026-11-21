@@ -1,0 +1,34 @@
+# Full run ssas-mdx-sales-cube_20261119-113824, commit c849c13: state/summary.tsv in full,
+# the pytest result line of ci/offline (logs/j1_4.log) and the per-test lines of ci/mssql (logs/j2_6.log).
+
+## state/summary.tsv
+j1	1	NOOP	0	Run actions/checkout	tree copied
+j1	2	PASS	2	Run actions/setup-python	python 3.11 (uv venv)
+j1	3	PASS	11	Run python -m pip install -r requirements.txt	
+j1	4	PASS	1	Run python -m pytest -q	
+j1	5	PASS	0	Run ruff format --check . && ruff check .	
+j1	6	PASS	1	Run python -m sales_cube --output reports	
+j1	7	PASS	0	Run cat reports/summary.txt	
+j1	-	JOB_ok	15	ci/offline	
+j2	1	NOOP	0	Run actions/checkout	tree copied
+j2	2	PASS	0	Run actions/setup-python	python 3.11 (uv venv)
+j2	3	PASS	1	Run python -m pip install -r requirements.txt	
+j2	4	PASS	0	Run python -m sales_cube --output reports	
+j2	5	PASS	17	Start SQL Server Developer	
+j2	6	PASS	7	Check the sqlcmd load and compare the stored rows	
+j2	7	PASS	11	Remove the stand	
+j2	-	JOB_ok	36	ci/mssql	
+
+## ci/offline, step 4
+32 passed, 8 deselected in 0.70s
+
+## ci/mssql, step 6
+tests/test_mssql.py::test_text_columns_cover_every_character_column_of_the_star PASSED [ 12%]
+tests/test_mssql.py::test_trailing_space_in_the_printed_value_and_in_the_length PASSED [ 25%]
+tests/test_mssql.py::test_loaded_rows[DimDate] PASSED                    [ 37%]
+tests/test_mssql.py::test_loaded_rows[DimProduct] PASSED                 [ 50%]
+tests/test_mssql.py::test_loaded_rows[DimCustomer] PASSED                [ 62%]
+tests/test_mssql.py::test_loaded_rows[FactSales] PASSED                  [ 75%]
+tests/test_mssql.py::test_repeat_load_preserves_existing_star PASSED     [ 87%]
+tests/test_mssql.py::test_load_rejects_another_database PASSED           [100%]
+============================== 8 passed in 7.00s ===============================

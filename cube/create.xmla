@@ -1,0 +1,525 @@
+<Create xmlns="http://schemas.microsoft.com/analysisservices/2003/engine" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <ObjectDefinition>
+    <Database>
+      <ID>P64SalesCube</ID>
+      <Name>P64SalesCube</Name>
+      <DataSources>
+        <DataSource xsi:type="RelationalDataSource">
+          <ID>SalesDW</ID>
+          <Name>SalesDW</Name>
+          <ConnectionString>Data Source=localhost;Initial Catalog=P64SalesDW;Integrated Security=SSPI</ConnectionString>
+          <ImpersonationInfo>
+            <ImpersonationMode>ImpersonateServiceAccount</ImpersonationMode>
+          </ImpersonationInfo>
+          <ManagedProvider>System.Data.SqlClient</ManagedProvider>
+        </DataSource>
+      </DataSources>
+      <DataSourceViews>
+        <DataSourceView>
+          <ID>SalesView</ID>
+          <Name>SalesView</Name>
+          <DataSourceID>SalesDW</DataSourceID>
+          <Schema>
+            <xs:schema xmlns="" id="SalesView" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+              <xs:element name="SalesView" msdata:IsDataSet="true">
+                <xs:complexType>
+                  <xs:choice minOccurs="0" maxOccurs="unbounded">
+                    <xs:element name="DimDate" msprop:DbSchemaName="dbo" msprop:DbTableName="DimDate" msprop:TableType="Table">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="DateKey" type="xs:int" msprop:DbColumnName="DateKey" />
+                          <xs:element name="DayDate" type="xs:dateTime" msprop:DbColumnName="DayDate" />
+                          <xs:element name="MonthKey" type="xs:int" msprop:DbColumnName="MonthKey" />
+                          <xs:element name="MonthLabel" type="xs:string" msprop:DbColumnName="MonthLabel" />
+                          <xs:element name="YearNumber" type="xs:int" msprop:DbColumnName="YearNumber" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="DimProduct" msprop:DbSchemaName="dbo" msprop:DbTableName="DimProduct" msprop:TableType="Table">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="ProductKey" type="xs:int" msprop:DbColumnName="ProductKey" />
+                          <xs:element name="ProductName" type="xs:string" msprop:DbColumnName="ProductName" />
+                          <xs:element name="Category" type="xs:string" msprop:DbColumnName="Category" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="DimCustomer" msprop:DbSchemaName="dbo" msprop:DbTableName="DimCustomer" msprop:TableType="Table">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="CustomerKey" type="xs:int" msprop:DbColumnName="CustomerKey" />
+                          <xs:element name="CustomerName" type="xs:string" msprop:DbColumnName="CustomerName" />
+                          <xs:element name="Region" type="xs:string" msprop:DbColumnName="Region" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="FactSales" msprop:DbSchemaName="dbo" msprop:DbTableName="FactSales" msprop:TableType="Table">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="LineKey" type="xs:int" msprop:DbColumnName="LineKey" />
+                          <xs:element name="DateKey" type="xs:int" msprop:DbColumnName="DateKey" />
+                          <xs:element name="ProductKey" type="xs:int" msprop:DbColumnName="ProductKey" />
+                          <xs:element name="CustomerKey" type="xs:int" msprop:DbColumnName="CustomerKey" />
+                          <xs:element name="Units" type="xs:int" msprop:DbColumnName="Units" />
+                          <xs:element name="Revenue" type="xs:int" msprop:DbColumnName="Revenue" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:choice>
+                </xs:complexType>
+                <xs:unique name="PK_DimDate" msdata:PrimaryKey="true">
+                  <xs:selector xpath=".//DimDate" />
+                  <xs:field xpath="DateKey" />
+                </xs:unique>
+                <xs:unique name="PK_DimProduct" msdata:PrimaryKey="true">
+                  <xs:selector xpath=".//DimProduct" />
+                  <xs:field xpath="ProductKey" />
+                </xs:unique>
+                <xs:unique name="PK_DimCustomer" msdata:PrimaryKey="true">
+                  <xs:selector xpath=".//DimCustomer" />
+                  <xs:field xpath="CustomerKey" />
+                </xs:unique>
+                <xs:unique name="PK_FactSales" msdata:PrimaryKey="true">
+                  <xs:selector xpath=".//FactSales" />
+                  <xs:field xpath="LineKey" />
+                </xs:unique>
+                <xs:keyref name="FK_DimDate" refer="PK_DimDate">
+                  <xs:selector xpath=".//FactSales" />
+                  <xs:field xpath="DateKey" />
+                </xs:keyref>
+                <xs:keyref name="FK_DimProduct" refer="PK_DimProduct">
+                  <xs:selector xpath=".//FactSales" />
+                  <xs:field xpath="ProductKey" />
+                </xs:keyref>
+                <xs:keyref name="FK_DimCustomer" refer="PK_DimCustomer">
+                  <xs:selector xpath=".//FactSales" />
+                  <xs:field xpath="CustomerKey" />
+                </xs:keyref>
+              </xs:element>
+            </xs:schema>
+          </Schema>
+        </DataSourceView>
+      </DataSourceViews>
+      <Dimensions>
+        <Dimension>
+          <ID>Date</ID>
+          <Name>Date</Name>
+          <Source xsi:type="DataSourceViewBinding">
+            <DataSourceViewID>SalesView</DataSourceViewID>
+          </Source>
+          <Type>Time</Type>
+          <Attributes>
+            <Attribute>
+              <ID>Day</ID>
+              <Name>Day</Name>
+              <Usage>Key</Usage>
+              <Type>Days</Type>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>DimDate</TableID>
+                    <ColumnID>DateKey</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <AttributeRelationships>
+                <AttributeRelationship>
+                  <AttributeID>Month</AttributeID>
+                </AttributeRelationship>
+              </AttributeRelationships>
+              <OrderBy>Key</OrderBy>
+            </Attribute>
+            <Attribute>
+              <ID>Month</ID>
+              <Name>Month</Name>
+              <Type>Months</Type>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>DimDate</TableID>
+                    <ColumnID>MonthKey</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <NameColumn>
+                <DataType>WChar</DataType>
+                <DataSize>7</DataSize>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>DimDate</TableID>
+                  <ColumnID>MonthLabel</ColumnID>
+                </Source>
+              </NameColumn>
+              <AttributeRelationships>
+                <AttributeRelationship>
+                  <AttributeID>Year</AttributeID>
+                </AttributeRelationship>
+              </AttributeRelationships>
+              <OrderBy>Key</OrderBy>
+            </Attribute>
+            <Attribute>
+              <ID>Year</ID>
+              <Name>Year</Name>
+              <Type>Years</Type>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>DimDate</TableID>
+                    <ColumnID>YearNumber</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <OrderBy>Key</OrderBy>
+            </Attribute>
+          </Attributes>
+          <Hierarchies>
+            <Hierarchy>
+              <ID>Calendar</ID>
+              <Name>Calendar</Name>
+              <Levels>
+                <Level>
+                  <ID>Year</ID>
+                  <Name>Year</Name>
+                  <SourceAttributeID>Year</SourceAttributeID>
+                </Level>
+                <Level>
+                  <ID>Month</ID>
+                  <Name>Month</Name>
+                  <SourceAttributeID>Month</SourceAttributeID>
+                </Level>
+                <Level>
+                  <ID>Day</ID>
+                  <Name>Day</Name>
+                  <SourceAttributeID>Day</SourceAttributeID>
+                </Level>
+              </Levels>
+            </Hierarchy>
+          </Hierarchies>
+        </Dimension>
+        <Dimension>
+          <ID>Product</ID>
+          <Name>Product</Name>
+          <Source xsi:type="DataSourceViewBinding">
+            <DataSourceViewID>SalesView</DataSourceViewID>
+          </Source>
+          <Attributes>
+            <Attribute>
+              <ID>Product</ID>
+              <Name>Product</Name>
+              <Usage>Key</Usage>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>DimProduct</TableID>
+                    <ColumnID>ProductKey</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <NameColumn>
+                <DataType>WChar</DataType>
+                <DataSize>32</DataSize>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>DimProduct</TableID>
+                  <ColumnID>ProductName</ColumnID>
+                </Source>
+              </NameColumn>
+              <AttributeRelationships>
+                <AttributeRelationship>
+                  <AttributeID>Category</AttributeID>
+                </AttributeRelationship>
+              </AttributeRelationships>
+              <OrderBy>Key</OrderBy>
+            </Attribute>
+            <Attribute>
+              <ID>Category</ID>
+              <Name>Category</Name>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <DataSize>32</DataSize>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>DimProduct</TableID>
+                    <ColumnID>Category</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <OrderBy>Key</OrderBy>
+            </Attribute>
+          </Attributes>
+          <Hierarchies>
+            <Hierarchy>
+              <ID>Catalog</ID>
+              <Name>Catalog</Name>
+              <Levels>
+                <Level>
+                  <ID>Category</ID>
+                  <Name>Category</Name>
+                  <SourceAttributeID>Category</SourceAttributeID>
+                </Level>
+                <Level>
+                  <ID>Product</ID>
+                  <Name>Product</Name>
+                  <SourceAttributeID>Product</SourceAttributeID>
+                </Level>
+              </Levels>
+            </Hierarchy>
+          </Hierarchies>
+        </Dimension>
+        <Dimension>
+          <ID>Customer</ID>
+          <Name>Customer</Name>
+          <Source xsi:type="DataSourceViewBinding">
+            <DataSourceViewID>SalesView</DataSourceViewID>
+          </Source>
+          <Attributes>
+            <Attribute>
+              <ID>Customer</ID>
+              <Name>Customer</Name>
+              <Usage>Key</Usage>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>DimCustomer</TableID>
+                    <ColumnID>CustomerKey</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <NameColumn>
+                <DataType>WChar</DataType>
+                <DataSize>32</DataSize>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>DimCustomer</TableID>
+                  <ColumnID>CustomerName</ColumnID>
+                </Source>
+              </NameColumn>
+              <AttributeRelationships>
+                <AttributeRelationship>
+                  <AttributeID>Region</AttributeID>
+                </AttributeRelationship>
+              </AttributeRelationships>
+              <OrderBy>Key</OrderBy>
+            </Attribute>
+            <Attribute>
+              <ID>Region</ID>
+              <Name>Region</Name>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <DataSize>32</DataSize>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>DimCustomer</TableID>
+                    <ColumnID>Region</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <OrderBy>Key</OrderBy>
+            </Attribute>
+          </Attributes>
+          <Hierarchies>
+            <Hierarchy>
+              <ID>Geography</ID>
+              <Name>Geography</Name>
+              <Levels>
+                <Level>
+                  <ID>Region</ID>
+                  <Name>Region</Name>
+                  <SourceAttributeID>Region</SourceAttributeID>
+                </Level>
+                <Level>
+                  <ID>Customer</ID>
+                  <Name>Customer</Name>
+                  <SourceAttributeID>Customer</SourceAttributeID>
+                </Level>
+              </Levels>
+            </Hierarchy>
+          </Hierarchies>
+        </Dimension>
+      </Dimensions>
+      <Cubes>
+        <Cube>
+          <ID>Sales</ID>
+          <Name>Sales</Name>
+          <Dimensions>
+            <Dimension>
+              <ID>Date</ID>
+              <Name>Date</Name>
+              <DimensionID>Date</DimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>Day</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Month</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Year</AttributeID>
+                </Attribute>
+              </Attributes>
+              <Hierarchies>
+                <Hierarchy>
+                  <HierarchyID>Calendar</HierarchyID>
+                </Hierarchy>
+              </Hierarchies>
+            </Dimension>
+            <Dimension>
+              <ID>Product</ID>
+              <Name>Product</Name>
+              <DimensionID>Product</DimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>Product</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Category</AttributeID>
+                </Attribute>
+              </Attributes>
+              <Hierarchies>
+                <Hierarchy>
+                  <HierarchyID>Catalog</HierarchyID>
+                </Hierarchy>
+              </Hierarchies>
+            </Dimension>
+            <Dimension>
+              <ID>Customer</ID>
+              <Name>Customer</Name>
+              <DimensionID>Customer</DimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>Customer</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Region</AttributeID>
+                </Attribute>
+              </Attributes>
+              <Hierarchies>
+                <Hierarchy>
+                  <HierarchyID>Geography</HierarchyID>
+                </Hierarchy>
+              </Hierarchies>
+            </Dimension>
+          </Dimensions>
+          <MeasureGroups>
+            <MeasureGroup>
+              <ID>SalesLines</ID>
+              <Name>SalesLines</Name>
+              <Measures>
+                <Measure>
+                  <ID>Revenue</ID>
+                  <Name>Revenue</Name>
+                  <AggregateFunction>Sum</AggregateFunction>
+                  <Source>
+                    <DataType>Integer</DataType>
+                    <Source xsi:type="ColumnBinding">
+                      <TableID>FactSales</TableID>
+                      <ColumnID>Revenue</ColumnID>
+                    </Source>
+                  </Source>
+                  <FormatString>#,##0</FormatString>
+                </Measure>
+                <Measure>
+                  <ID>Units</ID>
+                  <Name>Units</Name>
+                  <AggregateFunction>Sum</AggregateFunction>
+                  <Source>
+                    <DataType>Integer</DataType>
+                    <Source xsi:type="ColumnBinding">
+                      <TableID>FactSales</TableID>
+                      <ColumnID>Units</ColumnID>
+                    </Source>
+                  </Source>
+                  <FormatString>#,##0</FormatString>
+                </Measure>
+              </Measures>
+              <StorageMode>Molap</StorageMode>
+              <Dimensions>
+                <Dimension xsi:type="RegularMeasureGroupDimension">
+                  <CubeDimensionID>Date</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Day</AttributeID>
+                      <KeyColumns>
+                        <KeyColumn>
+                          <DataType>Integer</DataType>
+                          <Source xsi:type="ColumnBinding">
+                            <TableID>FactSales</TableID>
+                            <ColumnID>DateKey</ColumnID>
+                          </Source>
+                        </KeyColumn>
+                      </KeyColumns>
+                      <Type>Granularity</Type>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension xsi:type="RegularMeasureGroupDimension">
+                  <CubeDimensionID>Product</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Product</AttributeID>
+                      <KeyColumns>
+                        <KeyColumn>
+                          <DataType>Integer</DataType>
+                          <Source xsi:type="ColumnBinding">
+                            <TableID>FactSales</TableID>
+                            <ColumnID>ProductKey</ColumnID>
+                          </Source>
+                        </KeyColumn>
+                      </KeyColumns>
+                      <Type>Granularity</Type>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension xsi:type="RegularMeasureGroupDimension">
+                  <CubeDimensionID>Customer</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Customer</AttributeID>
+                      <KeyColumns>
+                        <KeyColumn>
+                          <DataType>Integer</DataType>
+                          <Source xsi:type="ColumnBinding">
+                            <TableID>FactSales</TableID>
+                            <ColumnID>CustomerKey</ColumnID>
+                          </Source>
+                        </KeyColumn>
+                      </KeyColumns>
+                      <Type>Granularity</Type>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+              <Partitions>
+                <Partition>
+                  <ID>SalesLines</ID>
+                  <Name>SalesLines</Name>
+                  <Source xsi:type="DsvTableBinding">
+                    <DataSourceViewID>SalesView</DataSourceViewID>
+                    <TableID>FactSales</TableID>
+                  </Source>
+                  <StorageMode>Molap</StorageMode>
+                </Partition>
+              </Partitions>
+            </MeasureGroup>
+          </MeasureGroups>
+          <Source>
+            <DataSourceViewID>SalesView</DataSourceViewID>
+          </Source>
+          <MdxScripts>
+            <MdxScript>
+              <ID>Calculations</ID>
+              <Name>Calculations</Name>
+              <Commands>
+                <Command>
+                  <Text>CALCULATE;</Text>
+                </Command>
+              </Commands>
+            </MdxScript>
+          </MdxScripts>
+        </Cube>
+      </Cubes>
+    </Database>
+  </ObjectDefinition>
+</Create>

@@ -1,0 +1,4 @@
+SELECT {[Measures].[Revenue]} ON COLUMNS,
+       NON EMPTY [Product].[Catalog].[Category].Members ON ROWS
+FROM [Sales]
+WHERE ([Date].[Calendar].[Year].&[2025]);

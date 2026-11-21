@@ -1,0 +1,1 @@
+"""Synthetic multidimensional sales lab."""

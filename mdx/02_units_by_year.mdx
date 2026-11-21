@@ -1,0 +1,3 @@
+SELECT {[Measures].[Units]} ON COLUMNS,
+       NON EMPTY [Date].[Calendar].[Year].Members ON ROWS
+FROM [Sales];

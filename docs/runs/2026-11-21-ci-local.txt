@@ -1,0 +1,110 @@
+ci_local run ssas-mdx-sales-cube_20261121-063735 (runner linux, docker), commit e8d6895, verdict PASS (15 passed, 0 failed, 0 uncovered)
+
+== state/summary.tsv
+j1	1	NOOP	0	Run actions/checkout	tree copied
+j1	2	PASS	2	Run actions/setup-python	python 3.11 (uv venv)
+j1	3	PASS	12	Run python -m pip install -r requirements.txt	
+j1	4	PASS	1	Run python -m pytest -q	
+j1	5	PASS	0	Run ruff format --check . && ruff check .	
+j1	6	PASS	1	Run python -m sales_cube --output reports	
+j1	7	PASS	0	Run cat reports/summary.txt	
+j1	-	JOB_ok	16	ci/offline	
+j2	1	NOOP	0	Run actions/checkout	tree copied
+j2	2	PASS	0	Run actions/setup-python	python 3.11 (uv venv)
+j2	3	PASS	0	Run python -m pip install -r requirements.txt	
+j2	4	PASS	1	Run python -m sales_cube --output reports	
+j2	5	PASS	17	Start SQL Server Developer	
+j2	6	PASS	10	Check the sqlcmd load and compare the stored rows	
+j2	7	PASS	0	Run actions/setup-java	java found
+j2	8	PASS	8	Download Mondrian 3.2 and check the SHA-256 of every jar	
+j2	9	PASS	8	Execute the 10 MDX queries on Mondrian 3.2 over the star in SQL Server	
+j2	10	PASS	0	Mondrian answers against the reference, query by query	
+j2	11	PASS	0	Compare the answers with the code written for SSAS answers	
+j2	12	PASS	1	Negative controls on the Mondrian answers	
+j2	13	PASS	12	Remove the stand	
+j2	-	JOB_ok	57	ci/mssql	
+
+== logs/j1_4.log (offline pytest), last line
+50 passed, 31 deselected in 0.89s
+
+== logs/j2_6.log (SQL Server load tests), last line
+============================== 8 passed in 8.23s ===============================
+
+== logs/j2_8.log (sha256sum -c)
+mondrian-3.2.0-13661-JS-3.jar: OK
+olap4j-0.9.7.309-JS-3.jar: OK
+eigenbase-xom-1.3.0.11999.jar: OK
+eigenbase-properties-1.1.0.10924.jar: OK
+eigenbase-resgen-1.3.0.11873.jar: OK
+javacup-0.10k.jar: OK
+commons-dbcp-1.2.jar: OK
+commons-pool-1.2.jar: OK
+commons-vfs-1.0.jar: OK
+commons-math-1.0.jar: OK
+commons-collections-3.2.2.jar: OK
+commons-logging-1.0.4.jar: OK
+reload4j-1.2.25.jar: OK
+mssql-jdbc-12.8.1.jre11.jar: OK
+
+== logs/j2_9.log (Mondrian execution)
+statements written to reports/mondrian/statements; final ';' dropped in 10
+changed for Mondrian: ['09_top_products']
+09_top_products: '.Properties("KEY0", TYPED)' -> '.Properties("KEY0")' (the Mondrian 3.2 parser has no TYPED flag and reads it as a member name; KEY0 is declared in cube/mondrian.xml as a numeric property of the ProductKey column, so the tie-break gets the same number)
+openjdk version "17.0.20.1" 2026-08-18
+java 17.0.20.1
+jdbc driver 12.8.1.0
+sql server Microsoft SQL Server 2022 (RTM-CU18) (KB5050771) - 16.0.4185.3 (X64)
+mondrian.olap.SsasCompatibleNaming=true
+01_total: answered in 164 ms
+02_units_by_year: answered in 62 ms
+03_category: answered in 85 ms
+04_region: answered in 58 ms
+05_months: answered in 40 ms
+06_ytd_march: answered in 33 ms
+07_prior_march: answered in 16 ms
+08_march_change: answered in 4 ms
+09_top_products: answered in 47 ms
+10_east_office: answered in 45 ms
+10 queries, 0 failed
+
+== logs/j2_10.log (report)
+01_total | expected [[870055]] | Mondrian [[870055]] | match yes
+02_units_by_year | expected [['2024', 4232], ['2025', 4190]] | Mondrian [['2024', 4232], ['2025', 4190]] | match yes
+03_category | expected [['Office', 192840], ['Tech', 218900]] | Mondrian [['Office', 192840], ['Tech', 218900]] | match yes
+04_region | expected [['East', 201310], ['West', 210430]] | Mondrian [['East', 201310], ['West', 210430]] | match yes
+05_months | expected [['2025-01', 31130], ['2025-02', 31595], ['2025-03', 28625], ['2025-04', 35240], ['2025-05', 41575], ['2025-06', 35485], ['2025-07', 43185], ['2025-08', 30020], ['2025-09', 26565], ['2025-10', 32595], ['2025-11', 36900], ['2025-12', 38825]] | Mondrian [['2025-01', 31130], ['2025-02', 31595], ['2025-03', 28625], ['2025-04', 35240], ['2025-05', 41575], ['2025-06', 35485], ['2025-07', 43185], ['2025-08', 30020], ['2025-09', 26565], ['2025-10', 32595], ['2025-11', 36900], ['2025-12', 38825]] | match yes
+06_ytd_march | expected [[91350]] | Mondrian [[91350]] | match yes
+07_prior_march | expected [[42395]] | Mondrian [[42395]] | match yes
+08_march_change | expected [[-13770]] | Mondrian [[-13770]] | match yes
+09_top_products | expected [['Screen', 152640], ['Desk', 117000], ['Chair', 53370]] | Mondrian [['Screen', 152640], ['Desk', 117000], ['Chair', 53370]] | match yes
+10_east_office | expected [['Aspen', 48335], ['Birch', 47650]] | Mondrian [['Aspen', 48335], ['Birch', 47650]] | match yes
+10/10 Mondrian answers match the reference
+
+== logs/j2_11.log (sales_cube.cellset)
+10 MDX cellsets match the reference
+
+== logs/j2_12.log (answers and negative controls)
+tests/test_mondrian_answers.py::test_ten_mondrian_answers_match_the_reference PASSED [  4%]
+tests/test_mondrian_answers.py::test_a_changed_reference_value_fails[01_total] PASSED [  8%]
+tests/test_mondrian_answers.py::test_a_changed_reference_value_fails[02_units_by_year] PASSED [ 13%]
+tests/test_mondrian_answers.py::test_a_changed_reference_value_fails[03_category] PASSED [ 17%]
+tests/test_mondrian_answers.py::test_a_changed_reference_value_fails[04_region] PASSED [ 21%]
+tests/test_mondrian_answers.py::test_a_changed_reference_value_fails[05_months] PASSED [ 26%]
+tests/test_mondrian_answers.py::test_a_changed_reference_value_fails[06_ytd_march] PASSED [ 30%]
+tests/test_mondrian_answers.py::test_a_changed_reference_value_fails[07_prior_march] PASSED [ 34%]
+tests/test_mondrian_answers.py::test_a_changed_reference_value_fails[08_march_change] PASSED [ 39%]
+tests/test_mondrian_answers.py::test_a_changed_reference_value_fails[09_top_products] PASSED [ 43%]
+tests/test_mondrian_answers.py::test_a_changed_reference_value_fails[10_east_office] PASSED [ 47%]
+tests/test_mondrian_answers.py::test_a_changed_mondrian_value_fails[01_total] PASSED [ 52%]
+tests/test_mondrian_answers.py::test_a_changed_mondrian_value_fails[02_units_by_year] PASSED [ 56%]
+tests/test_mondrian_answers.py::test_a_changed_mondrian_value_fails[03_category] PASSED [ 60%]
+tests/test_mondrian_answers.py::test_a_changed_mondrian_value_fails[04_region] PASSED [ 65%]
+tests/test_mondrian_answers.py::test_a_changed_mondrian_value_fails[05_months] PASSED [ 69%]
+tests/test_mondrian_answers.py::test_a_changed_mondrian_value_fails[06_ytd_march] PASSED [ 73%]
+tests/test_mondrian_answers.py::test_a_changed_mondrian_value_fails[07_prior_march] PASSED [ 78%]
+tests/test_mondrian_answers.py::test_a_changed_mondrian_value_fails[08_march_change] PASSED [ 82%]
+tests/test_mondrian_answers.py::test_a_changed_mondrian_value_fails[09_top_products] PASSED [ 86%]
+tests/test_mondrian_answers.py::test_a_changed_mondrian_value_fails[10_east_office] PASSED [ 91%]
+tests/test_mondrian_answers.py::test_swapped_captions_fail PASSED        [ 95%]
+tests/test_mondrian_answers.py::test_a_missing_answer_fails PASSED       [100%]
+============================== 23 passed in 0.19s ==============================

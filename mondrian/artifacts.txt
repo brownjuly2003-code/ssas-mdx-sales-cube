@@ -1,0 +1,14 @@
+fdac61f6631c4080591b40751abeca6a99573332f2795e7cd4cc069e1d5bbb02  mondrian-3.2.0-13661-JS-3.jar  https://jaspersoft.jfrog.io/artifactory/third-party-ce-artifacts/mondrian/mondrian/3.2.0-13661-JS-3/mondrian-3.2.0-13661-JS-3.jar
+caa9a1c5c44fb809a9bd8456050054d07be18c990a4962cb9efa53902675eacf  olap4j-0.9.7.309-JS-3.jar  https://jaspersoft.jfrog.io/artifactory/third-party-ce-artifacts/org/olap4j/olap4j/0.9.7.309-JS-3/olap4j-0.9.7.309-JS-3.jar
+797817b43112519847335a46b11a26d896771790c570226db040118f2faf5234  eigenbase-xom-1.3.0.11999.jar  https://jaspersoft.jfrog.io/artifactory/third-party-ce-artifacts/eigenbase/eigenbase-xom/1.3.0.11999/eigenbase-xom-1.3.0.11999.jar
+1d39e561c287a4cd186c8d5719bdb1ac35164c18d122c9b18f8d672812ede125  eigenbase-properties-1.1.0.10924.jar  https://jaspersoft.jfrog.io/artifactory/third-party-ce-artifacts/eigenbase/eigenbase-properties/1.1.0.10924/eigenbase-properties-1.1.0.10924.jar
+f0880609e823f8a88903a10283a272000e1cc2e0c71538569bab4756ae1c9edc  eigenbase-resgen-1.3.0.11873.jar  https://jaspersoft.jfrog.io/artifactory/third-party-ce-artifacts/eigenbase/eigenbase-resgen/1.3.0.11873/eigenbase-resgen-1.3.0.11873.jar
+12af05de7fc6b27e00f083a207a0f70feb8b0d091d1ef2cbbabb00c48735832b  javacup-0.10k.jar  https://jaspersoft.jfrog.io/artifactory/third-party-ce-artifacts/javacup/javacup/0.10k/javacup-0.10k.jar
+938b42fee68be56ddd081a0caadc6e01528e0024460d25f5bd893a42c6fc5dc3  commons-dbcp-1.2.jar  https://repo1.maven.org/maven2/commons-dbcp/commons-dbcp/1.2/commons-dbcp-1.2.jar
+80085a373c245c3e884d4f0b616298fa1aa338a366dd2a28a268ffc9213ec476  commons-pool-1.2.jar  https://repo1.maven.org/maven2/commons-pool/commons-pool/1.2/commons-pool-1.2.jar
+a57e969f8b5622213c905da87419a1b6e4c22065435fcedb3292afe2aa071b7d  commons-vfs-1.0.jar  https://repo1.maven.org/maven2/commons-vfs/commons-vfs/1.0/commons-vfs-1.0.jar
+2a26e2d5f6f789ff48137b62f8fefa98bff7bff11fef0af0dbee3175c104f6e9  commons-math-1.0.jar  https://repo1.maven.org/maven2/commons-math/commons-math/1.0/commons-math-1.0.jar
+eeeae917917144a68a741d4c0dff66aa5c5c5fd85593ff217bced3fc8ca783b8  commons-collections-3.2.2.jar  https://repo1.maven.org/maven2/commons-collections/commons-collections/3.2.2/commons-collections-3.2.2.jar
+e94af49749384c11f5aa50e8d0f5fe679be771295b52030338d32843c980351e  commons-logging-1.0.4.jar  https://repo1.maven.org/maven2/commons-logging/commons-logging/1.0.4/commons-logging-1.0.4.jar
+e71115175c4b080cf51dd72097165ea001ff9fafdc4f79d88049d0b1ecca979c  reload4j-1.2.25.jar  https://repo1.maven.org/maven2/ch/qos/reload4j/reload4j/1.2.25/reload4j-1.2.25.jar
+e6933c0711e598a224060e52ed31392f720a4a7664e85d8ae37c52a85b67ebb0  mssql-jdbc-12.8.1.jre11.jar  https://repo1.maven.org/maven2/com/microsoft/sqlserver/mssql-jdbc/12.8.1.jre11/mssql-jdbc-12.8.1.jre11.jar

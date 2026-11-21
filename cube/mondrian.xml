@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Mondrian 3.2 schema of the same cube as cube/create.xmla (substitute engine, not SSAS).
+  Mondrian is ROLAP: it translates MDX into SQL against the star in SQL Server and stores no cube.
+  Names follow SSAS: with mondrian.olap.SsasCompatibleNaming=true the hierarchies are
+  [Date].[Calendar], [Product].[Catalog] and [Customer].[Geography].
+-->
+<Schema name="P64SalesCube">
+  <Cube name="Sales">
+    <Table schema="dbo" name="FactSales"/>
+    <Dimension name="Date" type="TimeDimension" foreignKey="DateKey">
+      <Hierarchy name="Calendar" hasAll="true" primaryKey="DateKey">
+        <Table schema="dbo" name="DimDate"/>
+        <Level name="Year" column="YearNumber" type="Integer" uniqueMembers="true" levelType="TimeYears"/>
+        <Level name="Month" column="MonthKey" nameColumn="MonthLabel" type="Integer" uniqueMembers="true" levelType="TimeMonths"/>
+        <Level name="Day" column="DateKey" type="Integer" uniqueMembers="true" levelType="TimeDays"/>
+      </Hierarchy>
+    </Dimension>
+    <Dimension name="Product" foreignKey="ProductKey">
+      <Hierarchy name="Catalog" hasAll="true" primaryKey="ProductKey">
+        <Table schema="dbo" name="DimProduct"/>
+        <Level name="Category" column="Category" type="String" uniqueMembers="true"/>
+        <Level name="Product" column="ProductKey" nameColumn="ProductName" type="Integer" uniqueMembers="true">
+          <!-- SSAS has the intrinsic member property KEY0 (first key column); Mondrian 3.2 has only KEY,
+               so query 09 reads the same key through a numeric member property with the SSAS name. -->
+          <Property name="KEY0" column="ProductKey" type="Numeric"/>
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Dimension name="Customer" foreignKey="CustomerKey">
+      <Hierarchy name="Geography" hasAll="true" primaryKey="CustomerKey">
+        <Table schema="dbo" name="DimCustomer"/>
+        <Level name="Region" column="Region" type="String" uniqueMembers="true"/>
+        <Level name="Customer" column="CustomerKey" nameColumn="CustomerName" type="Integer" uniqueMembers="true"/>
+      </Hierarchy>
+    </Dimension>
+    <Measure name="Revenue" column="Revenue" aggregator="sum" formatString="#,##0"/>
+    <Measure name="Units" column="Units" aggregator="sum" formatString="#,##0"/>
+  </Cube>
+</Schema>
